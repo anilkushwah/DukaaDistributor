@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlue"
+    android:orientation="vertical"
+    android:weightSum="2"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:id="@+id/iv_login_back_arrow"
+            android:src="@drawable/ic_back_left"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_minus20sdp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enter"
+                    android:textSize="@dimen/_20sdp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@android:color/white"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="OTP"
+                    android:textSize="@dimen/_20sdp"
+                    android:fontFamily="@font/poppins_light"
+                    android:textColor="@android:color/white"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:paddingBottom="@dimen/_5sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_color_logo"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:weightSum="3"
+        android:background="@drawable/curve_bg_white_login"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1.5"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter OTP"
+                android:fontFamily="@font/poppins"
+                android:textStyle="bold"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_15sdp"/>
+
+            <com.chaos.view.PinView
+                android:id="@+id/firstPinView"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:hint="0"
+                android:itemBackground="@drawable/pin_view_background"
+                android:layout_margin="@dimen/_15sdp"
+                android:inputType="number"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/grey_2"
+                android:textSize="@dimen/_18sdp"
+                app:cursorColor="@color/colorBlue"
+                app:cursorWidth="@dimen/_2sdp"
+                app:hideLineWhenFilled="false"
+                app:itemCount="6"
+                app:itemHeight="@dimen/_30sdp"
+                app:itemRadius="@dimen/_4sdp"
+                app:itemSpacing="@dimen/_10sdp"
+                app:itemWidth="@dimen/_30sdp"
+                app:lineColor="#DDDDDD"
+                app:lineWidth="@dimen/_2sdp"
+                app:viewType="none" />
+
+            <LinearLayout
+                android:id="@+id/lv_cound_down_timerForgot_Id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    style="@style/normalFont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:gravity="right"
+                    android:text="OTP will be send in"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    style="@style/normalFont"
+                    android:id="@+id/tv_resend_otp_timer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="00"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/normalFont"
+                android:id="@+id/tv_resend_Ot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_3sdp"
+                android:text="Resend"
+                android:textColor="@color/colorBlue"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1.1">
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="0.4"
+            android:background="@drawable/button_shap"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/btn_submit_otp"
+                android:text="Submit"
+                android:textSize="@dimen/_18sdp"
+                android:fontFamily="@font/poppins"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

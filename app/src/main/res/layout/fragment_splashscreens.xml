@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <!--<FrameLayout
+        android:id="@+id/llpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpimgs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_60sdp"
+            tools:listitem="@layout/fullimage_row" />
+
+        <LinearLayout
+            android:id="@+id/llindicators"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:layout_gravity="center"
+        android:textSize="@dimen/_12sdp"
+        android:text="Skip"
+        android:id="@+id/tv_skip"
+        android:textColor="#55aefb"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="0.3"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:id="@+id/ll_loginsignup">
+
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="wrap_content"
+            android:textColor="#ffff"
+            android:background="@drawable/curvedrectanglebluecolor"
+            android:layout_height="@dimen/_40sdp"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:text="@string/signup" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:textAllCaps="false"
+            android:textColor="@color/blue"
+            android:background="@drawable/curvedrectangleshapeback"
+            android:layout_weight="1"
+            android:text="@string/login" />
+    </LinearLayout>-->
+
+</LinearLayout>

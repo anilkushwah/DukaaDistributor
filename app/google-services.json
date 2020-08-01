@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "949022065366",
+    "firebase_url": "https://dukaa-299c4.firebaseio.com",
+    "project_id": "dukaa-299c4",
+    "storage_bucket": "dukaa-299c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949022065366:android:b0281b82797c629f37bf77",
+        "android_client_info": {
+          "package_name": "com.dollop.distributor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949022065366-v0gll58ejkg8rg8p72adb965350mjmoi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dollop.distributor",
+            "certificate_hash": "3527518514e7f46cc453972e37075ba447a20379"
+          }
+        },
+        {
+          "client_id": "949022065366-6qsf7lpiqjilijt2kfhv0mu8alf2k1ll.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdMAt5Vfy6Rv6RW1dxq7m_rgfR0jOewlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949022065366-6qsf7lpiqjilijt2kfhv0mu8alf2k1ll.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

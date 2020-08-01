@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.dollop.distributor.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.dollop.distributor.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.dollop.distributor.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.dollop.distributor.ui.user.UserFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/navigation_allItem"
+        android:name="com.dollop.distributor.Fragment.AllItemFragment"
+        android:label="AllItemFragment" />
+    <fragment
+        android:id="@+id/setTiming"
+        android:name="com.dollop.distributor.Fragment.SetTimingFragment"
+        android:label="SetTimingFragment" />
+    <fragment
+        android:id="@+id/nav_newFragment"
+        android:name="com.dollop.distributor.Fragment.NewFragment"
+        android:label="New Order"
+        tools:layout="@layout/fragment_new" />
+    <fragment
+        android:id="@+id/nav_earning"
+        android:name="com.dollop.distributor.Fragment.EarningFragment"
+        android:label="Total Earning" />
+
+
+</navigation>
