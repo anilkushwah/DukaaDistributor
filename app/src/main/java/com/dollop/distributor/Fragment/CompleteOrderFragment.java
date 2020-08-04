@@ -56,7 +56,59 @@ public class CompleteOrderFragment extends Fragment {
              View root = inflater.inflate(R.layout.fragment_completorder, container, false);
         rv_completeorder = root.findViewById(R.id.rv_completeorder);
 
-        Completlist();
+        completOderList = new ArrayList<>();
+
+        CompleteOderlist model = new CompleteOderlist();
+        model.setGen_order_id("#125683");
+        model.setTotal_amount("1400");
+        model.setAgencyname("Aysha Agencyes");
+        model.setOrder_status("Completed");
+        model.setItemCount("5");
+        completOderList.add(model);
+
+        CompleteOderlist model1 = new CompleteOderlist();
+        model1.setGen_order_id("#125683");
+        model1.setTotal_amount("1400");
+        model1.setAgencyname("Ram Agencyes");
+        model1.setOrder_status("Not Completed");
+        model1.setItemCount("5");
+        completOderList.add(model1);
+
+        CompleteOderlist model2 = new CompleteOderlist();
+        model2.setGen_order_id("#125683");
+        model2.setTotal_amount("1400");
+        model2.setAgencyname("Ram Agencyes");
+        model2.setOrder_status("Completed");
+        model2.setItemCount("5");
+        completOderList.add(model2);
+
+
+        CompleteOderlist model3 = new CompleteOderlist();
+        model3.setGen_order_id("#125683");
+        model3.setTotal_amount("1400");
+        model3.setAgencyname("Ram Agencyes");
+        model3.setOrder_status("Not Completed");
+        model3.setItemCount("5");
+        completOderList.add(model3);
+
+        CompleteOderlist model4 = new CompleteOderlist();
+        model4.setGen_order_id("#125683");
+        model4.setTotal_amount("1400");
+        model4.setAgencyname("Ram Agencyes");
+        model4.setOrder_status("Completed");
+        model4.setItemCount("5");
+        completOderList.add(model4);
+
+
+
+
+        rv_completeorder.setLayoutManager(new LinearLayoutManager(getActivity()));
+        completOrderAdapter = new CompleteOrderAdapter(getActivity(),completOderList);
+        rv_completeorder.setAdapter(completOrderAdapter);
+
+
+
+        // Completlist();
         return root;
     }
 

@@ -12,7 +12,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.dollop.distributor.Activity.NewOrderActivity;
+import com.dollop.distributor.Activity.ShowOrderActivity;
 import com.dollop.distributor.R;
+import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.model.NewOderlist;
 
 import java.util.ArrayList;
@@ -41,22 +44,18 @@ public class NewOrderAdapter extends RecyclerView.Adapter<NewOrderAdapter.MyView
 
         holder.o_amount.setText(current.getTotal_amount());
         holder.gen_order_id.setText(current.getGen_order_id());
-        holder.o_item.setText(current.getItemCount());
+        holder.o_item.setText(current.getItemCount() + "Items");
+        holder.tv_agencyname.setText(current.getAgencyname());
 
-        String Status = current.getOrder_status().toString();
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Utils.I(context, NewOrderActivity.class,null);
+            }
+        });
 
-        if(Status.equals("Completed")){
-            holder.tv_order_staus.setText(current.getOrder_status());
-            holder.tv_order_staus.setTextColor(Color.parseColor("#14a809"));
-            holder.img_semicircle.setImageResource(R.drawable.right_semicircle);
-        }
-        else{
-            holder.tv_order_staus.setText(current.getOrder_status());
-            holder.tv_order_staus.setTextColor(Color.parseColor("#ec1515"));
-            holder.img_semicircle.setImageResource(R.drawable.red_right_semicircle);
-        }
 
-        holder.tv_agencyname.setText(current.getAgencyname().toString());
+
 
 
 
@@ -70,17 +69,16 @@ public class NewOrderAdapter extends RecyclerView.Adapter<NewOrderAdapter.MyView
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-       private   TextView gen_order_id,o_item,o_amount,tv_agencyname,tv_order_staus;
-        private ImageView img_semicircle;
+       private   TextView gen_order_id,o_item,o_amount,tv_agencyname;
+
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             gen_order_id = itemView.findViewById(R.id.gen_order_id);
             o_item = itemView.findViewById(R.id.or_items);
             o_amount = itemView.findViewById(R.id.order_amount);
-            img_semicircle = itemView.findViewById(R.id.img_semicircle);
             tv_agencyname = itemView.findViewById(R.id.tv_agencyname);
-            tv_order_staus = itemView.findViewById(R.id.tv_order_staus);
+
         }
     }
 }

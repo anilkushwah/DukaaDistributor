@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     finalDots[pos].setImageDrawable(getApplicationContext().getResources().getDrawable(R.drawable.selecteditem_dot));
                 }
                 if (pos==2){
-
+                    btnsplashNextId.setText("Done");
                 }
 
             }

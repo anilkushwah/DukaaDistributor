@@ -9,7 +9,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.dollop.distributor.Activity.OrderDetailsActivity;
 import com.dollop.distributor.R;
+import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.model.NewOderlist;
 import com.dollop.distributor.model.Processinglist;
 
@@ -37,7 +39,15 @@ public class ProcessingorderAdapter extends RecyclerView.Adapter<Processingorder
 
         holder.o_amount.setText(current.getTotal_amount());
         holder.gen_order_id.setText(current.getGen_order_id());
-        holder.o_item.setText(current.getItemCount());
+        holder.o_item.setText(current.getItemCount() +" Items");
+        holder.tv_agencyname.setText(current.getAgencyname());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Utils.I(context, OrderDetailsActivity.class,null);
+            }
+        });
 
     }
 
@@ -47,7 +57,7 @@ public class ProcessingorderAdapter extends RecyclerView.Adapter<Processingorder
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-       private   TextView gen_order_id,o_item,o_amount;
+       private   TextView gen_order_id,o_item,o_amount,tv_agencyname;
 
 
         public MyViewHolder(@NonNull View itemView) {
@@ -55,6 +65,7 @@ public class ProcessingorderAdapter extends RecyclerView.Adapter<Processingorder
             gen_order_id = itemView.findViewById(R.id.gen_order_id);
             o_item = itemView.findViewById(R.id.or_items);
             o_amount = itemView.findViewById(R.id.order_amount);
+            tv_agencyname = itemView.findViewById(R.id.tv_agencyname);
         }
     }
 }

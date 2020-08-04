@@ -5,6 +5,15 @@ public class CompleteOderlist {
     String no_ID,no_Item,amount;
     String id,gen_order_id,total_amount,paid_amount,transaction_id,transaction_mode,order_status,create_date,itemCount;
 
+    String agencyname;
+
+    public String getAgencyname() {
+        return agencyname;
+    }
+
+    public void setAgencyname(String agencyname) {
+        this.agencyname = agencyname;
+    }
 
     public String getId() {
         return id;

@@ -65,39 +65,36 @@ public class NewFragment extends Fragment {
         newOderList = new ArrayList<>();
 
         NewOderlist model = new NewOderlist();
-        model.setItemCount("5 Items");
+        model.setItemCount("5 ");
         model.setGen_order_id("#1234098765");
-        model.setTotal_amount("400.00");
         model.setAgencyname("Aysha Agencyes");
-        model.setOrder_status("Completed");
+        model.setTotal_amount("400.00");
+
         newOderList.add(model);
 
         NewOderlist model1 = new NewOderlist();
-        model1.setItemCount("2 Items");
+        model1.setItemCount("2 ");
         model1.setGen_order_id("#9287458765");
         model1.setTotal_amount("700.00");
-        model1.setAgencyname("Ram Agencyes");
-        model1.setOrder_status("Not Completed");
+        model1.setAgencyname("Aysha Agencyes");
+
         newOderList.add(model1);
 
 
         NewOderlist model2 = new NewOderlist();
-        model2.setItemCount("7 Items");
+        model2.setItemCount("7 ");
         model2.setGen_order_id("#8254328765");
         model2.setTotal_amount("500.00");
-        model2.setAgencyname("Sharma Agencyes");
-        model2.setOrder_status("Completed");
+        model2.setAgencyname("Aysha Agencyes");
         newOderList.add(model2);
 
 
         NewOderlist model3 = new NewOderlist();
-        model3.setItemCount("1 Items");
+        model3.setItemCount("1 ");
         model3.setGen_order_id("1234328765");
         model3.setTotal_amount("100.00");
         model3.setAgencyname("Aysha Agencyes");
-        model3.setOrder_status("Not Completed");
         newOderList.add(model3);
-
 
         newOrderAdapter = new NewOrderAdapter(getActivity(),newOderList);
         rv_neworder.setAdapter(newOrderAdapter);

@@ -56,7 +56,51 @@ public class ProcessingFragment extends Fragment {
              View root = inflater.inflate(R.layout.fragment_processorder, container, false);
         rv_processorder = root.findViewById(R.id.rv_processorder);
 
-        processingList();
+        processingList = new ArrayList<>();
+
+        Processinglist model = new Processinglist();
+        model.setGen_order_id("#1232423");
+        model.setTotal_amount("3450");
+        model.setItemCount("4");
+        model.setAgencyname("Ram Agencyes");
+        processingList.add(model);
+
+
+        Processinglist model1 = new Processinglist();
+        model1.setGen_order_id("#1232423");
+        model1.setTotal_amount("3450");
+        model1.setItemCount("4");
+        model1.setAgencyname("Ram Agencyes");
+        processingList.add(model1);
+
+        Processinglist model2 = new Processinglist();
+        model2.setGen_order_id("#1232423");
+        model2.setTotal_amount("3450");
+        model2.setItemCount("4");
+        model2.setAgencyname("Ram Agencyes");
+        processingList.add(model2);
+
+        Processinglist model3 = new Processinglist();
+        model3.setGen_order_id("#1232423");
+        model3.setTotal_amount("3450");
+        model3.setItemCount("4");
+        model3.setAgencyname("Ram Agencyes");
+        processingList.add(model3);
+
+        Processinglist model4 = new Processinglist();
+        model4.setGen_order_id("#1232423");
+        model4.setTotal_amount("3450");
+        model4.setItemCount("4");
+        model4.setAgencyname("Ram Agencyes");
+        processingList.add(model4);
+
+        rv_processorder.setLayoutManager(new LinearLayoutManager(getActivity()));
+        processingAdapter = new ProcessingorderAdapter(getActivity(),processingList);
+        rv_processorder.setAdapter(processingAdapter);
+
+
+
+        /// processingList();
         return root;
     }
 

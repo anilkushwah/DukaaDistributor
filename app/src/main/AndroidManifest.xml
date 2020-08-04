@@ -20,7 +20,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.ChangePasswordActivity"></activity>
+        <activity android:name=".Activity.OrderDetilsBackActivity"></activity>
+        <activity android:name=".Activity.TrackingActivity" />
+        <activity android:name=".Activity.AssignActivity" />
+        <activity android:name=".Activity.OrderDetailsActivity" />
+        <activity android:name=".Activity.ChangePasswordActivity" />
         <activity android:name=".Activity.BankDetailsActivity" />
         <activity android:name=".Activity.MPESActivity" />
         <activity android:name=".Activity.SearchMapsActivity" />
@@ -36,7 +40,8 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".Activity.DeliveryCompletedActivity"/>
+        <activity android:name=".Activity.NewOrderActivity" />
+        <activity android:name=".Activity.DeliveryCompletedActivity" />
         <activity android:name=".Activity.StatusordershowActivity" />
         <activity android:name=".Activity.CreateAccountActivity" />
         <activity android:name=".Activity.ShowOrderActivity" />
@@ -61,14 +66,14 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
