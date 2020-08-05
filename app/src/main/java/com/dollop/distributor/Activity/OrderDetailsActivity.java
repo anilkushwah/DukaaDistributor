@@ -61,7 +61,7 @@ public class OrderDetailsActivity extends AppCompatActivity  implements View.OnC
         else if(v == sign_submit){
             ll_sign_box.setVisibility(View.GONE);
         } else if(v == order_accespt){
-            Utils.I(OrderDetailsActivity.this,AssignActivity.class,null);
+            Utils.I(OrderDetailsActivity.this,AssignOrderDetailsActivity.class,null);
         } else if(v == order_dispatch){
             Utils.I(OrderDetailsActivity.this,DeliveryCompletedActivity.class,null);
         }

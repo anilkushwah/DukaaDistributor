@@ -49,13 +49,54 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         ordertabAdapter = new OrderTabsAdapter(getChildFragmentManager(),tabLayout.getTabCount(),getActivity());
         orderviewPager.setAdapter(ordertabAdapter);
 
-        orderviewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        //orderviewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        orderviewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                if(position == 0){
+
+                    tv_new.setTextColor(Color.parseColor("#000000"));
+                    tv_completed.setTextColor(Color.parseColor("#ffffff"));
+                    tv_processing.setTextColor(Color.parseColor("#ffffff"));
+                    ll_tab_processing.setBackgroundResource(0);
+                    ll_tab_new.setBackgroundResource(R.drawable.tab_background_selected);
+                    ll_tab_completed.setBackgroundResource(0);
+                }
+
+                else if(position ==1){
+                    ll_tab_processing.setBackgroundResource(R.drawable.tab_background_selected);
+                    tv_processing.setTextColor(Color.parseColor("#000000"));
+                    tv_new.setTextColor(Color.parseColor("#ffffff"));
+                    tv_completed.setTextColor(Color.parseColor("#ffffff"));
+                    ll_tab_new.setBackgroundResource(0);
+                    ll_tab_completed.setBackgroundResource(0);
+                }
+                else if(position ==2){
+                    tv_completed.setTextColor(Color.parseColor("#000000"));
+                    tv_processing.setTextColor(Color.parseColor("#ffffff"));
+                    tv_new.setTextColor(Color.parseColor("#ffffff"));
+                    ll_tab_processing.setBackgroundResource(0);
+                    ll_tab_new.setBackgroundResource(0);
+                    ll_tab_completed.setBackgroundResource(R.drawable.tab_background_selected);
+                }
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onTabSelected(TabLayout.Tab tab) {
+            public void onTabSelected( TabLayout.Tab tab) {
                 orderviewPager.setCurrentItem(tab.getPosition());
-                if(tab.getPosition() == 0){
+         /*       if(tab.getPosition() == 0){
                     tv_new.setTextColor(Color.parseColor("#000000"));
                     tv_completed.setTextColor(Color.parseColor("#ffffff"));
                     tv_processing.setTextColor(Color.parseColor("#ffffff"));
@@ -80,7 +121,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                     ll_tab_processing.setBackgroundResource(0);
                     ll_tab_new.setBackgroundResource(0);
                     ll_tab_completed.setBackgroundResource(R.drawable.tab_background_selected);
-                }
+                }*/
             }
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
@@ -95,10 +136,19 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        if(v == ll_tab_processing){
 
+        if(v == ll_tab_new){
+            orderviewPager.setCurrentItem(0);
+            tv_new.setTextColor(Color.parseColor("#000000"));
+            tv_completed.setTextColor(Color.parseColor("#ffffff"));
+            tv_processing.setTextColor(Color.parseColor("#ffffff"));
+            ll_tab_processing.setBackgroundResource(0);
+            ll_tab_new.setBackgroundResource(R.drawable.tab_background_selected);
+            ll_tab_completed.setBackgroundResource(0);
+        }
+       else if(v == ll_tab_processing){
+            orderviewPager.setCurrentItem(1);
          //   Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_newFragment);
-
             ll_tab_processing.setBackgroundResource(R.drawable.tab_background_selected);
             tv_processing.setTextColor(Color.parseColor("#000000"));
             tv_new.setTextColor(Color.parseColor("#ffffff"));
@@ -106,18 +156,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
             ll_tab_new.setBackgroundResource(0);
             ll_tab_completed.setBackgroundResource(0);
         }
-        else if(v == ll_tab_new){
-
-            tv_new.setTextColor(Color.parseColor("#000000"));
-            tv_completed.setTextColor(Color.parseColor("#ffffff"));
-            tv_processing.setTextColor(Color.parseColor("#ffffff"));
-
-            ll_tab_processing.setBackgroundResource(0);
-            ll_tab_new.setBackgroundResource(R.drawable.tab_background_selected);
-            ll_tab_completed.setBackgroundResource(0);
-        }
 
         else if(v == ll_tab_completed){
+            orderviewPager.setCurrentItem(2);
             tv_completed.setTextColor(Color.parseColor("#000000"));
             tv_processing.setTextColor(Color.parseColor("#ffffff"));
             tv_new.setTextColor(Color.parseColor("#ffffff"));

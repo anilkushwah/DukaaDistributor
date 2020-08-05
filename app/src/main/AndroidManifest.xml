@@ -20,7 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.OrderDetilsBackActivity"></activity>
+        <activity android:name=".Activity.AssignOrderDetailsActivity"></activity>
+        <activity android:name=".Activity.OrderDetilsBackActivity" />
         <activity android:name=".Activity.TrackingActivity" />
         <activity android:name=".Activity.AssignActivity" />
         <activity android:name=".Activity.OrderDetailsActivity" />
