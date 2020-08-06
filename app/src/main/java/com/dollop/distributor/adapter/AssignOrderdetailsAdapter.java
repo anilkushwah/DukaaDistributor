@@ -30,7 +30,7 @@ public class AssignOrderdetailsAdapter extends RecyclerView.Adapter<AssignOrderd
     @NonNull
     @Override
     public AssignOrderdetailsAdapter.MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.new_order_item_layout,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.order_details_assign_driver_item_layout,parent,false);
         return new MyHolder(view);
     }
 
@@ -42,7 +42,6 @@ public class AssignOrderdetailsAdapter extends RecyclerView.Adapter<AssignOrderd
         holder.TextView_Item_NameId.setText(showorderModel.getName());
         holder.TextView_Item_QuantityId.setText(showorderModel.getItemquantity());
         holder.TextView_Item_PriceId.setText(showorderModel.getAmount());
-        holder.ImageView_Item_ImageId.setImageResource(showorderModel.getImage());
         holder.order_price.setText(showorderModel.getOrderprice());
         holder.order_qty.setText(showorderModel.getOrderqty());
 
@@ -57,7 +56,6 @@ public class AssignOrderdetailsAdapter extends RecyclerView.Adapter<AssignOrderd
     public class MyHolder extends RecyclerView.ViewHolder {
 
         TextView TextView_Item_NameId, TextView_Item_QuantityId, TextView_Item_PriceId,order_qty,order_price;
-        ImageView ImageView_Item_ImageId;
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);
@@ -67,7 +65,6 @@ public class AssignOrderdetailsAdapter extends RecyclerView.Adapter<AssignOrderd
             TextView_Item_NameId = itemView.findViewById(R.id.TextView_Item_NameId);
             TextView_Item_QuantityId = itemView.findViewById(R.id.TextView_Item_QuantityId);
             TextView_Item_PriceId = itemView.findViewById(R.id.TextView_Item_amount);
-            ImageView_Item_ImageId = itemView.findViewById(R.id.ImageView_Item_ImageId);
         }
     }
 }

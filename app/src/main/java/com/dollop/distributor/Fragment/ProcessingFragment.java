@@ -63,6 +63,8 @@ public class ProcessingFragment extends Fragment {
         model.setTotal_amount("3450");
         model.setItemCount("4");
         model.setAgencyname("Ram Agencyes");
+        model.setCreate_date("20 Jul 2020");
+        model.setOrder_status("Scheduled");
         processingList.add(model);
 
 
@@ -71,6 +73,8 @@ public class ProcessingFragment extends Fragment {
         model1.setTotal_amount("3450");
         model1.setItemCount("4");
         model1.setAgencyname("Ram Agencyes");
+        model1.setCreate_date("22 Jul 2020");
+        model1.setOrder_status("Delivery");
         processingList.add(model1);
 
         Processinglist model2 = new Processinglist();
@@ -78,6 +82,8 @@ public class ProcessingFragment extends Fragment {
         model2.setTotal_amount("3450");
         model2.setItemCount("4");
         model2.setAgencyname("Ram Agencyes");
+        model2.setCreate_date("25 Jul 2020");
+        model2.setOrder_status("Scheduled");
         processingList.add(model2);
 
         Processinglist model3 = new Processinglist();
@@ -85,6 +91,8 @@ public class ProcessingFragment extends Fragment {
         model3.setTotal_amount("3450");
         model3.setItemCount("4");
         model3.setAgencyname("Ram Agencyes");
+        model3.setCreate_date("23 Jul 2020");
+        model3.setOrder_status("Pickup");
         processingList.add(model3);
 
         Processinglist model4 = new Processinglist();
@@ -92,6 +100,8 @@ public class ProcessingFragment extends Fragment {
         model4.setTotal_amount("3450");
         model4.setItemCount("4");
         model4.setAgencyname("Ram Agencyes");
+        model4.setCreate_date("23 Jul 2020");
+        model4.setOrder_status("Pickup");
         processingList.add(model4);
 
         rv_processorder.setLayoutManager(new LinearLayoutManager(getActivity()));

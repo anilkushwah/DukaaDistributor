@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -46,6 +47,24 @@ public class NewOrderAdapter extends RecyclerView.Adapter<NewOrderAdapter.MyView
         holder.gen_order_id.setText(current.getGen_order_id());
         holder.o_item.setText(current.getItemCount() + "Items");
         holder.tv_agencyname.setText(current.getAgencyname());
+        holder.or_date.setText(current.getCreate_date());
+
+        String status = current.getOrder_status().toString();
+
+        if(status.equals("Scheduled")){
+          //  holder.ll_card_back.setBackgroundColor(R.color.colorPrimary);
+            holder.ll_card_back.setBackgroundResource(R.drawable.schedule_back);
+        }
+       else if(status.equals("Delivery")){
+           // holder.ll_card_back.setBackgroundColor(R.color.colorRed);
+            holder.ll_card_back.setBackgroundResource(R.drawable.deliverry_back);
+           // holder.ll_card_back.setBackgroundColor(Color.parseColor("#ec1515"));
+        }
+        else if(status.equals("Pickup")){
+            holder.ll_card_back.setBackgroundResource(R.drawable.pickup_back);
+          //  holder.ll_card_back.setBackgroundColor(R.color.orange);
+           // holder.ll_card_back.setBackgroundColor(Color.parseColor("#F5C639"));
+        }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,10 +72,6 @@ public class NewOrderAdapter extends RecyclerView.Adapter<NewOrderAdapter.MyView
                 Utils.I(context, NewOrderActivity.class,null);
             }
         });
-
-
-
-
 
 
     }
@@ -69,7 +84,8 @@ public class NewOrderAdapter extends RecyclerView.Adapter<NewOrderAdapter.MyView
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-       private   TextView gen_order_id,o_item,o_amount,tv_agencyname;
+       private   TextView gen_order_id,o_item,o_amount,tv_agencyname,or_date;
+       private LinearLayout ll_card_back;
 
 
         public MyViewHolder(@NonNull View itemView) {
@@ -78,6 +94,8 @@ public class NewOrderAdapter extends RecyclerView.Adapter<NewOrderAdapter.MyView
             o_item = itemView.findViewById(R.id.or_items);
             o_amount = itemView.findViewById(R.id.order_amount);
             tv_agencyname = itemView.findViewById(R.id.tv_agencyname);
+            or_date = itemView.findViewById(R.id.or_date);
+            ll_card_back = itemView.findViewById(R.id.ll_card_back);
 
         }
     }

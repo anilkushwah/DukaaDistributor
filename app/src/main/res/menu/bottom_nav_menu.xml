@@ -12,6 +12,11 @@
         android:title="@string/title_items"/>
 
     <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_write"
+        android:title="@string/title_dashboard_onr"/>
+
+    <item
         android:id="@+id/nav_earning"
         android:icon="@drawable/ic_wage"
         android:title="@string/title_earning"/>

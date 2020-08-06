@@ -97,6 +97,9 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.navigation_profile:
                 Navigation.findNavController(HomeActivity.this, R.id.nav_host_fragment).navigate(R.id.navigation_profile);
                break;
+               case R.id.navigation_dashboard:
+                Navigation.findNavController(HomeActivity.this, R.id.nav_host_fragment).navigate(R.id.navigation_dashboard);
+                break;
 
             default:
                 break;

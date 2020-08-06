@@ -69,6 +69,8 @@ public class NewFragment extends Fragment {
         model.setGen_order_id("#1234098765");
         model.setAgencyname("Aysha Agencyes");
         model.setTotal_amount("400.00");
+        model.setCreate_date("20 Jul 2020");
+        model.setOrder_status("Scheduled");
 
         newOderList.add(model);
 
@@ -77,6 +79,8 @@ public class NewFragment extends Fragment {
         model1.setGen_order_id("#9287458765");
         model1.setTotal_amount("700.00");
         model1.setAgencyname("Aysha Agencyes");
+        model1.setCreate_date("22 Jul 2020");
+        model1.setOrder_status("Delivery");
 
         newOderList.add(model1);
 
@@ -86,6 +90,9 @@ public class NewFragment extends Fragment {
         model2.setGen_order_id("#8254328765");
         model2.setTotal_amount("500.00");
         model2.setAgencyname("Aysha Agencyes");
+        model2.setCreate_date("25 Jul 2020");
+        model2.setOrder_status("Scheduled");
+
         newOderList.add(model2);
 
 
@@ -94,6 +101,8 @@ public class NewFragment extends Fragment {
         model3.setGen_order_id("1234328765");
         model3.setTotal_amount("100.00");
         model3.setAgencyname("Aysha Agencyes");
+        model3.setCreate_date("230 Jul 2020");
+        model3.setOrder_status("Pickup");
         newOderList.add(model3);
 
         newOrderAdapter = new NewOrderAdapter(getActivity(),newOderList);

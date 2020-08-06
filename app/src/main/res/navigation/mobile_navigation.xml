@@ -12,9 +12,9 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_history"
+        android:id="@+id/navigation_dashboard"
         android:name="com.dollop.distributor.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/title_dashboard_onr"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment

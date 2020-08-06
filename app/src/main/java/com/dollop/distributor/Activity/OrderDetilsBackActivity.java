@@ -45,8 +45,10 @@ public class OrderDetilsBackActivity extends AppCompatActivity   implements View
         tracking.setOnClickListener(this);
         order_accespt.setOnClickListener(this);
         sign_submit.setOnClickListener(this);
-        sign_submit.setOnClickListener(this);
         order_dispatch.setOnClickListener(this);
+        signature_set.setOnClickListener(this);
+
+
 
         list();
 

@@ -46,18 +46,10 @@ tools:context=".Activity.AssignOrderDetailsActivity">
                     style="@style/normalFont"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Order Details -"
+                    android:text="Order Details"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_12sdp" />
 
-                <TextView
-                    style="@style/normalFont"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="#12458965"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_12sdp" />
 
             </LinearLayout>
 
@@ -75,7 +67,6 @@ tools:context=".Activity.AssignOrderDetailsActivity">
                     style="@style/normalFont"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
                     android:text="Order ID -" />
 
                 <TextView
@@ -92,24 +83,6 @@ tools:context=".Activity.AssignOrderDetailsActivity">
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_weight="0.9"
-            android:layout_width="0dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <ImageView
-                android:layout_width="@dimen/_25sdp"
-                android:layout_height="@dimen/_25sdp"
-                android:layout_marginLeft="@dimen/_15sdp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_mail" />
-
-
-        </LinearLayout>
 
     </LinearLayout>
 
@@ -159,19 +132,30 @@ tools:context=".Activity.AssignOrderDetailsActivity">
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Total Weight"
+                android:text="Total Amount"
                 android:textColor="@color/black" />
 
-            <TextView
+            <LinearLayout
                 android:layout_gravity="right"
                 android:gravity="right"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                >
+
+
+
+            <TextView
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableLeft="@drawable/ic_rupee_black_small"
                 android:textSize="@dimen/_12sdp"
                 style="@style/normalFont"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="6 kg"
+                android:text="720.00"
                 android:textColor="@color/black" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

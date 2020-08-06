@@ -64,6 +64,8 @@ public class CompleteOrderFragment extends Fragment {
         model.setAgencyname("Aysha Agencyes");
         model.setOrder_status("Completed");
         model.setItemCount("5");
+        model.setCreate_date("20 Jul 2020");
+        model.setOrder_status("Scheduled");
         completOderList.add(model);
 
         CompleteOderlist model1 = new CompleteOderlist();
@@ -72,6 +74,8 @@ public class CompleteOrderFragment extends Fragment {
         model1.setAgencyname("Ram Agencyes");
         model1.setOrder_status("Not Completed");
         model1.setItemCount("5");
+        model1.setCreate_date("22 Jul 2020");
+        model1.setOrder_status("Delivery");
         completOderList.add(model1);
 
         CompleteOderlist model2 = new CompleteOderlist();
@@ -80,6 +84,8 @@ public class CompleteOrderFragment extends Fragment {
         model2.setAgencyname("Ram Agencyes");
         model2.setOrder_status("Completed");
         model2.setItemCount("5");
+        model2.setCreate_date("25 Jul 2020");
+        model2.setOrder_status("Scheduled");
         completOderList.add(model2);
 
 
@@ -89,6 +95,8 @@ public class CompleteOrderFragment extends Fragment {
         model3.setAgencyname("Ram Agencyes");
         model3.setOrder_status("Not Completed");
         model3.setItemCount("5");
+        model3.setCreate_date("230 Jul 2020");
+        model3.setOrder_status("Pickup");
         completOderList.add(model3);
 
         CompleteOderlist model4 = new CompleteOderlist();

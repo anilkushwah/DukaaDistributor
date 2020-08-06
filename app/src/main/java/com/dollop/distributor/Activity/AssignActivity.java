@@ -23,7 +23,7 @@ public class AssignActivity extends AppCompatActivity {
         assign_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Utils.I(AssignActivity.this,OrderDetilsBackActivity.class,null);
+                Utils.I(AssignActivity.this,OrderDetailsActivity.class,null);
             }
         });
     }
