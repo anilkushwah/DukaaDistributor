@@ -28,8 +28,8 @@
                 <ImageView
                     android:id="@+id/edit_profile_back"
                     android:layout_gravity="center"
-                    android:layout_width="@dimen/_25sdp"
-                    android:layout_height="@dimen/_25sdp"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
                     android:src="@drawable/ic_back_left"/>
 
                 <TextView
@@ -321,85 +321,6 @@
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="1"
-                        android:layout_marginHorizontal="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_8sdp"
-                        >
-
-                        <TextView
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:paddingLeft="@dimen/_10sdp"
-                            android:textSize="@dimen/_10sdp"
-                            style="@style/normalFont"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            android:text="Create Password"/>
-
-                        <TextView
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:paddingLeft="@dimen/_10sdp"
-                            android:textSize="@dimen/_10sdp"
-                            style="@style/normalFont"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            android:text="Confirm Password"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginHorizontal="@dimen/_5sdp"
-                        android:weightSum="2"
-                        >
-
-
-
-                        <EditText
-                            android:layout_weight="1"
-                            android:inputType="textPassword"
-                            android:id="@+id/confirm_pass"
-                            android:maxLines="1"
-                            android:singleLine="true"
-                            android:paddingLeft="@dimen/_10sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:textSize="@dimen/_10sdp"
-                            style="@style/normalFont"
-                            android:layout_width="0dp"
-
-                            android:background="@drawable/et_edittext_bck"
-                            android:textColor="@color/grey_2"
-                            android:layout_height="@dimen/_35sdp"
-                            />
-
-                        <EditText
-                            android:layout_weight="1"
-                            android:id="@+id/create_password"
-                            android:maxLines="1"
-                            android:singleLine="true"
-                            android:paddingLeft="@dimen/_10sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:textSize="@dimen/_10sdp"
-                            android:inputType="textPassword"
-                            style="@style/normalFont"
-                            android:layout_width="0dp"
-                            android:background="@drawable/et_edittext_bck"
-                            android:textColor="@color/grey_2"
-                            android:layout_height="@dimen/_35sdp"
-                            />
-
-
-
-                    </LinearLayout>
 
 
                     <LinearLayout

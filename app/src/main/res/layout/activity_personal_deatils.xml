@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="@dimen/_10sdp"
-                    android:text="Profile"
+                    android:text="Personal Details"
                     android:fontFamily="@font/poppins_semibold"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_18sdp"
@@ -112,32 +112,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_marginTop="@dimen/_minus32sdp"
-            android:layout_marginLeft="@dimen/_65sdp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:background="@drawable/camera_circle"
-            >
-
-            <LinearLayout
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_gravity="center"
-                    android:layout_width="@dimen/_12sdp"
-                    android:layout_height="@dimen/_12sdp"
-                    android:src="@drawable/ic_camera"/>
-
-            </LinearLayout>
-
-
-
-        </LinearLayout>
 
     </LinearLayout>
 
@@ -146,14 +120,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="1"
         >
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.9">
+            android:layout_height="wrap_content"
+            >
 
             <androidx.core.widget.NestedScrollView
                 android:layout_weight="0.9"
@@ -207,7 +180,8 @@
                         android:layout_marginHorizontal="@dimen/_5sdp"
                         >
 
-                        <EditText
+                        <TextView
+                            android:text="Alax Carey"
                             android:layout_weight="1"
                             android:id="@+id/create_name"
                             style="@style/normalFont"
@@ -216,14 +190,14 @@
                             android:layout_marginHorizontal="@dimen/_5sdp"
                             android:layout_marginTop="@dimen/_5sdp"
                             android:background="@drawable/et_edittext_bck"
-                            android:inputType="text"
                             android:maxLines="1"
                             android:paddingLeft="@dimen/_10sdp"
                             android:singleLine="true"
-                            android:textColor="@color/grey_2"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/_10sdp" />
 
-                        <EditText
+                        <TextView
+                            android:text="Bhopal"
                             android:layout_weight="1"
                             android:id="@+id/create_store_location"
                             style="@style/normalFont"
@@ -232,11 +206,10 @@
                             android:layout_marginHorizontal="@dimen/_5sdp"
                             android:layout_marginTop="@dimen/_5sdp"
                             android:background="@drawable/et_edittext_bck"
-                            android:inputType="text"
                             android:maxLines="1"
                             android:paddingLeft="@dimen/_10sdp"
                             android:singleLine="true"
-                            android:textColor="@color/grey_2"
+                            android:textColor="@color/black"
                             android:textSize="@dimen/_10sdp" />
 
 
@@ -283,9 +256,9 @@
 
 
 
-                        <EditText
+                        <TextView
+                            android:text="Bhopal"
                             android:layout_weight="1"
-                            android:inputType="text"
                             android:id="@+id/create_store_address"
                             android:maxLines="1"
                             android:singleLine="true"
@@ -296,11 +269,12 @@
                             style="@style/normalFont"
                             android:layout_width="0dp"
                             android:background="@drawable/et_edittext_bck"
-                            android:textColor="@color/grey_2"
+                            android:textColor="@color/black"
                             android:layout_height="@dimen/_35sdp"
                             />
 
                         <EditText
+                            android:text="alax@gmail.com"
                             android:layout_weight="1"
                             android:id="@+id/create_email"
                             android:maxLines="1"
@@ -309,11 +283,10 @@
                             android:layout_marginTop="@dimen/_5sdp"
                             android:layout_marginHorizontal="@dimen/_5sdp"
                             android:textSize="@dimen/_10sdp"
-                            android:inputType="textEmailAddress"
                             style="@style/normalFont"
                             android:layout_width="0dp"
                             android:background="@drawable/et_edittext_bck"
-                            android:textColor="@color/grey_2"
+                            android:textColor="@color/black"
                             android:layout_height="@dimen/_35sdp"
                             />
 
@@ -372,14 +345,15 @@
                             android:background="@drawable/et_edittext_bck"
                             >
 
-                            <Spinner
-                                android:id="@+id/crate_country"
-                                android:entries="@array/countryname"
-                                android:layout_marginHorizontal="@dimen/_5sdp"
+                            <TextView
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:textSize="@dimen/_10sdp"
                                 style="@style/normalFont"
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/_30sdp"
-                                />
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:text="India"/>
 
 
                         </LinearLayout>
@@ -387,7 +361,8 @@
 
 
 
-                        <EditText
+                        <TextView
+                            android:text="Filed"
                             android:layout_weight="0.5"
                             android:maxLines="1"
                             android:singleLine="true"
@@ -395,11 +370,10 @@
                             android:layout_marginTop="@dimen/_5sdp"
                             android:layout_marginHorizontal="@dimen/_5sdp"
                             android:textSize="@dimen/_10sdp"
-                            android:inputType="text"
                             style="@style/normalFont"
                             android:layout_width="0dp"
                             android:background="@drawable/et_edittext_bck"
-                            android:textColor="@color/grey_2"
+                            android:textColor="@color/black"
                             android:layout_height="@dimen/_35sdp"
                             />
 
@@ -407,7 +381,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -431,7 +405,8 @@
                             android:weightSum="2"
                             >
 
-                            <EditText
+                            <TextView
+                                android:text="9867493828"
                                 android:layout_weight="1"
                                 android:id="@+id/create_phone"
                                 android:maxLines="1"
@@ -440,12 +415,10 @@
                                 android:layout_marginTop="@dimen/_5sdp"
                                 android:layout_marginHorizontal="@dimen/_5sdp"
                                 android:textSize="@dimen/_10sdp"
-                                android:inputType="phone"
-                                android:maxLength="10"
                                 style="@style/normalFont"
                                 android:layout_width="0dp"
                                 android:background="@drawable/et_edittext_bck"
-                                android:textColor="@color/grey_2"
+                                android:textColor="@color/black"
                                 android:layout_height="@dimen/_35sdp"
                                 />
 
@@ -461,29 +434,7 @@
 
         </LinearLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            android:layout_weight="0.1"
-            android:background="@drawable/curve_bg_login"
-            android:paddingBottom="@dimen/_10sdp"
-            >
 
-            <TextView
-                android:paddingTop="@dimen/_2sdp"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColor="@color/white"
-                android:layout_alignParentBottom="true"
-                android:text="Update Profile"
-                android:id="@+id/btn_update_profile"
-                android:textSize="@dimen/_16sdp"
-                android:fontFamily="@font/poppins"
-                />
-
-        </RelativeLayout>
 
     </LinearLayout>
 

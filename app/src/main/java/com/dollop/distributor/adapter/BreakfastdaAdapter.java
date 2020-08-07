@@ -1,13 +1,20 @@
 package com.dollop.distributor.adapter;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Switch;
@@ -20,11 +27,13 @@ import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dollop.distributor.R;
+import com.dollop.distributor.UtilityTools.UserAccount;
 import com.dollop.distributor.model.breakfastdaModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/*
 public class BreakfastdaAdapter extends RecyclerView.Adapter<BreakfastdaAdapter.MyViewHolder> {
     Context context;
     List<breakfastdaModel> breakfastdaModels = new ArrayList<>();
@@ -85,9 +94,108 @@ public class BreakfastdaAdapter extends RecyclerView.Adapter<BreakfastdaAdapter.
 
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     public boolean onMenuItemClick(MenuItem menu_item) {
-                        switch (menu_item.getItemId()) {
+                        int id = menu_item.getItemId();
 
+                        if (R.id.menu_editdetails == id){
+                          ////////
+                            final Dialog popdialog = new Dialog(getContext()) ;
+                            popdialog.requestWindowFeature(Window.FEATURE_RIGHT_ICON);
+                            popdialog.setContentView(R.layout.add_itempopup);
+                            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+                            lp.copyFrom(popdialog.getWindow().getAttributes());
+                            lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+                            lp.height = WindowManager.LayoutParams.MATCH_PARENT;
+                            popdialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                            popdialog.getWindow().setAttributes(lp);
+                            // dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme; //style id
+
+                            ImageView additemClose = popdialog.findViewById(R.id.add_item_close);
+                            Button btn_add_product = popdialog.findViewById(R.id.btn_add_product);
+                            sp_categoty = popdialog.findViewById(R.id.sp_product_category);
+                            sp_sub_category= popdialog.findViewById(R.id.sp_product_sub_category);
+                            sp_unit_per_case= popdialog.findViewById(R.id.sp_unit_per_case);
+                            sp_total_unit= popdialog.findViewById(R.id.sp_total_unit);
+                            sp_packsize= popdialog.findViewById(R.id.sp_packsize);
+
+                            add_product_name= popdialog.findViewById(R.id.add_product_name);
+                            sku_code= popdialog.findViewById(R.id.sku_code);
+                            item_code= popdialog.findViewById(R.id.item_code);
+                            price_per_case= popdialog.findViewById(R.id.price_per_Case);
+                            inc_vat= popdialog.findViewById(R.id.incl_vat);
+                            retail_price= popdialog.findViewById(R.id.retail_price);
+                            pro_discription= popdialog.findViewById(R.id.product_discription);
+                            btn_add_product= popdialog.findViewById(R.id.btn_add_product);
+
+                            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item, categotyNameList);
+                            arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                            sp_categoty.setAdapter(arrayAdapter);
+                            sp_categoty.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                @Override
+                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                    String Name = parent.getItemAtPosition(position).toString();
+
+                                    if(position>0){
+                                        SubCategoty();}
+
+                                }
+                                @Override
+                                public void onNothingSelected(AdapterView <?> parent) {
+                                }
+                            });
+
+                            additemClose.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    popdialog.dismiss();
+                                }
+                            });
+                            btn_add_product.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+
+
+                                    if (!UserAccount.isEmpty(add_product_name)){
+                                        add_product_name.setError("Please enter product name");
+                                        add_product_name.requestFocus();
+                                    }
+
+                                    else if (!UserAccount.isEmpty(sku_code)){
+                                        sku_code.setError("Please enter sku code");
+                                        sku_code.requestFocus();
+                                    }
+                                    else if (!UserAccount.isEmpty(item_code)){
+                                        item_code.setError("Please enter item code");
+                                        item_code.requestFocus();
+                                    }
+                                    else if (!UserAccount.isEmpty(price_per_case)){
+                                        price_per_case.setError("Please enter price per case");
+                                        price_per_case.requestFocus();
+                                    }
+                                    else if (!UserAccount.isEmpty(inc_vat)){
+                                        inc_vat.setError("Please enter factory price");
+                                        inc_vat.requestFocus();
+                                    }
+                                    else if (!UserAccount.isEmpty(retail_price)){
+                                        retail_price.setError("Please enter retail price");
+                                        retail_price.requestFocus();
+                                    }
+                                    else if (!UserAccount.isEmpty(pro_discription)){
+                                        pro_discription.setError("Please enter discription");
+                                        pro_discription.requestFocus();
+                                    }
+
+                                    else{
+                                        AddProduct();
+                                    }
+                                }
+                            });
+                            popdialog.show();
+
+                            /////
                         }
+
+                        else  if (R.id.menu_delete == id){}
+
                         return true;
                     }
                 });
@@ -133,3 +241,4 @@ public class BreakfastdaAdapter extends RecyclerView.Adapter<BreakfastdaAdapter.
         }
     }
 }
+*/

@@ -48,10 +48,8 @@ public class NewFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     RecyclerView rv_neworder;
     ArrayList<NewOderlist> newOderList;
-
     NewOrderAdapter newOrderAdapter;
 
     @Override
@@ -59,10 +57,8 @@ public class NewFragment extends Fragment {
                              Bundle savedInstanceState) {
              View root = inflater.inflate(R.layout.fragment_new, container, false);
              rv_neworder = root.findViewById(R.id.rv_new_order);
-
-        rv_neworder.setLayoutManager(new LinearLayoutManager(getActivity()));
-///////////////////
-        newOderList = new ArrayList<>();
+             rv_neworder.setLayoutManager(new LinearLayoutManager(getActivity()));
+             newOderList = new ArrayList<>();
 
         NewOderlist model = new NewOderlist();
         model.setItemCount("5 ");

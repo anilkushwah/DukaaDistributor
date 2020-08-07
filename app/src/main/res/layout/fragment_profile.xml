@@ -50,7 +50,7 @@
                     android:text="Profile"
                     android:fontFamily="@font/poppins_semibold"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_18sdp"
+                    android:textSize="@dimen/_16sdp"
                     />
 
                 <TextView
@@ -296,7 +296,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:id="@+id/lv_MyOrderGo_Id"
+            android:id="@+id/ll_products"
             android:orientation="horizontal"
             android:weightSum="2">
 
@@ -352,70 +352,12 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <ImageView
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="@dimen/_20sdp"
-                android:layout_weight="0.1"
-                android:src="@drawable/ic_profile_pay"/>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.8"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:paddingBottom="@dimen/_10sdp"
-                    android:paddingTop="@dimen/_10sdp"
-                    android:weightSum="3">
-
-                    <TextView
-                        android:textSize="@dimen/_12sdp"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2.9"
-                        android:text="Manage  Documents"
-                        android:fontFamily="@font/poppins"
-                        android:layout_marginLeft="@dimen/_5sdp"
-                        android:padding="@dimen/_5sdp"/>
-
-                    <ImageView
-                        android:layout_width="@dimen/_25sdp"
-                        android:layout_height="@dimen/_25sdp"
-                        android:layout_weight="0.1"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_chevron_grey_right"/>
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginRight="@dimen/_15sdp"
-                    android:layout_marginLeft="@dimen/_15sdp"
-                    android:background="#DDDDDD"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:id="@+id/lv_manage_addressGo_Id"
+            android:id="@+id/ll_statics"
             android:orientation="horizontal"
             android:weightSum="2">
 
@@ -471,65 +413,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:id="@+id/lv_wishListGo_Id"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <ImageView
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="@dimen/_20sdp"
-                android:layout_weight="0.1"
-                android:src="@drawable/ic_profile_wishlist"/>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.8"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:paddingBottom="@dimen/_10sdp"
-                    android:paddingTop="@dimen/_10sdp"
-                    android:weightSum="3">
-
-                    <TextView
-                        android:textSize="@dimen/_12sdp"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2.9"
-                        android:text="Store Settings"
-                        android:fontFamily="@font/poppins"
-                        android:layout_marginLeft="@dimen/_5sdp"
-                        android:padding="@dimen/_5sdp"/>
-
-                    <ImageView
-                        android:layout_width="@dimen/_25sdp"
-                        android:layout_height="@dimen/_25sdp"
-                        android:layout_weight="0.1"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_chevron_grey_right"/>
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginRight="@dimen/_15sdp"
-                    android:layout_marginLeft="@dimen/_15sdp"
-                    android:background="#DDDDDD"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -590,64 +473,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <ImageView
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="@dimen/_20sdp"
-                android:layout_weight="0.1"
-                android:src="@drawable/ic_proilfe_refer"/>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.8"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:paddingBottom="@dimen/_10sdp"
-                    android:paddingTop="@dimen/_10sdp"
-                    android:weightSum="3">
-
-                    <TextView
-                        android:textSize="@dimen/_12sdp"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2.9"
-                        android:text="Set Store Details"
-                        android:fontFamily="@font/poppins"
-                        android:layout_marginLeft="@dimen/_5sdp"
-                        android:padding="@dimen/_5sdp"/>
-
-                    <ImageView
-                        android:layout_width="@dimen/_25sdp"
-                        android:layout_height="@dimen/_25sdp"
-                        android:layout_weight="0.1"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_chevron_grey_right"/>
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginRight="@dimen/_15sdp"
-                    android:layout_marginLeft="@dimen/_15sdp"
-                    android:background="#DDDDDD"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ll_setbusiness_hours"
@@ -794,6 +619,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:id="@+id/ll_per_info"
             android:orientation="horizontal"
             android:weightSum="2">
 

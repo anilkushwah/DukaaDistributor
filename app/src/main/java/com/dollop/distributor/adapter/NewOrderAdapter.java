@@ -3,6 +3,7 @@ package com.dollop.distributor.adapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,7 +70,9 @@ public class NewOrderAdapter extends RecyclerView.Adapter<NewOrderAdapter.MyView
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Utils.I(context, NewOrderActivity.class,null);
+                Bundle bundle=new Bundle();
+                bundle.putString("order_status","not complete");
+                Utils.I(context, NewOrderActivity.class,bundle);
             }
         });
 

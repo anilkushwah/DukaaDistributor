@@ -137,6 +137,7 @@
                     android:text="28 jun 2020,10:29 AM"/>
 
                 <TextView
+                    android:id="@+id/tv_view_details"
                     android:gravity="right"
                     android:layout_weight="0.5"
                     android:textSize="@dimen/_12sdp"

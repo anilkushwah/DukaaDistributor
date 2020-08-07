@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
@@ -19,7 +20,7 @@ import com.dollop.distributor.model.ShoworderModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NewOrderActivity extends AppCompatActivity {
+public class NewOrderActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     RecyclerView All_Complains_recyclerviewId;
@@ -27,6 +28,8 @@ public class NewOrderActivity extends AppCompatActivity {
     ImageView order_back;
     TextView pastorder;
     TextView order_accept,order_decline;
+    String order_status;
+    LinearLayout ll_set_order,ll_order_complete;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -36,28 +39,57 @@ public class NewOrderActivity extends AppCompatActivity {
 
         //getWindow().setStatusBarColor(getResources().getColor(R.color.white, this.getTheme()));
 
+        ll_set_order = findViewById(R.id.ll_set_order);
+        ll_order_complete = findViewById(R.id.ll_order_complete);
         order_decline = findViewById(R.id.order_decline);
         pastorder = findViewById(R.id.tv_pastorder);
         order_accept = findViewById(R.id.order_accept);
         order_back = findViewById(R.id.order_back);
         All_Complains_recyclerviewId = findViewById(R.id.All_Complains_recyclerviewId);
 
-        order_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        order_status = (String) getIntent().getExtras().getString("order_status");
 
-        order_decline.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        if(order_status.equals("complete")){
+            ll_set_order.setVisibility(View.GONE);
+            ll_order_complete.setVisibility(View.VISIBLE);
+        }
 
+
+        ll_order_complete.setOnClickListener(this);
+        order_back.setOnClickListener(this);
+        order_decline.setOnClickListener(this);
+        order_accept.setOnClickListener(this);
+        pastorder.setOnClickListener(this);
+
+
+
+        list();
+
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        if(v==ll_order_complete){
+            finish();
+        }
+        else if(v==order_back){
+            finish();
+        }
+        else if(v==order_decline){
+            finish();
+        }else if(v==order_accept){
+            Intent intent  = new Intent(NewOrderActivity.this,StatusordershowActivity.class);
+            startActivity(intent);
+        }else if(v==pastorder){
+            Intent intent  = new Intent(NewOrderActivity.this,DeliveryCompletedActivity.class);
+            startActivity(intent);
+        }
+    }
+
+
+    private void list() {
         ShoworderModel modal = new ShoworderModel();
-
         modal.setAmount("60.00");
         modal.setName("Apple");
         modal.setItemquantity("(1kg)");
@@ -108,24 +140,6 @@ public class NewOrderActivity extends AppCompatActivity {
         All_Complains_recyclerviewId.setLayoutManager(new LinearLayoutManager(NewOrderActivity.this, RecyclerView.VERTICAL, false));
         ShowOrderAdapter showAdapter = new ShowOrderAdapter(NewOrderActivity.this, showModelList);
         All_Complains_recyclerviewId.setAdapter(showAdapter);
-
-        order_accept.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent  = new Intent(NewOrderActivity.this,StatusordershowActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        pastorder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent  = new Intent(NewOrderActivity.this,DeliveryCompletedActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-
     }
+
 }

@@ -20,7 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.AssignOrderDetailsActivity"></activity>
+        <activity android:name=".Activity.PersonalDeatilsActivity"></activity>
+        <activity android:name=".Activity.StockQuantityActivity" />
+        <activity android:name=".Activity.AssignOrderDetailsActivity" />
         <activity android:name=".Activity.OrderDetilsBackActivity" />
         <activity android:name=".Activity.TrackingActivity" />
         <activity android:name=".Activity.AssignActivity" />
@@ -69,12 +71,13 @@
             android:name=".LoginActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan" />
+
         <activity
             android:name=".HomeActivity"
-            android:label="@string/title_activity_home" />
+            android:label="@string/title_activity_home"/>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
