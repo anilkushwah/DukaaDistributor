@@ -44,7 +44,7 @@ public class NewOrderAdapter extends RecyclerView.Adapter<NewOrderAdapter.MyView
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         NewOderlist  current  = newOderlists.get(position);
 
-        holder.o_amount.setText(current.getTotal_amount());
+       holder.o_amount.setText(current.getTotal_amount());
         holder.gen_order_id.setText(current.getGen_order_id());
         holder.o_item.setText(current.getItemCount() + "Items");
         holder.tv_agencyname.setText(current.getAgencyname());

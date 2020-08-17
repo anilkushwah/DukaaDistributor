@@ -126,10 +126,10 @@
                 app:cursorWidth="@dimen/_2sdp"
                 app:hideLineWhenFilled="false"
                 app:itemCount="6"
-                app:itemHeight="@dimen/_30sdp"
+                app:itemHeight="@dimen/_35sdp"
                 app:itemRadius="@dimen/_4sdp"
                 app:itemSpacing="@dimen/_10sdp"
-                app:itemWidth="@dimen/_30sdp"
+                app:itemWidth="@dimen/_35sdp"
                 app:lineColor="#DDDDDD"
                 app:lineWidth="@dimen/_2sdp"
                 app:viewType="none" />

@@ -206,6 +206,14 @@
 
                     </LinearLayout>
 
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
                     <TextView
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_width="match_parent"
@@ -247,6 +255,7 @@
 
                     </LinearLayout>
 
+                </LinearLayout>
 
 
                     <LinearLayout

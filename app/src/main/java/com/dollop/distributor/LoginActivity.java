@@ -76,14 +76,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 et_login_mobile_number.setError("Please enter 10 digit mobile number");
                 et_login_mobile_number.requestFocus();
             }
-            else if (!UserAccount.isEmpty(et_login_password)){
+          /*  else if (!UserAccount.isEmpty(et_login_password)){
                 et_login_password.setError("Please enter password");
                 et_login_password.requestFocus();
-            }
+            }*/
             else {
-            //    Login();
-                Intent intent = new Intent(LoginActivity.this,LocationActivity.class);
-                startActivity(intent);
+                Login();
+              //  Intent intent = new Intent(LoginActivity.this,LocationActivity.class);
+               // startActivity(intent);
             }
            /* Intent intent = new Intent(LoginActivity.this,OtpSendActivity.class);
             startActivity(intent);*/
@@ -145,9 +145,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                             Utils.E("otpdata:-"+otpdata);
 
-                            Intent intent = new Intent(LoginActivity.this,OtpSendActivity.class);
+                          /*  Intent intent = new Intent(LoginActivity.this,OtpSendActivity.class);
                             intent.putExtra("otp",otpdata.toString());
                             intent.putExtra("mobile",et_login_mobile_number.getText().toString());
+                            startActivity(intent);*/
+                            Intent intent = new Intent(LoginActivity.this,LocationActivity.class);
                             startActivity(intent);
                         }
 

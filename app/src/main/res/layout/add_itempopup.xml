@@ -555,6 +555,10 @@
                     android:weightSum="1"
                     >
                     <TextView
+                        android:layout_gravity="center"
+                        android:id="@+id/upload_product"
+                        android:maxLines="1"
+                        android:ellipsize="end"
                         android:drawablePadding="@dimen/_10sdp"
                         style="@style/normalFont"
                         android:layout_width="0dp"

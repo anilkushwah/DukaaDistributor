@@ -1,10 +1,18 @@
 package com.dollop.distributor.Fragment;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.Dialog;
+import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -14,6 +22,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -49,6 +58,7 @@ import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.Const;
 import com.dollop.distributor.UtilityTools.UserAccount;
 import com.dollop.distributor.UtilityTools.Utils;
+import com.dollop.distributor.UtilityTools.multipart.VolleyMultipartRequest;
 import com.dollop.distributor.model.AddProduct_model;
 import com.dollop.distributor.model.SubCategoty_model;
 import com.dollop.distributor.model.breakfastdaModel;
@@ -57,6 +67,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -65,6 +79,19 @@ import java.util.Map;
 
 public class BreakfastDaFragment extends Fragment {
 
+    private static final int GALLERY =123 ;
+    private String fileTimeStr_business = "",fileTimeStr_kra_pin ="",fileTimeStr_id_proof="";
+    private byte[] inputDatabusiness_permit,inputDatakra_pin,inputDataid_proof;
+    private String mimeType_business,mimeType_kra_pin,mimeType_id_proof;
+    private ImageView Image_business_permit,Image_kra_pin,Image_id_proof;
+    Boolean flag = false;
+
+
+    private static final int PICK_business_permit = 100 ;
+    private static final int PICK_kra_pin = 200 ;
+    private static final int PICK_id_proof = 300 ;
+    Uri imageUri = null;
+    Bitmap photo;
     public BreakfastDaFragment() {
         // Required empty public constructor
     }
@@ -79,6 +106,7 @@ public class BreakfastDaFragment extends Fragment {
     EditText add_product_name,sku_code,item_code,price_per_case,inc_vat,retail_price,pro_discription;
     Spinner sp_categoty,sp_sub_category,sp_unit_per_case,sp_total_unit,sp_packsize;
     Button btn_add_product;
+    TextView upload_product;
 
     ArrayList<String> categotyNameList = new ArrayList<>();
     ArrayList<String> SubcategotyNameList = new ArrayList<>();
@@ -120,6 +148,7 @@ public class BreakfastDaFragment extends Fragment {
                 sp_unit_per_case= popdialog.findViewById(R.id.sp_unit_per_case);
                 sp_total_unit= popdialog.findViewById(R.id.sp_total_unit);
                 sp_packsize= popdialog.findViewById(R.id.sp_packsize);
+                upload_product= popdialog.findViewById(R.id.upload_product);
 
                 add_product_name= popdialog.findViewById(R.id.add_product_name);
                 sku_code= popdialog.findViewById(R.id.sku_code);
@@ -144,6 +173,14 @@ public class BreakfastDaFragment extends Fragment {
                     }
                     @Override
                     public void onNothingSelected(AdapterView <?> parent) {
+                    }
+                });
+
+                upload_product.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent=  getFileChooserIntent();
+                        startActivityForResult(intent,GALLERY);
                     }
                 });
 
@@ -199,103 +236,6 @@ public class BreakfastDaFragment extends Fragment {
 
         return root;
     }
-
-
-
-        private void AddProduct() {
-            {
-                final Dialog dialog = Utils.initProgressDialog(getActivity());
-                RequestQueue queue = Volley.newRequestQueue(getActivity());
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, Const.URL.add_product, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        dialog.dismiss();
-
-                        Utils.E("distributer add product:-" +"add product:--" + response);
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-
-                            Toast.makeText(getActivity(),jsonObject.getString("message"),Toast.LENGTH_LONG).show();
-
-                            if (jsonObject.getInt("status")==200) {
-
-                                Utils.E("add product Response:-"+jsonObject);
-                                String item = jsonObject.getString("data");
-                             }
-
-                        } catch (JSONException e) {
-                            dialog.dismiss();
-
-                            e.printStackTrace();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        dialog.dismiss();
-
-                        NetworkResponse networkResponse = error.networkResponse;
-
-                        String errorMessage = "Unknown error";
-                        if (networkResponse == null) {
-                            if (error.getClass().equals(TimeoutError.class)) {
-                                errorMessage = "Request timeout";
-                                Utils.T(getActivity(), errorMessage + "please check Internet connection");
-                            } else if (error.getClass().equals(NoConnectionError.class)) {
-                                errorMessage = "Failed to connect server";
-                            }
-                        } else {
-                            String result = new String(networkResponse.data);
-                            try {
-                                JSONObject response = new JSONObject(result);
-                                String status = response.getString("status");
-                                String message = response.getString("message");
-                                Log.e("Error Status", status);
-                                Log.e("Error Message", message);
-                                if (networkResponse.statusCode == 404) {
-                                    errorMessage = "Resource not found";
-                                } else if (networkResponse.statusCode == 401) {
-                                    errorMessage = message + " Please login again";
-                                } else if (networkResponse.statusCode == 400) {
-                                    errorMessage = message + " Check your inputs";
-                                } else if (networkResponse.statusCode == 500) {
-                                    errorMessage = message + " Something is getting wrong";
-                                }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    }
-                }) {
-
-                    @Override
-                    protected Map<String, String> getParams() throws AuthFailureError {
-                        HashMap<String, String> addproductParam = new HashMap<>();
-                         addproductParam.put("distributor_id","1");
-                         addproductParam.put("category_id","1");
-                         addproductParam.put("sub_category_id","1");
-                         addproductParam.put("product_name",add_product_name.getText().toString());
-                         addproductParam.put("unit_per_case",sp_unit_per_case.getSelectedItem().toString());
-                         addproductParam.put("total_unit",sp_total_unit.getSelectedItem().toString());
-                         addproductParam.put("item_sku_code",sku_code.getText().toString());
-                         addproductParam.put("item_code",item_code.getText().toString());
-                         addproductParam.put("pack_size",sp_packsize.getSelectedItem().toString());
-                         addproductParam.put("price_per_case",price_per_case.getText().toString());
-                         addproductParam.put("factory_price",inc_vat.getText().toString());
-                         addproductParam.put("rec_retail_price",retail_price.getText().toString());
-                         addproductParam.put("description",pro_discription.getText().toString());
-
-                        Log.e("Add ProductParam::", "paramAddproduct:--" + addproductParam);
-                        return addproductParam;
-                    }
-                };
-                stringRequest.setRetryPolicy(new DefaultRetryPolicy(
-                        25000,
-                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-                queue.add(stringRequest);
-            }
-        }
 
 
 
@@ -600,6 +540,91 @@ public class BreakfastDaFragment extends Fragment {
         rv_breakfast.setAdapter(breakfastdaAdapter);
     }
 
+    private Intent getFileChooserIntent() {
+        String[] mimeTypes = {"image/*", "application/pdf", "video/*"};
+
+        Intent intentbusiness = new Intent(Intent.ACTION_GET_CONTENT);
+        intentbusiness.addCategory(Intent.CATEGORY_OPENABLE);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            intentbusiness.setType(mimeTypes.length == 1 ? mimeTypes[0] : "*/*");
+            if (mimeTypes.length > 0) {
+                intentbusiness.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
+            }
+        } else {
+            String mimeTypesStr = "";
+
+            for (String mimeType : mimeTypes) {
+                mimeTypesStr += mimeType + "|";
+            }
+
+            intentbusiness.setType(mimeTypesStr.substring(0, mimeTypesStr.length() - 1));
+        }
+
+        return intentbusiness;
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == GALLERY && resultCode == Activity.RESULT_OK  && data != null){
+
+            Uri ImageFileUri = data.getData();
+            String path = "";
+            Uri uri = data.getData();
+            File file = new File(uri.getPath());//create path from uri
+            final String[] split = file.getPath().split(":");//split the path.
+            Log.e("docu01", "inent:01" + uri.getPath());
+            ContentResolver cR = getActivity().getContentResolver();
+            MimeTypeMap mime = MimeTypeMap.getSingleton();
+            mimeType_business = mime.getExtensionFromMimeType(cR.getType(uri));
+            Log.e("mimeType", "mimeType" + mimeType_business);
+
+           // Image_business_permit.setImageURI(ImageFileUri);
+            fileTimeStr_business = System.currentTimeMillis() + "image." + mimeType_business;
+            upload_product.setText(fileTimeStr_business);
+            upload_product.setTextSize(8);
+            flag = true;
+
+            try {
+                InputStream iStream = getActivity().getContentResolver().openInputStream(ImageFileUri);
+                inputDatabusiness_permit = getBytes(iStream);
+                Log.e("inputData", "if(inputData=" + inputDatabusiness_permit);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+    }
+
+
+
+
+    public static byte[] getFileDataFromDrawable(Context context, Drawable drawable) {
+        Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 80, byteArrayOutputStream);
+        return byteArrayOutputStream.toByteArray();
+    }
+
+
+
+
+
+    public byte[] getBytes(InputStream inputStream) throws IOException {
+        ByteArrayOutputStream byteBuffer = new ByteArrayOutputStream();
+        int bufferSize = 1024;
+        byte[] buffer = new byte[bufferSize];
+
+        int len = 0;
+        while ((len = inputStream.read(buffer)) != -1) {
+            byteBuffer.write(buffer, 0, len);
+        }
+        return byteBuffer.toByteArray();
+    }
 
 
     public class BreakfastdaAdapter extends RecyclerView.Adapter<BreakfastdaAdapter.MyViewHolder> {
@@ -807,6 +832,102 @@ public class BreakfastDaFragment extends Fragment {
                 bf_amount = itemView.findViewById(R.id.bf_amount);
                 bf_menu = itemView.findViewById(R.id.bf_menu);
             }
+        }
+    }
+
+
+    private void AddProduct() {
+        {
+            final Dialog dialog = Utils.initProgressDialog(getActivity());
+            RequestQueue queue = Volley.newRequestQueue(getActivity());
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, Const.URL.add_product, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    dialog.dismiss();
+
+                    Utils.E("distributer add product:-" +"add product:--" + response);
+                    try {
+                        JSONObject jsonObject = new JSONObject(response);
+
+                        Toast.makeText(getActivity(),jsonObject.getString("message"),Toast.LENGTH_LONG).show();
+
+                        if (jsonObject.getInt("status")==200) {
+
+                            Utils.E("add product Response:-"+jsonObject);
+                            String item = jsonObject.getString("data");
+                        }
+
+                    } catch (JSONException e) {
+                        dialog.dismiss();
+
+                        e.printStackTrace();
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    dialog.dismiss();
+
+                    NetworkResponse networkResponse = error.networkResponse;
+
+                    String errorMessage = "Unknown error";
+                    if (networkResponse == null) {
+                        if (error.getClass().equals(TimeoutError.class)) {
+                            errorMessage = "Request timeout";
+                            Utils.T(getActivity(), errorMessage + "please check Internet connection");
+                        } else if (error.getClass().equals(NoConnectionError.class)) {
+                            errorMessage = "Failed to connect server";
+                        }
+                    } else {
+                        String result = new String(networkResponse.data);
+                        try {
+                            JSONObject response = new JSONObject(result);
+                            String status = response.getString("status");
+                            String message = response.getString("message");
+                            Log.e("Error Status", status);
+                            Log.e("Error Message", message);
+                            if (networkResponse.statusCode == 404) {
+                                errorMessage = "Resource not found";
+                            } else if (networkResponse.statusCode == 401) {
+                                errorMessage = message + " Please login again";
+                            } else if (networkResponse.statusCode == 400) {
+                                errorMessage = message + " Check your inputs";
+                            } else if (networkResponse.statusCode == 500) {
+                                errorMessage = message + " Something is getting wrong";
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }) {
+
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    HashMap<String, String> addproductParam = new HashMap<>();
+                    addproductParam.put("distributor_id","1");
+                    addproductParam.put("category_id","1");
+                    addproductParam.put("sub_category_id","1");
+                    addproductParam.put("product_name",add_product_name.getText().toString());
+                    addproductParam.put("unit_per_case",sp_unit_per_case.getSelectedItem().toString());
+                    addproductParam.put("total_unit",sp_total_unit.getSelectedItem().toString());
+                    addproductParam.put("item_sku_code",sku_code.getText().toString());
+                    addproductParam.put("item_code",item_code.getText().toString());
+                    addproductParam.put("pack_size",sp_packsize.getSelectedItem().toString());
+                    addproductParam.put("price_per_case",price_per_case.getText().toString());
+                    addproductParam.put("factory_price",inc_vat.getText().toString());
+                    addproductParam.put("rec_retail_price",retail_price.getText().toString());
+                    addproductParam.put("description",pro_discription.getText().toString());
+
+                    Log.e("Add ProductParam::", "paramAddproduct:--" + addproductParam);
+                    return addproductParam;
+                }
+            };
+            stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                    25000,
+                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+            queue.add(stringRequest);
         }
     }
 

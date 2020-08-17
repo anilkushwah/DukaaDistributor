@@ -17,12 +17,14 @@ import android.view.WindowManager;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+
 
 import com.anychart.AnyChart;
 import com.anychart.AnyChartView;
@@ -34,39 +36,31 @@ import com.anychart.enums.Anchor;
 import com.anychart.enums.HoverMode;
 import com.anychart.enums.Position;
 import com.anychart.enums.TooltipPositionMode;
-import com.dollop.distributor.Activity.DemoBase;
 import com.dollop.distributor.Activity.StockQuantityActivity;
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.Utility;
 import com.dollop.distributor.UtilityTools.Utils;
-import com.github.mikephil.charting.charts.BarChart;
-import com.github.mikephil.charting.components.Legend;
-import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.data.BarData;
-import com.github.mikephil.charting.data.BarDataSet;
-import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.formatter.ValueFormatter;
-import com.github.mikephil.charting.highlight.Highlight;
-import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
-import com.github.mikephil.charting.interfaces.datasets.IDataSet;
-import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
-import com.github.mikephil.charting.utils.ColorTemplate;
-import com.github.mikephil.charting.utils.MPPointF;
+
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import me.ithebk.barchart.BarChart;
+import me.ithebk.barchart.BarChartModel;
+
 
 public class DashboardFragment extends Fragment  {
 
 
-    private static final int MAX_X_VALUE = 7;
+    private static final int MAX_X_VALUE = 5;
     private static final int MAX_Y_VALUE = 50;
     private static final int MIN_Y_VALUE = 5;
-    //private static final String SET_LABEL = "App Downloads";
-    private static final String[] DAYS = { "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT" };
-    private BarChart chart;
+    private static final String STACK_1_LABEL = "Stack 1";
+    private static final String STACK_2_LABEL = "Stack 2";
+    private static final String STACK_3_LABEL = "Stack 3";
+    private static final String SET_LABEL = "Set ABC";
+    //private BarChart chart;
 
     TextView tv_view_all;
 
@@ -80,121 +74,151 @@ public class DashboardFragment extends Fragment  {
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        chart = root.findViewById(R.id.fragment_verticalbarchart_chart);
-
-       // BarData data = createChartData();
-       // configureChartAppearance();
-      //  prepareChartData(data);
         tv_view_all = root.findViewById(R.id.tv_view_all);
         tv_view_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Utils.I(getContext(), StockQuantityActivity.class,null);
+                Utils.I(getContext(),StockQuantityActivity.class,null);
             }
         });
+//////////////////////
+        ////// -1-////
+  /*      BarChart chart = root.findViewById(R.id.barchart);
+        ArrayList NoOfEmp = new ArrayList();
+        NoOfEmp.add(new BarEntry(945f, 0));
+        NoOfEmp.add(new BarEntry(1040f, 1));
+        NoOfEmp.add(new BarEntry(1133f, 2));
+        NoOfEmp.add(new BarEntry(1240f, 3));
+        NoOfEmp.add(new BarEntry(1369f, 4));
+        NoOfEmp.add(new BarEntry(1487f, 5));
+        NoOfEmp.add(new BarEntry(1501f, 6));
 
 
+        ArrayList year = new ArrayList();
+        year.add("MON");
+        year.add("THE");
+        year.add("WED");
+        year.add("THU");
+        year.add("FRI");
+        year.add("SAT");
+        year.add("SUN");
+
+        BarDataSet bardataset = new BarDataSet(NoOfEmp, "");
+      //  chart.animateY(5000);
+        BarData data = new BarData( year, bardataset);
+     //   bardataset.setBarSpacePercent(3f);
+        bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
+        bardataset.setColors(ColorTemplate.createColors(new int[]{R.color.colorPrimaryDark}));
+        chart.setData(data);*/
+  ///////////
 
 
-        AnyChartView anyChartView = root.findViewById(R.id.any_chart_view);
-        anyChartView.setProgressBar(root.findViewById(R.id.progress_bar));
+        AnyChartView anyChartView = root.findViewById(R.id.any_chart);
+      //  anyChartView.setProgressBar(root.findViewById(R.id.progress_bar));
 
         Cartesian cartesian = AnyChart.column();
 
         List<DataEntry> data = new ArrayList<>();
-        data.add(new ValueDataEntry("Rouge", 80540));
-        data.add(new ValueDataEntry("Foundation", 94190));
-        data.add(new ValueDataEntry("Mascara", 102610));
-        data.add(new ValueDataEntry("Lip gloss", 110430));
-        data.add(new ValueDataEntry("Lipstick", 128000));
-        data.add(new ValueDataEntry("Nail polish", 143760));
-        data.add(new ValueDataEntry("Eyebrow pencil", 170670));
-        data.add(new ValueDataEntry("Eyeliner", 213210));
-        data.add(new ValueDataEntry("Eyeshadows", 249980));
+        data.add(new ValueDataEntry("MON", 110430));
+        data.add(new ValueDataEntry("TUE", 80540));
+        data.add(new ValueDataEntry("WED", 102610));
+        data.add(new ValueDataEntry("THU", 130430));
+        data.add(new ValueDataEntry("FRI", 1000));
+        data.add(new ValueDataEntry("SAT", 13760));
+        data.add(new ValueDataEntry("SUN", 102610));
 
         Column column = cartesian.column(data);
 
         column.tooltip()
-                .titleFormat("{%X}")
+                .titleFormat("{X}")
                 .position(Position.CENTER_BOTTOM)
                 .anchor(Anchor.CENTER_BOTTOM)
                 .offsetX(0d)
-                .offsetY(5d)
-                .format("${%Value}{groupsSeparator: }");
+                .offsetY(0d)
+    .format();
 
-        cartesian.animation(true);
-        cartesian.title("Top 10 Cosmetic Products by Revenue");
+                /*.format("${%Value}{groupsSeparator: }");*/
 
-        cartesian.yScale().minimum(0d);
+    //    cartesian.animation(true);
+       // cartesian.title("Top 10 Cosmetic Products by Revenue");
 
-        cartesian.yAxis(0).labels().format("${%Value}{groupsSeparator: }");
+       // cartesian.yScale().minimum(0d);
+/*        cartesian.yAxis(0).labels().format();*/
+       // cartesian.yAxis(0).labels().format("${%Value}{groupsSeparator: }");
 
         cartesian.tooltip().positionMode(TooltipPositionMode.POINT);
         cartesian.interactivity().hoverMode(HoverMode.BY_X);
 
-        cartesian.xAxis(0).title("Product");
-        cartesian.yAxis(0).title("Revenue");
+       // cartesian.xAxis(0).title("Product");
+      //  cartesian.yAxis(0).title("Revenue");
 
         anyChartView.setChart(cartesian);
+//////////
+
+
+/*        BarChart barChart = (BarChart) root.findViewById(R.id.bar_chart_vertical);
+        barChart.setBarMaxValue(100);
+
+
+        //Add single bar
+        BarChartModel barChartModel = new BarChartModel();
+        barChartModel.setBarValue(50);
+        barChartModel.setBarColor(Color.parseColor("#9C27B0"));
+        barChartModel.setBarTag(null); //You can set your own tag to bar model
+        barChartModel.setBarText("10");
+        barChart.addBar(barChartModel);
+
+
+
+        BarChartModel barChartModel1 = new BarChartModel();
+        barChartModel1.setBarValue(30);
+        barChartModel1.setBarColor(Color.parseColor("#9C27B0"));
+        barChartModel1.setBarTag(null); //You can set your own tag to bar model
+        barChartModel1.setBarText("20");
+        barChart.addBar(barChartModel1);
+
+        BarChartModel barChartModel2 = new BarChartModel();
+        barChartModel2.setBarValue(40);
+        barChartModel2.setBarColor(Color.parseColor("#9C27B0"));
+        barChartModel2.setBarTag(null); //You can set your own tag to bar model
+        barChartModel2.setBarText("30");
+        barChart.addBar(barChartModel2);
+
+        BarChartModel barChartModel3 = new BarChartModel();
+        barChartModel3.setBarValue(60);
+        barChartModel3.setBarColor(Color.parseColor("#9C27B0"));
+        barChartModel3.setBarTag(null); //You can set your own tag to bar model
+        barChartModel3.setBarText("40");
+        barChart.addBar(barChartModel3);
+
+        BarChartModel barChartModel4 = new BarChartModel();
+        barChartModel4.setBarValue(20);
+        barChartModel4.setBarColor(Color.parseColor("#9C27B0"));
+        barChartModel4.setBarTag(null); //You can set your own tag to bar model
+        barChartModel4.setBarText("50");
+        barChart.addBar(barChartModel4);
+
+        BarChartModel barChartModel5 = new BarChartModel();
+        barChartModel5.setBarValue(80);
+        barChartModel5.setBarColor(Color.parseColor("#9C27B0"));
+        barChartModel5.setBarTag(null); //You can set your own tag to bar model
+        barChartModel5.setBarText("60");
+        barChart.addBar(barChartModel5);
+
+
+        BarChartModel barChartModel6 = new BarChartModel();
+        barChartModel6.setBarValue(25);
+        barChartModel6.setBarColor(Color.parseColor("#9C27B0"));
+        barChartModel6.setBarTag(null); //You can set your own tag to bar model
+        barChartModel6.setBarText("70");
+        barChart.addBar(barChartModel6);*/
+
+
+
+
 
 
         return root;
     }
-
-
-
-
-
-
-    private void configureChartAppearance() {
-        chart.getDescription().setEnabled(false);
-        chart.setDrawValueAboveBar(false);
-
-        XAxis xAxis = chart.getXAxis();
-        xAxis.setValueFormatter(new ValueFormatter() {
-            @Override
-            public String getFormattedValue(float value) {
-                return DAYS[(int) value];
-            }
-        });
-
-        YAxis axisLeft = chart.getAxisLeft();
-        axisLeft.setGranularity(10f);
-        axisLeft.setAxisMinimum(0);
-
-        YAxis axisRight = chart.getAxisRight();
-        axisRight.setGranularity(10f);
-        axisRight.setAxisMinimum(0);
-    }
-
-    private BarData createChartData() {
-        ArrayList<BarEntry> values = new ArrayList<>();
-        for (int i = 0; i < MAX_X_VALUE; i++) {
-            float x = i;
-            //float y =new  Util().randomFloatBetween(MIN_Y_VALUE, MAX_Y_VALUE);
-            float y =MIN_Y_VALUE;
-
-            values.add(new BarEntry(x, y));
-        }
-        BarDataSet set1 = new BarDataSet(values, "");
-        ArrayList<IBarDataSet> dataSets = new ArrayList<>();
-        dataSets.add(set1);
-
-        BarData data = new BarData(dataSets);
-
-        return data;
-    }
-
-    private void prepareChartData(BarData data) {
-        data.setValueTextSize(12f);
-        chart.setData(data);
-        chart.invalidate();
-    }
-
-
-
-
-
-
 
 }

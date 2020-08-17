@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -259,9 +260,9 @@ public class SetTimingFragment extends AppCompatActivity   implements View.OnCli
         }
 
         else if(v== time_save){
-         //   EditText sone_open,sone_close,stwo_open,stwo_close,ssone_open,ssone_close,sstwo_open,sstwo_close;
+        //    EditText sone_open,sone_close,stwo_open,stwo_close,ssone_open,ssone_close,sstwo_open,sstwo_close;
 
-            /*if (sone_open.getText().equals("Select Time")){
+            if (sone_open.getText().equals("Select Time")){
                Utils.T(SetTimingFragment.this,"Please Select Slot-1 Open Time");
             } else if (sone_close.getText().equals("Select Time")){
                 Utils.T(SetTimingFragment.this,"Please Select Slot-1 Close Time");
@@ -286,9 +287,9 @@ public class SetTimingFragment extends AppCompatActivity   implements View.OnCli
             }
             else {
                 setTime();
-            }*/
-            Intent intent = new Intent(SetTimingFragment.this, HomeActivity.class);
-            startActivity(intent);
+            }
+           /* Intent intent = new Intent(SetTimingFragment.this, HomeActivity.class);
+            startActivity(intent);*/
         }
     }
 
@@ -367,12 +368,16 @@ public class SetTimingFragment extends AppCompatActivity   implements View.OnCli
                     HashMap<String, String> setTimeParam = new HashMap<>();
 
                     setTimeParam.put("distributor_id","1");
-                    setTimeParam.put("mon_sat_slot1",sone_open.getText().toString());
-                    setTimeParam.put("mon_sat_slot2",stwo_open.getText().toString());
-                    setTimeParam.put("sat_sun_slot1",ssone_open.getText().toString());
-                    setTimeParam.put("sat_sun_slot2",sstwo_open.getText().toString());
+                    setTimeParam.put("MF_slot1_start_time",sone_open.getText().toString());
+                    setTimeParam.put("MF_slot1_end_time",sone_close.getText().toString());
+                    setTimeParam.put("MF_slot2_start_time",stwo_open.getText().toString());
+                    setTimeParam.put("MF_slot2_end_time",stwo_close.getText().toString());
+                    setTimeParam.put("SS_slot1_start_time",ssone_open.getText().toString());
+                    setTimeParam.put("SS_slot1_end_time",ssone_close.getText().toString());
+                    setTimeParam.put("SS_slot2_start_time",sstwo_open.getText().toString());
+                    setTimeParam.put("SS_slot2_end_time",sstwo_close.getText().toString());
 
-                    Log.e("LoginParameter::", "paramLogin:--" + setTimeParam);
+                    Log.e("setTimeparam::", "All :--" + setTimeParam);
                     return setTimeParam;
                 }
             };
