@@ -27,6 +27,7 @@ import com.android.volley.toolbox.Volley;
 import com.chaos.view.PinView;
 import com.dollop.distributor.UtilityTools.Const;
 import com.dollop.distributor.UtilityTools.Utils;
+import com.dollop.distributor.model.UserDTO;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -37,8 +38,8 @@ import java.util.Map;
 public class OtpSendActivity extends AppCompatActivity implements View.OnClickListener {
     TextView btn_submit_otp;
     PinView firstPinView;
-    String mobile,data;
-    TextView tv_resend_Ot,tv_resend_otp_timer;
+    String mobile, data;
+    TextView tv_resend_Ot, tv_resend_otp_timer;
     CountDownTimer countDownTimer;
 
     LinearLayout lv_cound_down_timerForgot_Id;
@@ -55,9 +56,8 @@ public class OtpSendActivity extends AppCompatActivity implements View.OnClickLi
         btn_submit_otp.setOnClickListener(this);
         tv_resend_Ot.setOnClickListener(this);
 
-
-          data = getIntent().getExtras().getString("otp","");
-          mobile = getIntent().getExtras().getString("mobile","");
+        data = getIntent().getExtras().getString("otp", "");
+        mobile = getIntent().getExtras().getString("mobile", "");
 
         getTimer();
 
@@ -65,25 +65,21 @@ public class OtpSendActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        if (v == btn_submit_otp){
+        if (v == btn_submit_otp) {
             String otp = firstPinView.getText().toString();
-            if (otp.isEmpty()){
+            if (otp.isEmpty()) {
                 firstPinView.setError("Please Enter Otp");
                 firstPinView.requestFocus();
-            }else if (otp.length()!=6){
+            } else if (otp.length() != 6) {
                 firstPinView.setError("please enter 6 digit otp");
                 firstPinView.requestFocus();
-            }
-
-            else {
+            } else {
                 matchOtp();
-               // Intent intent = new Intent(OtpSendActivity.this,LocationActivity.class);
-              //  startActivity(intent);
+                // Intent intent = new Intent(OtpSendActivity.this,LocationActivity.class);
+                //  startActivity(intent);
             }
 
-        }
-
-        else if(v == tv_resend_Ot){
+        } else if (v == tv_resend_Ot) {
             lv_cound_down_timerForgot_Id.setVisibility(View.VISIBLE);
             tv_resend_Ot.setVisibility(View.GONE);
             getTimer();
@@ -104,13 +100,33 @@ public class OtpSendActivity extends AppCompatActivity implements View.OnClickLi
                     try {
                         JSONObject jsonObject = new JSONObject(response);
 
-                        Toast.makeText(OtpSendActivity.this,jsonObject.getString("message"),Toast.LENGTH_LONG).show();
+                        Toast.makeText(OtpSendActivity.this, jsonObject.getString("message"), Toast.LENGTH_LONG).show();
 
-                        if (jsonObject.getInt("status")==200) {
+                        if (jsonObject.getInt("status") == 200) {
+
+                                JSONObject data = jsonObject.getJSONObject("data");
+                                //  Utils.T(activity, message);
+                                UserDTO mUser = new UserDTO();
+/*
+
+                                mUser.set(data.getString("customer_id"));
+                                mUser.setCreatedDate(data.getString("created_date"));
+                                mUser.setEmail(data.getString("email"));
+                                mUser.setName(data.getString("name"));
+                                mUser.setPhone(data.getString("phone"));
+                                mUser.setPassword(data.getString("password"));
+                                mUser.setProfilePic(data.getString("profile_pic"));
+                                mUser.setStatus(data.getString("status"));
+                                mUser.setLogin_type(data.getString("login_type"));
+
+                                ((HomeActivity) getActivity()).sessionManager.setRegisterUser(mUser);
+*/
+
 
                             String otpdata = jsonObject.getString("data");
-                            Intent intent = new Intent(OtpSendActivity.this,LocationActivity.class);
-                              startActivity(intent);
+                            Intent intent = new Intent(OtpSendActivity.this, LocationActivity.class);
+                            startActivity(intent);
+                            finish();
                         }
 
                     } catch (JSONException e) {
@@ -161,9 +177,9 @@ public class OtpSendActivity extends AppCompatActivity implements View.OnClickLi
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
                     HashMap<String, String> stringStringHashMap = new HashMap<>();
-                    stringStringHashMap.put("mobile",mobile);
-                    stringStringHashMap.put("type","distributer");
-                    stringStringHashMap.put("otp",firstPinView.getText().toString());
+                    stringStringHashMap.put("mobile", mobile);
+                    stringStringHashMap.put("type", "distributor");
+                    stringStringHashMap.put("otp", firstPinView.getText().toString());
                     Log.e("LoginParameter::", "paramLogin:--" + stringStringHashMap);
                     return stringStringHashMap;
                 }
@@ -177,15 +193,16 @@ public class OtpSendActivity extends AppCompatActivity implements View.OnClickLi
     }
 
 
-    public void getTimer(){
-        Log.e("cgecch","::");
-        countDownTimer = new CountDownTimer(30000,1000) {
+    public void getTimer() {
+        Log.e("cgecch", "::");
+        countDownTimer = new CountDownTimer(30000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                tv_resend_otp_timer.setText((millisUntilFinished/30000)+":"+(millisUntilFinished%30000/1000)+" |");
+                tv_resend_otp_timer.setText((millisUntilFinished / 30000) + ":" + (millisUntilFinished % 30000 / 1000) + " |");
                 tv_resend_Ot.setVisibility(View.GONE);
 
             }
+
             @Override
             public void onFinish() {
                 lv_cound_down_timerForgot_Id.setVisibility(View.GONE);

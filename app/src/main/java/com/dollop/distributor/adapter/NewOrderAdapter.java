@@ -18,6 +18,7 @@ import com.dollop.distributor.Activity.NewOrderActivity;
 import com.dollop.distributor.Activity.ShowOrderActivity;
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.Utils;
+import com.dollop.distributor.model.AllOrderDTO;
 import com.dollop.distributor.model.NewOderlist;
 
 import java.util.ArrayList;
@@ -25,11 +26,11 @@ import java.util.List;
 
 public class NewOrderAdapter extends RecyclerView.Adapter<NewOrderAdapter.MyViewHolder> {
     Context context;
-    List<NewOderlist>  newOderlists ;
+    List<AllOrderDTO>  mAllOrderDTOArrayList ;
 
-    public NewOrderAdapter(Context context, List<NewOderlist> newOderlists) {
+    public NewOrderAdapter(Context context, List<AllOrderDTO> mList) {
         this.context = context;
-        this.newOderlists = newOderlists;
+        this.mAllOrderDTOArrayList = mList;
     }
 
     @NonNull
@@ -42,21 +43,21 @@ public class NewOrderAdapter extends RecyclerView.Adapter<NewOrderAdapter.MyView
     @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        NewOderlist  current  = newOderlists.get(position);
+        AllOrderDTO  mOrderDTO  = mAllOrderDTOArrayList.get(position);
 
-       holder.o_amount.setText(current.getTotal_amount());
-        holder.gen_order_id.setText(current.getGen_order_id());
-        holder.o_item.setText(current.getItemCount() + "Items");
-        holder.tv_agencyname.setText(current.getAgencyname());
-        holder.or_date.setText(current.getCreate_date());
+       holder.o_amount.setText(mOrderDTO.getTotalAmount(), TextView.BufferType.SPANNABLE);
+        holder.gen_order_id.setText(mOrderDTO.getGenOrderId());
+        holder.o_item.setText(mOrderDTO.getItemCount() + "  Items");
+        holder.tv_agencyname.setText(mOrderDTO.getName());
+        holder.or_date.setText(mOrderDTO.getCreateDate());
 
-        String status = current.getOrder_status().toString();
+        String status = mOrderDTO.getOrderStatus();
 
-        if(status.equals("Scheduled")){
+        if(status.equals("pending")){
           //  holder.ll_card_back.setBackgroundColor(R.color.colorPrimary);
             holder.ll_card_back.setBackgroundResource(R.drawable.schedule_back);
         }
-       else if(status.equals("Delivery")){
+       else if(status.equals("canceled")){
            // holder.ll_card_back.setBackgroundColor(R.color.colorRed);
             holder.ll_card_back.setBackgroundResource(R.drawable.deliverry_back);
            // holder.ll_card_back.setBackgroundColor(Color.parseColor("#ec1515"));
@@ -81,9 +82,8 @@ public class NewOrderAdapter extends RecyclerView.Adapter<NewOrderAdapter.MyView
 
     @Override
     public int getItemCount() {
-        return newOderlists.size();
+        return mAllOrderDTOArrayList.size();
     }
-
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

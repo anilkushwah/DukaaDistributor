@@ -36,7 +36,6 @@ public class AllItemFragment extends Fragment {
         ///getSupportFragmentManager
         alltabAdapter = new AllItemTabsAdapter(getChildFragmentManager(),tabLayout.getTabCount(),getActivity());
         allitemsviewPager.setAdapter(alltabAdapter);
-
         allitemsviewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
