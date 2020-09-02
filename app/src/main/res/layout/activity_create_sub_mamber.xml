@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorBody">
+
+    <androidx.appcompat.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:background="@drawable/lv_home_bck"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/sub_member_back"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:src="@drawable/ic_back_left"/>
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="Create sub Member"
+                    android:textFontWeight="700"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"
+                    />
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.90">
+
+            <androidx.core.widget.NestedScrollView
+                android:paddingBottom="@dimen/_20sdp"
+                android:layout_weight="0.9"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                >
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:weightSum="0.8"
+                   >
+
+                   <TextView
+                       android:layout_marginTop="@dimen/_5sdp"
+                       android:layout_marginLeft="@dimen/_5sdp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Enter Member details"
+                       android:fontFamily="@font/poppins"
+                       android:textSize="@dimen/_12sdp"
+                       />
+
+                   <LinearLayout
+                       android:layout_gravity="center"
+                       android:orientation="vertical"
+                       android:layout_width="@dimen/_90sdp"
+                       android:layout_height="@dimen/_70sdp"
+                       android:background="@drawable/upload_back_ragtangle"
+                       >
+
+                       <ImageView
+                           android:layout_gravity="center"
+                           android:layout_width="@dimen/_28sdp"
+                           android:layout_height="@dimen/_28sdp"
+                           android:src="@drawable/ic_camera"/>
+
+                       <TextView
+                           android:layout_marginTop="@dimen/_3sdp"
+                           android:gravity="center"
+                           android:textAlignment="center"
+                           android:textSize="@dimen/_10sdp"
+                           android:layout_gravity="center"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Upload Image\n(optional)"/>
+
+
+                   </LinearLayout>
+
+
+
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Full Name "
+                       android:fontFamily="@font/poppins"
+                       android:textStyle="bold"
+                       android:paddingLeft="@dimen/_5sdp"
+                       android:paddingTop="@dimen/_5sdp"
+                       android:paddingBottom="@dimen/_2sdp"
+                       android:paddingRight="@dimen/_5sdp"
+                       android:textSize="@dimen/_12sdp"
+                       android:layout_marginTop="@dimen/_10sdp"
+                       android:layout_marginLeft="@dimen/_5sdp"
+                       android:layout_marginRight="@dimen/_15sdp"/>
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:background="@drawable/et_edittext_bck"
+                       android:layout_marginLeft="@dimen/_5sdp"
+                       android:layout_marginRight="@dimen/_20sdp"
+                       android:gravity="center"
+                       android:orientation="horizontal">
+
+                       <EditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@null"
+                           android:gravity="center|left"
+                           android:inputType="text"
+                           android:textSize="@dimen/_13sdp"
+                           android:paddingLeft="@dimen/_10sdp"
+                           android:fontFamily="@font/poppins_light"
+                           android:hint=" Enter User Name"/>
+
+                   </LinearLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Mobile Number"
+                       android:fontFamily="@font/poppins"
+                       android:textStyle="bold"
+                       android:paddingLeft="@dimen/_5sdp"
+                       android:paddingTop="@dimen/_5sdp"
+                       android:paddingBottom="@dimen/_2sdp"
+                       android:paddingRight="@dimen/_5sdp"
+                       android:textSize="@dimen/_12sdp"
+                       android:layout_marginTop="@dimen/_10sdp"
+                       android:layout_marginLeft="@dimen/_5sdp"
+                       android:layout_marginRight="@dimen/_15sdp"/>
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:background="@drawable/et_edittext_bck"
+                       android:layout_marginLeft="@dimen/_5sdp"
+                       android:layout_marginRight="@dimen/_20sdp"
+                       android:gravity="center"
+                       android:orientation="horizontal">
+
+                       <EditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@null"
+                           android:gravity="center|left"
+                           android:inputType="phone"
+                           android:textSize="@dimen/_13sdp"
+                           android:ems="10"
+                           android:maxLength="10"
+                           android:paddingLeft="@dimen/_10sdp"
+                           android:fontFamily="@font/poppins_light"
+                           android:hint="Enter Mobile Number"/>
+
+                   </LinearLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Email-ID "
+                       android:fontFamily="@font/poppins"
+                       android:textStyle="bold"
+                       android:paddingLeft="@dimen/_5sdp"
+                       android:paddingTop="@dimen/_5sdp"
+                       android:paddingBottom="@dimen/_2sdp"
+                       android:paddingRight="@dimen/_5sdp"
+                       android:textSize="@dimen/_12sdp"
+                       android:layout_marginTop="@dimen/_10sdp"
+                       android:layout_marginLeft="@dimen/_5sdp"
+                       android:layout_marginRight="@dimen/_15sdp"/>
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:background="@drawable/et_edittext_bck"
+                       android:layout_marginLeft="@dimen/_5sdp"
+                       android:layout_marginRight="@dimen/_20sdp"
+                       android:gravity="center"
+                       android:orientation="horizontal">
+
+                       <EditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@null"
+                           android:gravity="center|left"
+                           android:inputType="textWebEmailAddress"
+                           android:textSize="@dimen/_13sdp"
+                           android:paddingLeft="@dimen/_10sdp"
+                           android:fontFamily="@font/poppins_light"
+                           android:hint="Enter Email-ID"/>
+
+                   </LinearLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Designation"
+                       android:fontFamily="@font/poppins"
+                       android:textStyle="bold"
+                       android:paddingLeft="@dimen/_5sdp"
+                       android:paddingTop="@dimen/_5sdp"
+                       android:paddingBottom="@dimen/_2sdp"
+                       android:paddingRight="@dimen/_5sdp"
+                       android:textSize="@dimen/_12sdp"
+                       android:layout_marginTop="@dimen/_10sdp"
+                       android:layout_marginLeft="@dimen/_5sdp"
+                       android:layout_marginRight="@dimen/_15sdp"/>
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:background="@drawable/et_edittext_bck"
+                       android:layout_marginLeft="@dimen/_5sdp"
+                       android:layout_marginRight="@dimen/_20sdp"
+                       android:gravity="center"
+                       android:orientation="horizontal">
+
+                       <EditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@null"
+                           android:gravity="center|left"
+                           android:inputType="text"
+                           android:textSize="@dimen/_13sdp"
+                           android:paddingLeft="@dimen/_10sdp"
+                           android:fontFamily="@font/poppins_light"
+                           android:hint="Select Designation"/>
+
+                   </LinearLayout>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Employee ID"
+                       android:fontFamily="@font/poppins"
+                       android:textStyle="bold"
+                       android:paddingLeft="@dimen/_5sdp"
+                       android:paddingTop="@dimen/_5sdp"
+                       android:paddingBottom="@dimen/_2sdp"
+                       android:paddingRight="@dimen/_5sdp"
+                       android:textSize="@dimen/_12sdp"
+                       android:layout_marginTop="@dimen/_10sdp"
+                       android:layout_marginLeft="@dimen/_5sdp"
+                       android:layout_marginRight="@dimen/_15sdp"/>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:background="@drawable/et_edittext_bck"
+                       android:layout_marginLeft="@dimen/_5sdp"
+                       android:layout_marginRight="@dimen/_20sdp"
+                       android:gravity="center"
+                       android:orientation="horizontal">
+
+                       <EditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@null"
+                           android:gravity="center|left"
+                           android:inputType="text"
+                           android:textSize="@dimen/_13sdp"
+                           android:paddingLeft="@dimen/_10sdp"
+                           android:fontFamily="@font/poppins_light"
+                           android:hint="Enter Employee ID"/>
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_marginTop="@dimen/_10sdp"
+                       android:layout_marginLeft="@dimen/_5sdp"
+                       android:layout_marginRight="@dimen/_5sdp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:weightSum="2"
+                       >
+
+
+                       <LinearLayout
+                           android:layout_marginLeft="@dimen/_5sdp"
+                           android:layout_marginRight="@dimen/_5sdp"
+                           android:layout_weight="1"
+                           android:padding="@dimen/_3sdp"
+                           android:background="@drawable/list_light_blue"
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal"
+                           android:weightSum="1"
+                           >
+
+                           <RadioButton
+                               android:layout_gravity="center"
+                               android:gravity="center"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               />
+                           <TextView
+                               android:layout_marginLeft="@dimen/_5sdp"
+                               android:layout_gravity="center"
+                               android:gravity="center"
+                               android:padding="@dimen/_2sdp"
+                               android:textSize="@dimen/_10sdp"
+                               android:lineSpacingExtra="@dimen/_3sdp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Full Access"/>
+
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_marginLeft="@dimen/_5sdp"
+                           android:layout_marginRight="@dimen/_5sdp"
+                           android:layout_weight="1"
+                           android:padding="@dimen/_3sdp"
+                           android:background="@drawable/list_light_blue"
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal"
+                           android:weightSum="1"
+                           >
+
+                           <RadioButton
+                               android:layout_gravity="center"
+                               android:gravity="center"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               />
+                           <TextView
+                               android:layout_marginLeft="@dimen/_5sdp"
+                               android:layout_gravity="center"
+                               android:gravity="center"
+                               android:padding="@dimen/_2sdp"
+                               android:textSize="@dimen/_10sdp"
+                               android:lineSpacingExtra="@dimen/_3sdp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Partial Access"/>
+
+                       </LinearLayout>
+
+                   </LinearLayout>
+
+
+               </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="0.10"
+            android:background="@drawable/curve_bg_login"
+            android:paddingBottom="@dimen/_10sdp"
+            >
+
+            <TextView
+                android:paddingTop="@dimen/_2sdp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:text="Add Members"
+                android:id="@+id/btn_update_profile"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/poppins_light"
+                android:textFontWeight="600"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

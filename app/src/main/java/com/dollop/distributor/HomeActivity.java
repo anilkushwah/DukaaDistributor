@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.dollop.distributor.database.UserDataHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
@@ -39,6 +40,8 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         NavigationUI.setupWithNavController(navView, navController);
 
         navView.setOnNavigationItemSelectedListener(this);
+
+
     }
 
     @Override

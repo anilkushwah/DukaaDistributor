@@ -55,7 +55,7 @@ public class UserDataHelper {
     private boolean isExist(UserModel userModel) {
         read();
         Cursor cur = db.rawQuery("select * from " + UserModel.TABLE_NAME + " where " + UserModel.KEY_ID + "='"
-                + userModel.getUserId() + "'", null);
+                + userModel.getKeyid() + "'", null);
         if (cur.moveToFirst()) {
             return true;
         }
@@ -65,26 +65,19 @@ public class UserDataHelper {
     public void insertData(UserModel userModel) {
         open();
         ContentValues values = new ContentValues();
-        values.put(UserModel.KEY_USER_ID, userModel.getUserId());
-        values.put(UserModel.KeyUserToken, userModel.getUserToken());
-        values.put(UserModel.KeyUserRole, userModel.getUserRole());
-        values.put(UserModel.KeyuserCompanyId, userModel.getUserCompanyId());
-
-        values.put(UserModel.FEEDBACK_CLEAN, userModel.getUserFeedback());
-
-        values.put(UserModel.KEY_USERNAME, userModel.getUserName());
-        values.put(UserModel.KEY_USERPHONE, userModel.getUserPhone());
-        values.put(UserModel.KEY_USERDOJ, userModel.getUserDoj());
-        values.put(UserModel.KEY_USER_Profile_PIC, userModel.getProfile_pic());
-
-
+        values.put(UserModel.KEY_ID, userModel.getKeyid());
+        values.put(UserModel.KEY_DISTRIBUTOR_ID, userModel.getDistributorId());
+        values.put(UserModel.KEY_EMAIL_ID, userModel.getEmail());
+        values.put(UserModel.KEY_IMAGE_ID, userModel.getImage());
+        values.put(UserModel.KEY_MOBILE_ID, userModel.getMobile());
+        values.put(UserModel.KEY_NAME_ID, userModel.getName());
 
         if (!isExist(userModel)) {
             Utils.E("insert successfully");
             db.insert(UserModel.TABLE_NAME, null, values);
         } else {
-            Utils.E("update successfully" + userModel.getUserId());
-            db.update(UserModel.TABLE_NAME, values, UserModel.KEY_ID + "=" + userModel.getUserId(), null);
+            Utils.E("update successfully" + userModel.getDistributorId());
+            db.update(UserModel.TABLE_NAME, values, UserModel.KEY_ID + "=" + userModel.getKeyid(), null);
         }
         close();
     }
@@ -97,19 +90,13 @@ public class UserDataHelper {
             cursor.moveToLast();
             do {
                 UserModel taxiModel = new UserModel();
-                taxiModel.setUserId(cursor.getString(cursor.getColumnIndex(UserModel.KEY_USER_ID)));
-                taxiModel.setUserToken(cursor.getString(cursor.getColumnIndex(UserModel.KeyUserToken)));
-                taxiModel.setUserRole(cursor.getString(cursor.getColumnIndex(UserModel.KeyUserRole)));
-                taxiModel.setUserCompanyId(cursor.getString(cursor.getColumnIndex(UserModel.KeyuserCompanyId)));
-                taxiModel.setUserFeedback(cursor.getString(cursor.getColumnIndex(UserModel.FEEDBACK_CLEAN)));
-
-                taxiModel.setUserName(cursor.getString(cursor.getColumnIndex(UserModel.KEY_USERNAME)));
-                taxiModel.setUserPhone(cursor.getString(cursor.getColumnIndex(UserModel.KEY_USERPHONE)));
-                taxiModel.setUserDoj(cursor.getString(cursor.getColumnIndex(UserModel.KEY_USERDOJ)));
-                taxiModel.setProfile_pic(cursor.getString(cursor.getColumnIndex(UserModel.KEY_USER_Profile_PIC)));
-
+                taxiModel.setKeyid(cursor.getString(cursor.getColumnIndex(UserModel.KEY_ID)));
+                taxiModel.setDistributorId(cursor.getString(cursor.getColumnIndex(UserModel.KEY_DISTRIBUTOR_ID)));
+                taxiModel.setEmail(cursor.getString(cursor.getColumnIndex(UserModel.KEY_EMAIL_ID)));
+                taxiModel.setMobile(cursor.getString(cursor.getColumnIndex(UserModel.KEY_MOBILE_ID)));
+                taxiModel.setImage(cursor.getString(cursor.getColumnIndex(UserModel.KEY_IMAGE_ID)));
+                taxiModel.setName(cursor.getString(cursor.getColumnIndex(UserModel.KEY_NAME_ID)));
                 userItem.add(taxiModel);
-
             } while ((cursor.moveToPrevious()));
             cursor.close();
         }

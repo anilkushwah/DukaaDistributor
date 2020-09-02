@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorBody"
-    android:layout_marginBottom="@dimen/_50sdp"
     >
 
 
@@ -49,7 +48,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Total Earning"
-                        android:textColor="#ffffff"
+                        android:textColor="@color/white"
                         android:textSize="@dimen/_14sdp"
                         />
                     <LinearLayout
@@ -67,6 +66,7 @@
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
                         style="@style/normalFont"
+                        android:layout_marginRight="@dimen/_5sdp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -145,12 +145,12 @@
                                 android:layout_height="wrap_content"
                                 android:text="Filter"
                                 android:textColor="@color/black"
-                                android:textSize="@dimen/_14sdp" />
+                            android:textSize="@dimen/_12sdp" />
 
                             <ImageView
                                 android:layout_gravity="center"
-                                android:layout_width="@dimen/_20sdp"
-                                android:layout_height="@dimen/_20sdp"
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
                                 android:src="@drawable/ic_web_black"/>
 
                         </LinearLayout>
@@ -186,6 +186,7 @@
                         android:textSize="@dimen/_12sdp" />
 
                     <TextView
+                        android:textSize="@dimen/_12sdp"
                         android:drawablePadding="@dimen/_10sdp"
                         android:drawableRight="@drawable/ic_refresh_small"
                         android:layout_width="0dp"

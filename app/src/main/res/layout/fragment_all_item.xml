@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorBody"
-    android:layout_marginBottom="@dimen/_50sdp"
     >
 
     <LinearLayout
@@ -22,7 +21,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_170sdp"
+                android:layout_height="@dimen/_150sdp"
                 android:background="@drawable/lv_home_bck">
 
                 <ImageView
@@ -55,8 +54,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="All Items"
-                            android:textColor="#ffffff"
-                            android:textSize="@dimen/_16sdp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sdp"
                             />
 
                         <LinearLayout
@@ -90,11 +89,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:padding="@dimen/_5sdp"
                         android:background="@drawable/order_tabback"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_30sdp"
                         >
 
                         <com.google.android.material.tabs.TabLayout
@@ -103,7 +101,7 @@
                             android:elevation="0dp"
                             android:layout_width="match_parent"
                             style="@style/MyCustomTextAppearance"
-                            app:tabIndicatorColor="#ffffff"
+                            app:tabIndicatorColor="@color/white"
                             app:tabIndicator="@drawable/tab_indicator"
                             app:tabIndicatorFullWidth="false"
                             app:tabTextAppearance="@style/CustomViewAllTab"

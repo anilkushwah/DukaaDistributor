@@ -45,7 +45,8 @@ public class SetTimingFragment extends AppCompatActivity   implements View.OnCli
 
     ImageView iv_set_back_arrow;
     TextView time_save;
-    TextView sone_open,sone_close,stwo_open,stwo_close,ssone_open,ssone_close,sstwo_open,sstwo_close;
+    TextView sone_open,sone_close,ssone_open,ssone_close;
+    //,stwo_open,stwo_close,,sstwo_open,sstwo_close;
     private int  mHour, mMinute;
 
 
@@ -60,24 +61,26 @@ public class SetTimingFragment extends AppCompatActivity   implements View.OnCli
 
         sone_open = findViewById(R.id.sone_open);
         sone_close = findViewById(R.id.sone_close);
-        stwo_open = findViewById(R.id.stwo_open);
-        stwo_close = findViewById(R.id.stwo_close);
+
         ssone_open = findViewById(R.id.ssone_open);
         ssone_close = findViewById(R.id.ssone_close);
+    /*    stwo_open = findViewById(R.id.stwo_open);
+        stwo_close = findViewById(R.id.stwo_close);
         sstwo_open = findViewById(R.id.sstwo_open);
-        sstwo_close = findViewById(R.id.sstwo_close);
+        sstwo_close = findViewById(R.id.sstwo_close);*/
 
 
 
         sone_open.setOnClickListener(this);
         sone_close.setOnClickListener(this);
-        stwo_open.setOnClickListener(this);
-        stwo_close.setOnClickListener(this);
+
 
         ssone_open.setOnClickListener(this);
         ssone_close.setOnClickListener(this);
+       /* stwo_open.setOnClickListener(this);
+        stwo_close.setOnClickListener(this);
         sstwo_open.setOnClickListener(this);
-        sstwo_close.setOnClickListener(this);
+        sstwo_close.setOnClickListener(this);*/
 
         iv_set_back_arrow.setOnClickListener(this);
         time_save.setOnClickListener(this);
@@ -132,7 +135,50 @@ public class SetTimingFragment extends AppCompatActivity   implements View.OnCli
             mTimePicker.setTitle("Select Time");
             mTimePicker.show();
         }
-       else if(v ==stwo_open){
+
+        else if(v ==ssone_open){
+            Calendar mcurrentTime = Calendar.getInstance();
+            int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+            int minute = mcurrentTime.get(Calendar.MINUTE);
+
+            TimePickerDialog mTimePicker;
+            mTimePicker = new TimePickerDialog(SetTimingFragment.this, new TimePickerDialog.OnTimeSetListener() {
+                @Override
+                public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+                    String AM_PM;
+                    if (selectedHour >=0 && selectedHour < 12){
+                        AM_PM = "AM";
+                    } else {
+                        AM_PM = "PM";
+                    }
+                    ssone_open.setText( selectedHour + ":" + selectedMinute+" "+AM_PM);
+                }
+            }, hour, minute, true);
+            mTimePicker.setTitle("Select Time");
+            mTimePicker.show();
+        }
+        else if(v ==ssone_close){
+            Calendar mcurrentTime = Calendar.getInstance();
+            int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+            int minute = mcurrentTime.get(Calendar.MINUTE);
+
+            TimePickerDialog mTimePicker;
+            mTimePicker = new TimePickerDialog(SetTimingFragment.this, new TimePickerDialog.OnTimeSetListener() {
+                @Override
+                public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+                    String AM_PM;
+                    if (selectedHour >=0 && selectedHour < 12){
+                        AM_PM = "AM";
+                    } else {
+                        AM_PM = "PM";
+                    }
+                    ssone_close.setText( selectedHour + ":" + selectedMinute+" "+AM_PM);
+                }
+            }, hour, minute, true);
+            mTimePicker.setTitle("Select Time");
+            mTimePicker.show();
+        }
+     /*  else if(v ==stwo_open){
             Calendar mcurrentTime = Calendar.getInstance();
             int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
             int minute = mcurrentTime.get(Calendar.MINUTE);
@@ -169,48 +215,6 @@ public class SetTimingFragment extends AppCompatActivity   implements View.OnCli
                         AM_PM = "PM";
                     }
                     stwo_close.setText( selectedHour + ":" + selectedMinute+" "+AM_PM);
-                }
-            }, hour, minute, true);
-            mTimePicker.setTitle("Select Time");
-            mTimePicker.show();
-        }
-       else if(v ==ssone_open){
-            Calendar mcurrentTime = Calendar.getInstance();
-            int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
-            int minute = mcurrentTime.get(Calendar.MINUTE);
-
-            TimePickerDialog mTimePicker;
-            mTimePicker = new TimePickerDialog(SetTimingFragment.this, new TimePickerDialog.OnTimeSetListener() {
-                @Override
-                public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                    String AM_PM;
-                    if (selectedHour >=0 && selectedHour < 12){
-                        AM_PM = "AM";
-                    } else {
-                        AM_PM = "PM";
-                    }
-                    ssone_open.setText( selectedHour + ":" + selectedMinute+" "+AM_PM);
-                }
-            }, hour, minute, true);
-            mTimePicker.setTitle("Select Time");
-            mTimePicker.show();
-        }
-       else if(v ==ssone_close){
-            Calendar mcurrentTime = Calendar.getInstance();
-            int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
-            int minute = mcurrentTime.get(Calendar.MINUTE);
-
-            TimePickerDialog mTimePicker;
-            mTimePicker = new TimePickerDialog(SetTimingFragment.this, new TimePickerDialog.OnTimeSetListener() {
-                @Override
-                public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                    String AM_PM;
-                    if (selectedHour >=0 && selectedHour < 12){
-                        AM_PM = "AM";
-                    } else {
-                        AM_PM = "PM";
-                    }
-                    ssone_close.setText( selectedHour + ":" + selectedMinute+" "+AM_PM);
                 }
             }, hour, minute, true);
             mTimePicker.setTitle("Select Time");
@@ -257,12 +261,15 @@ public class SetTimingFragment extends AppCompatActivity   implements View.OnCli
             }, hour, minute, true);
             mTimePicker.setTitle("Select Time");
             mTimePicker.show();
-        }
+        }*/
 
         else if(v== time_save){
+
+            Intent intent = new Intent(SetTimingFragment.this, HomeActivity.class);
+            startActivity(intent);
         //    EditText sone_open,sone_close,stwo_open,stwo_close,ssone_open,ssone_close,sstwo_open,sstwo_close;
 
-            if (sone_open.getText().equals("Select Time")){
+        /*    if (sone_open.getText().equals("Select Time")){
                Utils.T(SetTimingFragment.this,"Please Select Slot-1 Open Time");
             } else if (sone_close.getText().equals("Select Time")){
                 Utils.T(SetTimingFragment.this,"Please Select Slot-1 Close Time");
@@ -287,7 +294,7 @@ public class SetTimingFragment extends AppCompatActivity   implements View.OnCli
             }
             else {
                 setTime();
-            }
+            }*/
            /* Intent intent = new Intent(SetTimingFragment.this, HomeActivity.class);
             startActivity(intent);*/
         }
@@ -370,12 +377,12 @@ public class SetTimingFragment extends AppCompatActivity   implements View.OnCli
                     setTimeParam.put("distributor_id","1");
                     setTimeParam.put("MF_slot1_start_time",sone_open.getText().toString());
                     setTimeParam.put("MF_slot1_end_time",sone_close.getText().toString());
-                    setTimeParam.put("MF_slot2_start_time",stwo_open.getText().toString());
-                    setTimeParam.put("MF_slot2_end_time",stwo_close.getText().toString());
                     setTimeParam.put("SS_slot1_start_time",ssone_open.getText().toString());
                     setTimeParam.put("SS_slot1_end_time",ssone_close.getText().toString());
-                    setTimeParam.put("SS_slot2_start_time",sstwo_open.getText().toString());
+                  /*  setTimeParam.put("SS_slot2_start_time",sstwo_open.getText().toString());
                     setTimeParam.put("SS_slot2_end_time",sstwo_close.getText().toString());
+                    setTimeParam.put("MF_slot2_start_time",stwo_open.getText().toString());
+                    setTimeParam.put("MF_slot2_end_time",stwo_close.getText().toString());*/
 
                     Log.e("setTimeparam::", "All :--" + setTimeParam);
                     return setTimeParam;

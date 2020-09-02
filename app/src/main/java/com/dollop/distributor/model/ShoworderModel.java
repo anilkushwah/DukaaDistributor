@@ -1,58 +1,17 @@
 package com.dollop.distributor.model;
 
 public class ShoworderModel {
-
-
-    String name,orderprice,orderqty;
-    String itemquantity;
-    String amount;
-    int image;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getOrderprice() {
-        return orderprice;
-    }
-
-    public void setOrderprice(String orderprice) {
-        this.orderprice = orderprice;
-    }
-
-    public String getOrderqty() {
-        return orderqty;
-    }
-
-    public void setOrderqty(String orderqty) {
-        this.orderqty = orderqty;
-    }
-
-    public String getItemquantity() {
-        return itemquantity;
-    }
-
-    public void setItemquantity(String itemquantity) {
-        this.itemquantity = itemquantity;
-    }
-
-    public String getAmount() {
-        return amount;
-    }
-
-    public void setAmount(String amount) {
-        this.amount = amount;
-    }
-
-    public int getImage() {
-        return image;
-    }
-
-    public void setImage(int image) {
-        this.image = image;
-    }
+    public String id;
+    public String retailer_id;
+    public String order_id;
+    public String product_id;
+    public String product_qty;
+    public String product_amount;
+    public String total_amount;
+    public String discount_amount;
+    public String product_discounted_price;
+    public String create_date;
+    public String product_name;
+    public String pack_size;
+    public String product_image;
 }

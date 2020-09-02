@@ -39,11 +39,11 @@ public class AssignOrderdetailsAdapter extends RecyclerView.Adapter<AssignOrderd
 
         ShoworderModel showorderModel = showorderModels.get(position);
 
-        holder.TextView_Item_NameId.setText(showorderModel.getName());
+     /*   holder.TextView_Item_NameId.setText(showorderModel.getName());
         holder.TextView_Item_QuantityId.setText(showorderModel.getItemquantity());
         holder.TextView_Item_PriceId.setText(showorderModel.getAmount());
         holder.order_price.setText(showorderModel.getOrderprice());
-        holder.order_qty.setText(showorderModel.getOrderqty());
+        holder.order_qty.setText(showorderModel.getOrderqty());*/
 
     }
 

@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:background="@color/colorBody">
 
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,9 +16,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
-
-
-
 
     <androidx.appcompat.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -48,9 +44,10 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="@dimen/_4sdp"
                     android:text="Profile"
-                    android:fontFamily="@font/poppins_semibold"
+                    android:textFontWeight="600"
+                    android:fontFamily="@font/poppins"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_16sdp"
+                    android:textSize="@dimen/_14sdp"
                     />
 
                 <TextView
@@ -63,7 +60,8 @@
                     android:layout_marginRight="@dimen/_5sdp"
                     android:text="Logout"
                     android:fontFamily="@font/poppins_light"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
                     android:textSize="@dimen/_16sdp"
                       />
 
@@ -93,30 +91,21 @@
             android:weightSum="2">
 
 
-            <androidx.cardview.widget.CardView
-                android:layout_margin="@dimen/_16sdp"
-                android:id="@+id/parent_layout"
-                android:layout_width="@dimen/_60sdp"
-                android:layout_height="@dimen/_60sdp"
-                android:clipToPadding="true"
-                app:cardCornerRadius="@dimen/_10sdp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+               <com.dollop.distributor.Activity.RoundedCornerImageLayout
+                   android:layout_margin="@dimen/_16sdp"
+                   android:layout_width="@dimen/_60sdp"
+                   android:layout_height="@dimen/_60sdp"
+                   android:layout_gravity="center"
+                   >
 
+                   <ImageView
+                       android:scaleType="fitXY"
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/_60sdp"
+                       android:src="@drawable/client_03"/>
 
-                <ImageView
-                    android:id="@+id/tv_profileImage"
-                    android:scaleType="fitXY"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_60sdp"
-                    android:src="@drawable/client_03"/>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
+               </com.dollop.distributor.Activity.RoundedCornerImageLayout>
 
             <LinearLayout
                 android:layout_gravity="center"
@@ -131,7 +120,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Alax Carey"
-                    android:textSize="@dimen/_16sdp"
+                    android:textSize="@dimen/_12sdp"
                     android:textColor="@android:color/white"
                     android:fontFamily="@font/poppins"/>
 
@@ -164,7 +153,7 @@
                 android:padding="@dimen/_2sdp"
                 android:text="Edit Profile"
                 android:textColor="@color/colorBlue"
-                android:textSize="@dimen/_13sdp" />
+                android:textSize="@dimen/_12sdp" />
 
         </LinearLayout>
 
@@ -219,7 +208,7 @@
             android:layout_height="wrap_content"
             android:text="General Setting"
             style="@style/normalFont"
-            android:textSize="@dimen/_14sdp"
+            android:textSize="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_5sdp"
             android:padding="@dimen/_5sdp"
             android:layout_marginLeft="@dimen/_10sdp"
@@ -244,7 +233,7 @@
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
                 android:layout_weight="0.1"
-                android:src="@drawable/ic_profile_account"/>
+                android:src="@drawable/ic_history"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -262,6 +251,7 @@
                     android:weightSum="3">
 
                     <TextView
+                        android:textFontWeight="600"
                         android:textSize="@dimen/_12sdp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -304,7 +294,7 @@
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
                 android:layout_weight="0.1"
-                android:src="@drawable/ic_profile_order"/>
+                android:src="@drawable/ic_order_products"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -322,6 +312,7 @@
                     android:weightSum="3">
 
                     <TextView
+                        android:textFontWeight="600"
                         android:textSize="@dimen/_12sdp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -357,7 +348,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:id="@+id/ll_statics"
+            android:id="@+id/ll_managedoc"
             android:orientation="horizontal"
             android:weightSum="2">
 
@@ -365,7 +356,7 @@
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
                 android:layout_weight="0.1"
-                android:src="@drawable/ic_profile_address"/>
+                android:src="@drawable/ic_google_docs"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -383,6 +374,68 @@
                     android:weightSum="3">
 
                     <TextView
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.9"
+                        android:text="Manage Documents"
+                        android:fontFamily="@font/poppins"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:padding="@dimen/_5sdp"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_weight="0.1"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_chevron_grey_right"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:background="#DDDDDD"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/ll_statics"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight="0.1"
+                android:src="@drawable/ic_graph"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:textFontWeight="600"
                         android:textSize="@dimen/_12sdp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -475,7 +528,7 @@
 
 
         <LinearLayout
-            android:id="@+id/ll_setbusiness_hours"
+            android:id="@+id/ll_store_setting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -486,7 +539,7 @@
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
                 android:layout_weight="0.1"
-                android:src="@drawable/ic_profile_question"/>
+                android:src="@drawable/ic_store_setting"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -504,6 +557,129 @@
                     android:weightSum="3">
 
                     <TextView
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.9"
+                        android:text="Store Setting"
+                        android:fontFamily="@font/poppins"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:padding="@dimen/_5sdp"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_weight="0.1"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_chevron_grey_right"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:background="#DDDDDD"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_set_store_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight="0.1"
+                android:src="@drawable/ic_store_details"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.9"
+                        android:text="Set Store Details"
+                        android:fontFamily="@font/poppins"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:padding="@dimen/_5sdp"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_weight="0.1"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_chevron_grey_right"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:background="#DDDDDD"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_setbusiness_hours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight="0.1"
+                android:src="@drawable/ic_clock_blue"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:textFontWeight="600"
                         android:textSize="@dimen/_12sdp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -546,7 +722,7 @@
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
                 android:layout_weight="0.1"
-                android:src="@drawable/ic_profile_faq"/>
+                android:src="@drawable/ic_notifications_black_24dp"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -564,11 +740,65 @@
                     android:weightSum="3">
 
                     <TextView
+                        android:textFontWeight="600"
                         android:textSize="@dimen/_12sdp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2.9"
                         android:text="Notifications"
+                        android:fontFamily="@font/poppins"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:padding="@dimen/_5sdp"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_weight="0.1"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_chevron_grey_right"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_credit_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight="0.1"
+                android:src="@drawable/ic_setting"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.9"
+                        android:text="Credit Setting"
                         android:fontFamily="@font/poppins"
                         android:layout_marginLeft="@dimen/_5sdp"
                         android:padding="@dimen/_5sdp"/>
@@ -600,9 +830,100 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Members Setting"
+            style="@style/normalFont"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textColor="@color/grey_2"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="#dddddd"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/ll_manage_member"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_weight="0.1"
+                android:src="@drawable/ic_team"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.9"
+                        android:text="Manage Members"
+                        android:fontFamily="@font/poppins"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:padding="@dimen/_5sdp"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_weight="0.1"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_chevron_grey_right"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:background="#DDDDDD"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Account Setting"
             style="@style/normalFont"
-            android:textSize="@dimen/_14sdp"
+            android:textSize="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_5sdp"
             android:padding="@dimen/_5sdp"
             android:layout_marginLeft="@dimen/_10sdp"
@@ -627,7 +948,7 @@
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
                 android:layout_weight="0.1"
-                android:src="@drawable/ic_profile_account"/>
+                android:src="@drawable/ic_user_blue"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -645,6 +966,7 @@
                     android:weightSum="3">
 
                     <TextView
+                        android:textFontWeight="600"
                         android:textSize="@dimen/_12sdp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -687,7 +1009,7 @@
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
                     android:layout_weight="0.1"
-                    android:src="@drawable/ic_profile_account"/>
+                    android:src="@drawable/ic_lock"/>
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -705,6 +1027,7 @@
                         android:weightSum="3">
 
                         <TextView
+                            android:textFontWeight="600"
                             android:textSize="@dimen/_12sdp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -737,7 +1060,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:background="@color/white"
-            android:paddingBottom="@dimen/_55sdp"
+
             >
 
             <TextView
@@ -745,7 +1068,7 @@
                 android:layout_height="wrap_content"
                 android:text="Payment"
                 style="@style/normalFont"
-                android:textSize="@dimen/_14sdp"
+                android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:padding="@dimen/_5sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
@@ -770,7 +1093,7 @@
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
                     android:layout_weight="0.1"
-                    android:src="@drawable/ic_profile_account"/>
+                    android:src="@drawable/mpesa_two"/>
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -788,6 +1111,7 @@
                         android:weightSum="3">
 
                         <TextView
+                            android:textFontWeight="600"
                             android:textSize="@dimen/_12sdp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -830,7 +1154,7 @@
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
                     android:layout_weight="0.1"
-                    android:src="@drawable/ic_profile_account"/>
+                    android:src="@drawable/ic_bank"/>
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -848,6 +1172,7 @@
                         android:weightSum="3">
 
                         <TextView
+                            android:textFontWeight="600"
                             android:textSize="@dimen/_12sdp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"

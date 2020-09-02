@@ -32,6 +32,7 @@ import com.dollop.distributor.Activity.BankDetailsActivity;
 import com.dollop.distributor.Activity.ChangePasswordActivity;
 import com.dollop.distributor.Activity.CreateAccountActivity;
 import com.dollop.distributor.Activity.MPESActivity;
+import com.dollop.distributor.Activity.ManageMemberActivity;
 import com.dollop.distributor.Activity.MyOrderActivity;
 import com.dollop.distributor.Activity.NotificationActivity;
 import com.dollop.distributor.Activity.PersonalDeatilsActivity;
@@ -44,6 +45,7 @@ import com.dollop.distributor.R;
 import com.dollop.distributor.Activity.WishListActivity;
 import com.dollop.distributor.UtilityTools.Const;
 import com.dollop.distributor.UtilityTools.Utils;
+import com.dollop.distributor.database.UserDataHelper;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -52,12 +54,12 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UserFragment extends Fragment implements View.OnClickListener{
-    LinearLayout ll_statics,ll_products,ll_order_history,ll_setbusiness_hours,ll_mpesa,ll_bankdetails,ll_notifications,ll_craete_pass,ll_per_info;
+public class UserFragment extends Fragment implements View.OnClickListener {
+    LinearLayout ll_statics, ll_products, ll_order_history, ll_setbusiness_hours, ll_mpesa, ll_bankdetails, ll_notifications, ll_craete_pass, ll_per_info,ll_manage_member;
 
     Button bt_editprofile;
 
-    TextView tv_profileName,tv_profileEmail;
+    TextView tv_profileName, tv_profileEmail, toolbar_logout;
     ImageView tv_profileImage;
 
 
@@ -77,7 +79,9 @@ public class UserFragment extends Fragment implements View.OnClickListener{
         tv_profileEmail = root.findViewById(R.id.tv_profileEmail);
         ll_craete_pass = root.findViewById(R.id.ll_craete_pass);
         ll_per_info = root.findViewById(R.id.ll_per_info);
-
+        toolbar_logout = root.findViewById(R.id.toolbar_logout);
+        tv_profileImage = root.findViewById(R.id.tv_profileImage);
+        ll_manage_member = root.findViewById(R.id.ll_manage_member);
 
 
         ll_craete_pass.setOnClickListener(this);
@@ -90,14 +94,15 @@ public class UserFragment extends Fragment implements View.OnClickListener{
         ll_mpesa.setOnClickListener(this);
         ll_bankdetails.setOnClickListener(this);
         ll_per_info.setOnClickListener(this);
+        toolbar_logout.setOnClickListener(this);
+        ll_manage_member.setOnClickListener(this);
 
         getProfile();
         return root;
     }
 
 
-
-        private void getProfile() {
+    private void getProfile() {
         {
             final Dialog dialog = Utils.initProgressDialog(getActivity());
             RequestQueue queue = Volley.newRequestQueue(getActivity());
@@ -110,16 +115,17 @@ public class UserFragment extends Fragment implements View.OnClickListener{
                     try {
                         JSONObject jsonObject = new JSONObject(response);
 
-                        Toast.makeText(getActivity(),jsonObject.getString("message"),Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), jsonObject.getString("message"), Toast.LENGTH_LONG).show();
 
-                        if (jsonObject.getInt("status")==200) {
+                        if (jsonObject.getInt("status") == 200) {
 
                             JSONArray jsonArray = jsonObject.getJSONArray("data");
-                            for(int i =0;i<jsonArray.length();i++){
+                            for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject object = jsonArray.getJSONObject(i);
-                                if(!object.isNull("name")){
+                                if (!object.isNull("name")) {
                                     tv_profileName.setText(object.getString("name"));
-                                } if(!object.isNull("email_id")){
+                                }
+                                if (!object.isNull("email_id")) {
                                     tv_profileEmail.setText(object.getString("email_id"));
                                 }
                             }
@@ -174,10 +180,8 @@ public class UserFragment extends Fragment implements View.OnClickListener{
 
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
-                    HashMap<String, String> ProfileParam  = new HashMap<>();
-                    ProfileParam.put("distributor_id","1");
-
-
+                    HashMap<String, String> ProfileParam = new HashMap<>();
+                    ProfileParam.put("distributor_id", UserDataHelper.getInstance().getList().get(0).getDistributorId());
                     Log.e("ProfileParam::", "param:--" + ProfileParam);
                     return ProfileParam;
                 }
@@ -194,42 +198,48 @@ public class UserFragment extends Fragment implements View.OnClickListener{
     @Override
     public void onClick(View v) {
 
-         if(v == ll_statics){
+        if (v == ll_statics) {
 
-             Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.navigation_dashboard);
+            Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.navigation_dashboard);
 
             /* Intent intent = new Intent(getActivity(), SavedAddressActivity.class);
             startActivity(intent);*/
-        }else if(v == ll_products){
-             Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.navigation_allItem);
+        } else if (v == ll_products) {
+            Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.navigation_allItem);
             /*Intent intent = new Intent(getActivity(), MyOrderActivity.class);
             startActivity(intent);*/
-        }else if(v == ll_order_history){
-             Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.navigation_home);
+        } else if (v == ll_order_history) {
+            Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.navigation_home);
            /*  Intent intent = new Intent(getActivity(),ShowOrderActivity.class);
             startActivity(intent);*/
-        }else if(v == ll_setbusiness_hours){
-            Intent intent = new Intent(getActivity(),SetTimingFragment.class);
+        } else if (v == ll_setbusiness_hours) {
+            Intent intent = new Intent(getActivity(), SetTimingFragment.class);
             startActivity(intent);
-        }else if(v == ll_mpesa){
-            Intent intent = new Intent(getActivity(),MPESActivity.class);
+        } else if (v == ll_mpesa) {
+            Intent intent = new Intent(getActivity(), MPESActivity.class);
             startActivity(intent);
-        }else if(v == ll_bankdetails){
-            Intent intent = new Intent(getActivity(),BankDetailsActivity.class);
+        } else if (v == ll_bankdetails) {
+            Intent intent = new Intent(getActivity(), BankDetailsActivity.class);
             startActivity(intent);
-        }else if(v == ll_notifications){
+        } else if (v == ll_notifications) {
             Intent intent = new Intent(getActivity(), NotificationActivity.class);
             startActivity(intent);
-        }else if(v == ll_craete_pass){
+        } else if (v == ll_craete_pass) {
             Intent intent = new Intent(getActivity(), ChangePasswordActivity.class);
             startActivity(intent);
-        }else if(v == ll_per_info){
+        } else if (v == ll_per_info) {
             Intent intent = new Intent(getActivity(), PersonalDeatilsActivity.class);
             startActivity(intent);
-        }else if(v == bt_editprofile){
-            Intent intent = new Intent(getActivity(),EditProfileFragment.class);
+        } else if (v == bt_editprofile) {
+            Intent intent = new Intent(getActivity(), EditProfileFragment.class);
             startActivity(intent);
-           // Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.editProfile);
+            // Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.editProfile);
+        }else if (v == ll_manage_member) {
+            Utils.I(getActivity(), ManageMemberActivity.class,null);
+        }
+        if (v == toolbar_logout) {
+            UserDataHelper.getInstance().deleteAll();
+            Utils.I_clear(getActivity(), LoginActivity.class, null);
         }
 
     }

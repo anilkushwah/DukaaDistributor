@@ -52,10 +52,10 @@ public class CreateAccountActivity extends AppCompatActivity  implements View.On
 
      private static final int GALLERY = 123;
     private String mimeType;
-    TextView btn_sav,upload_business_permit,upload_kra_pin,upload_id_proof;
+    TextView btn_sav;
     ImageView iv_create_back_arrow;
     private String fileTimeStr = "";
-    private byte[] inputData;
+    /*private byte[] inputData;
     private boolean imageCheck = false;
     private boolean im_upload_business = false;
     private boolean im_upload_kra_pin = false;
@@ -68,15 +68,15 @@ public class CreateAccountActivity extends AppCompatActivity  implements View.On
     private static final int PICK_business_permit = 100 ;
     private static final int PICK_kra_pin = 200 ;
     private static final int PICK_id_proof = 300 ;
+*/
 
-
-    private String fileTimeStr_business = "",fileTimeStr_kra_pin ="",fileTimeStr_id_proof="";
+  /*  private String fileTimeStr_business = "",fileTimeStr_kra_pin ="",fileTimeStr_id_proof="";
     private byte[] inputDatabusiness_permit,inputDatakra_pin,inputDataid_proof;
     private String mimeType_business,mimeType_kra_pin,mimeType_id_proof;
-    Boolean flag = false;
+    Boolean flag = false;*/
 
 
-    EditText create_name,create_dis_location,create_store_location,create_password,confirm_pass,create_store_address,create_email,create_key_name,create_phone,create_desi_field;
+    EditText create_name,create_dis_location,create_store_location,create_password,create_store_address,create_email,create_key_name,create_phone,create_desi_field;
     Spinner  crate_country;
 
     @Override
@@ -84,15 +84,14 @@ public class CreateAccountActivity extends AppCompatActivity  implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
 
-        upload_id_proof = findViewById(R.id.upload_id_proof);
+      /*  upload_id_proof = findViewById(R.id.upload_id_proof);
         upload_kra_pin = findViewById(R.id.upload_kra_pin);
-        upload_business_permit = findViewById(R.id.upload_business_permit);
+        upload_business_permit = findViewById(R.id.upload_business_permit);*/
         create_name = findViewById(R.id.create_name);
         create_dis_location = findViewById(R.id.create_dis_location);
         create_store_address = findViewById(R.id.create_store_address);
         create_email = findViewById(R.id.create_email);
         create_password= findViewById(R.id.create_password);
-        confirm_pass = findViewById(R.id.confirm_pass);
         crate_country = findViewById(R.id.crate_country);
         create_desi_field = findViewById(R.id.create_desi_field);
         create_phone = findViewById(R.id.create_phone);
@@ -100,9 +99,9 @@ public class CreateAccountActivity extends AppCompatActivity  implements View.On
         btn_sav = findViewById(R.id.btn_sav);
         iv_create_back_arrow = findViewById(R.id.iv_create_back_arrow);
 
-        upload_business_permit.setOnClickListener(this);
+       /* upload_business_permit.setOnClickListener(this);
         upload_kra_pin.setOnClickListener(this);
-        upload_id_proof.setOnClickListener(this);
+        upload_id_proof.setOnClickListener(this);*/
         btn_sav.setOnClickListener(this);
         iv_create_back_arrow.setOnClickListener(this);
 
@@ -113,7 +112,7 @@ public class CreateAccountActivity extends AppCompatActivity  implements View.On
 
     @Override
     public void onClick(View v) {
-        if(v== upload_id_proof){
+       /* if(v== upload_id_proof){
             im_upload_id_proof = true;
             Intent intent=  getFileChooserIntent_idproof();
             startActivityForResult(intent,PICK_id_proof);
@@ -127,8 +126,8 @@ public class CreateAccountActivity extends AppCompatActivity  implements View.On
             im_upload_kra_pin = true;
             Intent intent=  getFileChooserIntent_kra_pin();
             startActivityForResult(intent,PICK_kra_pin);
-        }
-        else if(v== btn_sav){
+        }*/
+          if(v== btn_sav){
             if (!UserAccount.isEmpty(create_name)){
                 create_name.setError("Please enter name");
                 create_name.requestFocus();
@@ -149,10 +148,7 @@ public class CreateAccountActivity extends AppCompatActivity  implements View.On
                 create_password.requestFocus();
             }
 
-            else if (!UserAccount.isEmpty(confirm_pass)){
-                confirm_pass.setError("Please enter confirm password");
-                confirm_pass.requestFocus();
-            }
+
 
             else if(crate_country.getSelectedItem().equals("Select Country")){
                 Utils.T(CreateAccountActivity.this,"please select Country name");
@@ -168,12 +164,7 @@ public class CreateAccountActivity extends AppCompatActivity  implements View.On
                 create_phone.requestFocus();
             }
             else {
-                if(! create_password.getText().toString().equals(confirm_pass.getText().toString())){
-                    Utils.T(CreateAccountActivity.this,"password and confirm password not match ");
-                }
-                else {
-                    Register();
-                }
+                Register();
 
             }
         }
@@ -318,7 +309,7 @@ public class CreateAccountActivity extends AppCompatActivity  implements View.On
 
 
 
-    @Override
+   /* @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
@@ -407,7 +398,8 @@ public class CreateAccountActivity extends AppCompatActivity  implements View.On
             }
         }
 
-           /* if (requestCode == GALLERY && resultCode == Activity.RESULT_OK) {
+           */
+   /* if (requestCode == GALLERY && resultCode == Activity.RESULT_OK) {
             Uri ImageFileUri = data.getData();
             String path = "";
             Uri uri = data.getData();
@@ -439,10 +431,10 @@ public class CreateAccountActivity extends AppCompatActivity  implements View.On
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }*/
+        }*//*
 
     }
-
+*/
     public byte[] getBytes(InputStream inputStream) throws IOException {
         ByteArrayOutputStream byteBuffer = new ByteArrayOutputStream();
         int bufferSize = 1024;
@@ -502,9 +494,9 @@ public class CreateAccountActivity extends AppCompatActivity  implements View.On
 
                 if(true) {
 
-                    params.put("business_permit", new DataPart(fileTimeStr_business, inputDatabusiness_permit, "image/png"));
-                    params.put("id_proof", new DataPart(fileTimeStr_id_proof, inputDataid_proof, "image/png"));
-                    params.put("kra_pin", new DataPart(fileTimeStr_kra_pin, inputDatakra_pin, "image/png"));
+                 //   params.put("business_permit", new DataPart(fileTimeStr_business, inputDatabusiness_permit, "image/png"));
+               //     params.put("id_proof", new DataPart(fileTimeStr_id_proof, inputDataid_proof, "image/png"));
+                //    params.put("kra_pin", new DataPart(fileTimeStr_kra_pin, inputDatakra_pin, "image/png"));
 
                 }
 
@@ -520,7 +512,6 @@ public class CreateAccountActivity extends AppCompatActivity  implements View.On
                 signupParam.put("store_address",create_store_address.getText().toString());
                 signupParam.put("email_id",create_email.getText().toString());
                 signupParam.put("password",create_password.getText().toString());
-                signupParam.put("cpassword",confirm_pass.getText().toString());
                 signupParam.put("designation",create_desi_field.getText().toString());
                 signupParam.put("country",crate_country.getSelectedItem().toString());
                 signupParam.put("mobile",create_phone.getText().toString());

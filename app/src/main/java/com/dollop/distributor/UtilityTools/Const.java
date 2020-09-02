@@ -20,6 +20,7 @@ public class Const {
         String category = HOST_URL+"category/";
         String subcategory = HOST_URL+"subcategory/";
         String view_orders = HOST_URL+"view_orders/";
+        String view_orders_new = HOST_URL+"view_orders//";
         String get_distributor = HOST_URL+"get_distributor/";
 
     }

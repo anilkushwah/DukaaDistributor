@@ -57,7 +57,7 @@ public class ShowOrderActivity extends AppCompatActivity {
             }
         });
 
-        ShoworderModel modal = new ShoworderModel();
+     /*   ShoworderModel modal = new ShoworderModel();
 
         modal.setAmount("60.00");
         modal.setName("Apple");
@@ -104,7 +104,7 @@ public class ShowOrderActivity extends AppCompatActivity {
         moda.setItemquantity("(1kg)");
         moda.setImage(R.drawable.soft_drink);
         showModelList.add(moda);
-
+*/
 
         All_Complains_recyclerviewId.setLayoutManager(new LinearLayoutManager(ShowOrderActivity.this, RecyclerView.VERTICAL, false));
         ShowOrderAdapter showAdapter = new ShowOrderAdapter(ShowOrderActivity.this, showModelList);

@@ -7,126 +7,91 @@ import com.dollop.distributor.UtilityTools.Utils;
 /**
  * Created by CRUD-PC on 10/5/2016.
  */
+
+/**/
 public class UserModel {
-    public static final String TABLE_NAME = "UserModelFuel";
+    public static final String TABLE_NAME = "UserModelDukaa";
     public static final String KEY_ID = "_id";
-    public static final String KEY_USER_ID = "user_id";
-    public static final String KeyUserToken = "userToken";
-    public static final String KeyuserCompanyId = "userCompanyId";
-    public static final String FEEDBACK_CLEAN= "userFeedback";
-    public static final String KeyUserRole= "userRole";
+    public static final String KEY_DISTRIBUTOR_ID = "distributorId";
+    public static final String KEY_EMAIL_ID = "email";
+    public static final String KEY_NAME_ID = "name";
+    public static final String KEY_IMAGE_ID = "image";
+    public static final String KEY_MOBILE_ID = "mobile";
 
-
-    public static final String KEY_USERNAME = "userName";
-    public static final String KEY_USERPHONE= "userPhone";
-    public static final String KEY_USERDOJ= "userDOJ";
-    public static final String KEY_USER_Profile_PIC= "Profile_pic";
 
     public static void creteTable(SQLiteDatabase db) {
         String CREATE_CLIENTTABLE = "create table " + TABLE_NAME + " ("
                 + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-                KEY_USER_ID + " text," +
-                KeyUserToken + " text,"+
-                KeyuserCompanyId + " text,"+
-                FEEDBACK_CLEAN + " text, " +
-                KeyUserRole + " text, " +
-                KEY_USERNAME + " text, " +
-                KEY_USERPHONE + " text, " +
-                KEY_USERDOJ + " text, " +
-
-                KEY_USER_Profile_PIC + " text " +
-                ")";
+                KEY_DISTRIBUTOR_ID + " text," +
+                KEY_EMAIL_ID + " text," +
+                KEY_NAME_ID + " text," +
+                KEY_IMAGE_ID + " text, " +
+                KEY_MOBILE_ID + " text " + ")";
 
         db.execSQL(CREATE_CLIENTTABLE);
-        Utils.E("check Create table::"+CREATE_CLIENTTABLE);
+        Utils.E("check Create table::" + CREATE_CLIENTTABLE);
     }
 
     public static void dropTable(SQLiteDatabase db) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
     }
 
+    String distributorId;
+    String name;
+    String mobile;
+    String email;
+    String image;
 
-    String userId;
-    String userToken;
-    String userRole;
-    String userName;
-    String userPhone;
-    String userDoj;
-    String userFeedback;
-    String Profile_pic;
-
-    public String getUserFeedback() {
-        return userFeedback;
+    public String getKeyid() {
+        return keyid;
     }
 
-    public void setUserFeedback(String userFeedback) {
-        this.userFeedback = userFeedback;
+    public void setKeyid(String keyid) {
+        this.keyid = keyid;
+    }
+
+    String keyid;
+
+
+    public String getDistributorId() {
+        return distributorId;
+    }
+
+    public void setDistributorId(String distributorId) {
+        this.distributorId = distributorId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
 
-    public String getUserCompanyId() {
-        return userCompanyId;
-    }
-
-    public void setUserCompanyId(String userCompanyId) {
-        this.userCompanyId = userCompanyId;
-    }
-
-    String userCompanyId;
-
-    public String getUserRole() {
-        return userRole;
-    }
-
-    public void setUserRole(String userRole) {
-        this.userRole = userRole;
-    }
-
-    public String getUserToken() {
-        return userToken;
-    }
-
-    public void setUserToken(String userToken) {
-        this.userToken = userToken;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getUserPhone() {
-        return userPhone;
-    }
-
-    public void setUserPhone(String userPhone) {
-        this.userPhone = userPhone;
-    }
-
-    public String getUserDoj() {
-        return userDoj;
-    }
-
-    public void setUserDoj(String userDoj) {
-        this.userDoj = userDoj;
-    }
-
-    public String getProfile_pic() {
-        return Profile_pic;
-    }
-
-    public void setProfile_pic(String profile_pic) {
-        Profile_pic = profile_pic;
-    }
 }

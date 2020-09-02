@@ -48,7 +48,7 @@ public class SearchMapsActivity extends FragmentActivity implements OnMapReadyCa
     private GoogleMap mMap;
     private LocationManager locationManager;
     private boolean isGPSEnabled;
-    private boolean isNetworkEnabled,check_request_ride;
+    private boolean isNetworkEnabled, check_request_ride;
     private boolean canGetLocation = false;
     private ArrayList<String> permissionsToRequest;
     private ArrayList<String> permissionsRejected = new ArrayList<>();
@@ -57,8 +57,8 @@ public class SearchMapsActivity extends FragmentActivity implements OnMapReadyCa
     private static final int ALL_PERMISSIONS_RESULT = 1011;
     private Location location;
     private GoogleApiClient googleApiClient;
-    double Currentlatitude,Currentlongitude;
-    Button btnkioskId,btn_other_location_id;
+    double Currentlatitude, Currentlongitude;
+    Button btnkioskId, btn_other_location_id;
     ImageView iv_clear_editText_text;
     EditText et_searchLocation;
     LinearLayout btn_save_location;
@@ -233,6 +233,16 @@ public class SearchMapsActivity extends FragmentActivity implements OnMapReadyCa
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         mMap.setMyLocationEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
 

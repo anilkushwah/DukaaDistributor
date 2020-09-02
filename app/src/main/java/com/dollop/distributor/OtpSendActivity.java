@@ -27,6 +27,8 @@ import com.android.volley.toolbox.Volley;
 import com.chaos.view.PinView;
 import com.dollop.distributor.UtilityTools.Const;
 import com.dollop.distributor.UtilityTools.Utils;
+import com.dollop.distributor.database.UserDataHelper;
+import com.dollop.distributor.database.UserModel;
 import com.dollop.distributor.model.UserDTO;
 
 import org.json.JSONException;
@@ -101,28 +103,21 @@ public class OtpSendActivity extends AppCompatActivity implements View.OnClickLi
                         JSONObject jsonObject = new JSONObject(response);
 
                         Toast.makeText(OtpSendActivity.this, jsonObject.getString("message"), Toast.LENGTH_LONG).show();
-
+/*{"distributor_id":"3","name":"ram","mobile":"1234567890","email":"ram@gmail.com",
+"password":"","designation":"","otp":"205185","country":"india","state":"","city":"indore",
+"store_location":"bhawarkua","store_address":"indore","store_lat":"","store_long":"","contact_name":"ram",
+"offer_id":"","offer_json":"","image":"","business_permit":"","kra_pin":"",
+"id_proof":"","is_active":"1","is_delete":"0","create_date":"2020-07-07 07:56:05"}*/
                         if (jsonObject.getInt("status") == 200) {
 
-                                JSONObject data = jsonObject.getJSONObject("data");
-                                //  Utils.T(activity, message);
-                                UserDTO mUser = new UserDTO();
-/*
-
-                                mUser.set(data.getString("customer_id"));
-                                mUser.setCreatedDate(data.getString("created_date"));
-                                mUser.setEmail(data.getString("email"));
-                                mUser.setName(data.getString("name"));
-                                mUser.setPhone(data.getString("phone"));
-                                mUser.setPassword(data.getString("password"));
-                                mUser.setProfilePic(data.getString("profile_pic"));
-                                mUser.setStatus(data.getString("status"));
-                                mUser.setLogin_type(data.getString("login_type"));
-
-                                ((HomeActivity) getActivity()).sessionManager.setRegisterUser(mUser);
-*/
-
-
+                            JSONObject data = jsonObject.getJSONObject("data");
+                            UserModel userModel = new UserModel();
+                            userModel.setDistributorId(data.getString("distributor_id"));
+                            userModel.setImage(data.getString("image"));
+                            userModel.setEmail(data.getString("email"));
+                            userModel.setName(data.getString("name"));
+                            userModel.setMobile(data.getString("mobile"));
+                            UserDataHelper.getInstance().insertData(userModel);
                             String otpdata = jsonObject.getString("data");
                             Intent intent = new Intent(OtpSendActivity.this, LocationActivity.class);
                             startActivity(intent);

@@ -28,8 +28,13 @@ import com.dollop.distributor.UtilityTools.Const;
 import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.adapter.NewOrderAdapter;
 import com.dollop.distributor.adapter.ProcessingorderAdapter;
+import com.dollop.distributor.database.UserDataHelper;
+import com.dollop.distributor.model.AllOrderDTO;
 import com.dollop.distributor.model.NewOderlist;
 import com.dollop.distributor.model.Processinglist;
+import com.dollop.distributor.retrofit.ApiClient;
+import com.dollop.distributor.retrofit.ApiInterface;
+import com.dollop.distributor.ui.home.HomeFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -39,185 +44,82 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+
 
 public class ProcessingFragment extends Fragment {
+
+    private ArrayList<AllOrderDTO> mAllOrderDTOArrayList = new ArrayList<>();
 
     public ProcessingFragment() {
         // Required empty public constructor
     }
-
     RecyclerView rv_processorder;
-    ArrayList<Processinglist> processingList;
-    ProcessingorderAdapter  processingAdapter;
+    ProcessingorderAdapter processingAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-             View root = inflater.inflate(R.layout.fragment_processorder, container, false);
+        View root = inflater.inflate(R.layout.fragment_processorder, container, false);
         rv_processorder = root.findViewById(R.id.rv_processorder);
 
-        processingList = new ArrayList<>();
-
-        Processinglist model = new Processinglist();
-        model.setGen_order_id("#1232423");
-        model.setTotal_amount("3450");
-        model.setItemCount("4");
-        model.setAgencyname("Ram Agencyes");
-        model.setCreate_date("20 Jul 2020");
-        model.setOrder_status("Scheduled");
-        processingList.add(model);
-
-
-        Processinglist model1 = new Processinglist();
-        model1.setGen_order_id("#1232423");
-        model1.setTotal_amount("3450");
-        model1.setItemCount("4");
-        model1.setAgencyname("Ram Agencyes");
-        model1.setCreate_date("22 Jul 2020");
-        model1.setOrder_status("Delivery");
-        processingList.add(model1);
-
-        Processinglist model2 = new Processinglist();
-        model2.setGen_order_id("#1232423");
-        model2.setTotal_amount("3450");
-        model2.setItemCount("4");
-        model2.setAgencyname("Ram Agencyes");
-        model2.setCreate_date("25 Jul 2020");
-        model2.setOrder_status("Scheduled");
-        processingList.add(model2);
-
-        Processinglist model3 = new Processinglist();
-        model3.setGen_order_id("#1232423");
-        model3.setTotal_amount("3450");
-        model3.setItemCount("4");
-        model3.setAgencyname("Ram Agencyes");
-        model3.setCreate_date("23 Jul 2020");
-        model3.setOrder_status("Pickup");
-        processingList.add(model3);
-
-        Processinglist model4 = new Processinglist();
-        model4.setGen_order_id("#1232423");
-        model4.setTotal_amount("3450");
-        model4.setItemCount("4");
-        model4.setAgencyname("Ram Agencyes");
-        model4.setCreate_date("23 Jul 2020");
-        model4.setOrder_status("Pickup");
-        processingList.add(model4);
-
         rv_processorder.setLayoutManager(new LinearLayoutManager(getActivity()));
-        processingAdapter = new ProcessingorderAdapter(getActivity(),processingList);
+        processingAdapter = new ProcessingorderAdapter(getActivity(), mAllOrderDTOArrayList);
         rv_processorder.setAdapter(processingAdapter);
+        processingAdapter.notifyDataSetChanged();
 
-
-
-        /// processingList();
+       // allOrderMethod();
         return root;
     }
 
-    private void processingList() {
-        {
-            final Dialog dialog = Utils.initProgressDialog(getActivity());
-            RequestQueue queue = Volley.newRequestQueue(getActivity());
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, Const.URL.view_orders, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    dialog.dismiss();
-
-                    Log.e("NewOrder:", "view_orders:--" + response);
-                    try {
-                        JSONObject jsonObject = new JSONObject(response);
-                        Toast.makeText(getActivity(),jsonObject.getString("message"),Toast.LENGTH_LONG).show();
-                        if (jsonObject.getInt("status")==200) {
-
-                            JSONArray jsonArray = jsonObject.getJSONArray("data");
-                            processingList = new ArrayList<>();
-                            for(int i= 0;i<jsonArray.length();i++){
-
-                                Processinglist model = new Processinglist();
-
-                                JSONObject object = jsonArray.getJSONObject(i);
-
-                                if(object.isNull("gen_order_id")){
-                                    model.setGen_order_id(object.getString("0").toString());
-                                }
-                                else{
-                                    model.setGen_order_id(object.getString("gen_order_id").toString());
-                                }
-
-                                 if(!object.isNull("total_amount")){
-                                    model.setTotal_amount(object.getString("total_amount").toString());
-                                }
-                                 if(!object.isNull("itemCount")){
-                                    model.setItemCount(object.getString("itemCount").toString());
-                                }
 
 
-                                processingList.add(model);
-                                rv_processorder.setLayoutManager(new LinearLayoutManager(getActivity()));
-                                processingAdapter = new ProcessingorderAdapter(getActivity(),processingList);
-                                rv_processorder.setAdapter(processingAdapter);
-                            }
-                        }
+    private void allOrderMethod() {
 
-                    } catch (JSONException e) {
-                        dialog.dismiss();
+        final Dialog dialog = Utils.initProgressDialog(getActivity());
+        ApiInterface apiService =
+                ApiClient.getClient().create(ApiInterface.class);
 
-                        e.printStackTrace();
-                    }
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    dialog.dismiss();
+        HashMap<String, String> hm = new HashMap<>();
+        hm.put("distributor_id", UserDataHelper.getInstance().getList().get(0).getDistributorId());
+        hm.put("status", "processing");
+        Call<NewOderlist> call = apiService.newOderlist(hm);
+        call.enqueue(new Callback<NewOderlist>() {
+            @Override
+            public void onResponse(Call<NewOderlist> call, retrofit2.Response<NewOderlist> response) {
+                dialog.dismiss();
+                try {
 
-                    NetworkResponse networkResponse = error.networkResponse;
+                    NewOderlist body = response.body();
 
-                    String errorMessage = "Unknown error";
-                    if (networkResponse == null) {
-                        if (error.getClass().equals(TimeoutError.class)) {
-                            errorMessage = "Request timeout";
-                            Utils.T(getActivity(), errorMessage + "please check Internet connection");
-                        } else if (error.getClass().equals(NoConnectionError.class)) {
-                            errorMessage = "Failed to connect server";
-                        }
+                    if (body.getStatus() == 200) {
+                        mAllOrderDTOArrayList = body.getData();
+                        rv_processorder.setLayoutManager(new LinearLayoutManager(getActivity()));
+                        processingAdapter = new ProcessingorderAdapter(getActivity(), mAllOrderDTOArrayList);
+                        rv_processorder.setAdapter(processingAdapter);
+                        processingAdapter.notifyDataSetChanged();
+
                     } else {
-                        String result = new String(networkResponse.data);
-                        try {
-                            JSONObject response = new JSONObject(result);
-                            String status = response.getString("status");
-                            String message = response.getString("message");
-                            Log.e("Error Status", status);
-                            Log.e("Error Message", message);
-                            if (networkResponse.statusCode == 404) {
-                                errorMessage = "Resource not found";
-                            } else if (networkResponse.statusCode == 401) {
-                                errorMessage = message + " Please login again";
-                            } else if (networkResponse.statusCode == 400) {
-                                errorMessage = message + " Check your inputs";
-                            } else if (networkResponse.statusCode == 500) {
-                                errorMessage = message + " Something is getting wrong";
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-            }) {
 
-                @Override
-                protected Map<String, String> getParams() throws AuthFailureError {
-                    HashMap<String, String> paramNeworder = new HashMap<>();
-                    paramNeworder.put("distributor_id","1");
-                    paramNeworder.put("status","processing");
-                    Log.e("Neworder:","Neworder:-" + paramNeworder);
-                    return paramNeworder;
+
+                    }
+
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            };
-            stringRequest.setRetryPolicy(new DefaultRetryPolicy(
-                    25000,
-                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-            queue.add(stringRequest);
-        }
+
+            }
+
+            @Override
+            public void onFailure(Call<NewOderlist> call, Throwable t) {
+                call.cancel();
+                t.printStackTrace();
+                dialog.dismiss();
+            }
+        });
+
     }
+
+
 }

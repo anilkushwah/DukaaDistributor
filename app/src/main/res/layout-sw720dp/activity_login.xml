@@ -202,7 +202,7 @@
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:paddingTop="@dimen/_5sdp"
                             android:fontFamily="@font/poppins_light"
-                            android:hint="12345 67890"/>
+                            android:hint="Enter Mobile Number"/>
 
                     </LinearLayout>
 
@@ -344,7 +344,7 @@
                     android:layout_height="match_parent"
                     android:textColor="@android:color/white"
                     android:layout_alignParentBottom="true"
-                    android:text="Submit"
+                    android:text="Get OTP"
                     android:gravity="center"
                     android:id="@+id/btn_send_otp"
                     android:textSize="@dimen/_18sdp"

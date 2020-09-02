@@ -40,7 +40,7 @@ public class AssignOrderDetailsActivity extends AppCompatActivity {
         });
 
 
-        ShoworderModel modal = new ShoworderModel();
+       /* ShoworderModel modal = new ShoworderModel();
 
         modal.setAmount("60.00");
         modal.setName("Apple");
@@ -57,7 +57,7 @@ public class AssignOrderDetailsActivity extends AppCompatActivity {
         modal1.setOrderqty("2");
         modal1.setOrderprice("20");
      //  modal1.setImage(R.drawable.soft_drink);
-        showModelList.add(modal1);
+        showModelList.add(modal1);*/
 
 
 

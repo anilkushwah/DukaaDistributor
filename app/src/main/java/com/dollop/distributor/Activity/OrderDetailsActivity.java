@@ -109,7 +109,7 @@ public class OrderDetailsActivity extends AppCompatActivity  implements View.OnC
 
 
     private void list() {
-        ShoworderModel modal = new ShoworderModel();
+       /* ShoworderModel modal = new ShoworderModel();
 
         modal.setAmount("60.00");
         modal.setName("Apple");
@@ -117,7 +117,7 @@ public class OrderDetailsActivity extends AppCompatActivity  implements View.OnC
         modal.setOrderqty("3");
         modal.setOrderprice("20");
         modal.setImage(R.drawable.soft_drink);
-        showModelList.add(modal);
+        showModelList.add(modal);*/
 
 
 

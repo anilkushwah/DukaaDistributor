@@ -2,6 +2,7 @@ package com.dollop.distributor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,9 +27,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.dollop.distributor.Activity.CreateAccountActivity;
+import com.dollop.distributor.Activity.ForgotActivity;
 import com.dollop.distributor.UtilityTools.Const;
 import com.dollop.distributor.UtilityTools.UserAccount;
 import com.dollop.distributor.UtilityTools.Utils;
+import com.dollop.distributor.database.UserDataHelper;
 import com.facebook.CallbackManager;
 
 import org.json.JSONException;
@@ -43,60 +46,67 @@ import retrofit2.Callback;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     Button btn_GoSignUp_Id;
     String token;
-
+    Activity activity = LoginActivity.this;
     LinearLayout lv_google_signIn;
     private static final String EMAIL = "email";
     CallbackManager callbackManager;
     TextView tv_GoSignUp_Id;
-    EditText et_login_mobile_number,et_login_password;
-    TextView btn_send_otp;
+    EditText et_login_mobile_number, et_login_pass;
+    TextView btn_send_otp,tv_forgot;
     ImageView iv_login_back_arrow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        tv_forgot = findViewById(R.id.tv_forgot);
         tv_GoSignUp_Id = findViewById(R.id.tv_GoSignUp_Id);
         et_login_mobile_number = findViewById(R.id.et_login_mobile_number);
         btn_send_otp = findViewById(R.id.btn_send_otp);
         iv_login_back_arrow = findViewById(R.id.iv_login_back_arrow);
-        et_login_password = findViewById(R.id.et_login_password);
+        et_login_pass = findViewById(R.id.et_login_pass);
         btn_send_otp.setOnClickListener(this);
         tv_GoSignUp_Id.setOnClickListener(this);
         iv_login_back_arrow.setOnClickListener(this);
+        tv_forgot.setOnClickListener(this);
+
+        if (UserDataHelper.getInstance().getList().size() > 0) {
+            Utils.I_clear(activity, HomeActivity.class, null);
+        }
     }
 
 
     @Override
     public void onClick(View v) {
 
-        if (v == btn_send_otp){
+        if (v == btn_send_otp) {
             String mobile = et_login_mobile_number.getText().toString();
-            if (!UserAccount.isEmpty(et_login_mobile_number)){
-                et_login_mobile_number.setError("Please enter mobile number");
+            if (!UserAccount.isEmpty(et_login_mobile_number)) {
+                et_login_mobile_number.setError("Please enter mobile number or email id");
                 et_login_mobile_number.requestFocus();
-            }else if (!UserAccount.isPhoneNumberLength(et_login_mobile_number)){
+            } /*else if (!UserAccount.isPhoneNumberLength(et_login_mobile_number)) {
                 et_login_mobile_number.setError("Please enter 10 digit mobile number");
                 et_login_mobile_number.requestFocus();
-            }
-          /*  else if (!UserAccount.isEmpty(et_login_password)){
-                et_login_password.setError("Please enter password");
-                et_login_password.requestFocus();
             }*/
-            else {
-                Login();
-              //  Intent intent = new Intent(LoginActivity.this,LocationActivity.class);
-               // startActivity(intent);
+            else if (!UserAccount.isEmpty(et_login_pass)){
+                et_login_pass.setError("Please enter password");
+                et_login_pass.requestFocus();
             }
-           /* Intent intent = new Intent(LoginActivity.this,OtpSendActivity.class);
+            else {
+              //  Login();
+                  Intent intent = new Intent(activity,LocationActivity.class);
+                 startActivity(intent);
+            }
+           /* Intent intent = new Intent(activity,OtpSendActivity.class);
             startActivity(intent);*/
-        }else if (v == tv_GoSignUp_Id){
-            //Intent intent = new Intent(LoginActivity.this,SignUpActivity.class);
-            Intent intent = new Intent(LoginActivity.this, CreateAccountActivity.class);
+        } else if (v == tv_GoSignUp_Id) {
+            //Intent intent = new Intent(activity,SignUpActivity.class);
+            Intent intent = new Intent(activity, CreateAccountActivity.class);
             startActivity(intent);
-        }
-         else if (v == iv_login_back_arrow){
+        } else if (v == iv_login_back_arrow) {
             onBackPressed();
+        }else if (v == tv_forgot) {
+            Utils.I(LoginActivity.this, ForgotActivity.class,null);
         }
         /*else if (v == lv_google_signIn){
             signIn();
@@ -107,7 +117,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 @Override
                 public void onSuccess(LoginResult loginResult) {
                     // App code
-                    Intent intent = new Intent(LoginActivity.this,LocationActivity.class);
+                    Intent intent = new Intent(activity,LocationActivity.class);
                     startActivity(intent);
                     finish();
                 }
@@ -126,7 +136,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
 
-
     private void Login() {
         {
             final Dialog dialog = Utils.initProgressDialog(this);
@@ -139,24 +148,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     Log.e("distributerLogin:", "Login:--" + response);
                     try {
                         JSONObject jsonObject = new JSONObject(response);
-
-                        Toast.makeText(LoginActivity.this,jsonObject.getString("message"),Toast.LENGTH_LONG).show();
-
-                        if (jsonObject.getInt("status")==200) {
-
+                        Toast.makeText(activity, jsonObject.getString("message"), Toast.LENGTH_LONG).show();
+                        if (jsonObject.getInt("status") == 200) {
                             String otpdata = jsonObject.getString("data");
-
-                            Utils.E("otpdata:-"+otpdata);
-
-                            Intent intent = new Intent(LoginActivity.this,OtpSendActivity.class);
-                            intent.putExtra("otp",otpdata);
-                            intent.putExtra("mobile",et_login_mobile_number.getText().toString());
+                            Utils.E("otpdata:-" + otpdata);
+                            Intent intent = new Intent(activity, OtpSendActivity.class);
+                            intent.putExtra("otp", otpdata);
+                            intent.putExtra("mobile", et_login_mobile_number.getText().toString());
                             startActivity(intent);
                             finish();
-
-                          /*  Intent intent = new Intent(LoginActivity.this,OtpSendActivity.class);
-                            startActivity(intent);
-                            finish();*/
                         }
 
                     } catch (JSONException e) {
@@ -176,7 +176,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     if (networkResponse == null) {
                         if (error.getClass().equals(TimeoutError.class)) {
                             errorMessage = "Request timeout";
-                            Utils.T(LoginActivity.this, errorMessage + "please check Internet connection");
+                            Utils.T(activity, errorMessage + "please check Internet connection");
                         } else if (error.getClass().equals(NoConnectionError.class)) {
                             errorMessage = "Failed to connect server";
                         }
@@ -207,8 +207,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
                     HashMap<String, String> stringStringHashMap = new HashMap<>();
-                    stringStringHashMap.put("mobile",et_login_mobile_number.getText().toString());
-                    stringStringHashMap.put("type","distributor");
+                    stringStringHashMap.put("mobile", et_login_mobile_number.getText().toString());
+                    stringStringHashMap.put("type", "distributor");
                     Log.e("LoginParameter::", "paramLogin:--" + stringStringHashMap);
                     return stringStringHashMap;
                 }
@@ -220,55 +220,4 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             queue.add(stringRequest);
         }
     }
-
-/*
-    private void loginMethod() {
-        startProgressDialog();
-        ApiInterface apiService =
-                ApiClient.getClient().create(ApiInterface.class);
-
-        HashMap<String, String> hm = new HashMap<>();
-        hm.put("phone", et_mobile_no.getText().toString());
-
-        Call<AllResponse> call = apiService.login(hm);
-        call.enqueue(new Callback<AllResponse>() {
-            @Override
-            public void onResponse(Call<AllResponse> call, retrofit2.Response<AllResponse> response) {
-                stopProgressDialog();
-                try {
-
-                    AllResponse body = response.body();
-
-                    //Toast.makeText(getApplicationContext(), body.getMessage(), Toast.LENGTH_LONG).show();
-
-                    if (body.getStatus() == 200) {
-
-                        startActivity(new Intent(LoginActivity.this, OTPVerificationActivity.class)
-                                .putExtra("phone", et_mobile_no.getText().toString()).putExtra("otp", "" + body.getOtp().getOtp()));
-                        finish();
-                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                        new CustomToast().Show_Toast(LoginActivity.this, view, body.getMessage(), true);
-
-                    } else {
-                        new CustomToast().Show_Toast(LoginActivity.this, view, body.getMessage(), false);
-
-                    }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-            }
-
-            @Override
-            public void onFailure(Call<AllResponse> call, Throwable t) {
-                call.cancel();
-                t.printStackTrace();
-                stopProgressDialog();
-            }
-        });
-    }
-*/
-
-
 }

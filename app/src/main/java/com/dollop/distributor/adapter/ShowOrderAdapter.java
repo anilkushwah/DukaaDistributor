@@ -11,12 +11,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dollop.distributor.R;
+import com.dollop.distributor.UtilityTools.Const;
 import com.dollop.distributor.model.ShoworderModel;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShowOrderAdapter extends RecyclerView.Adapter<ShowOrderAdapter.MyHolder>  {
+public class ShowOrderAdapter extends RecyclerView.Adapter<ShowOrderAdapter.MyHolder> {
 
 
     Context context;
@@ -30,7 +32,7 @@ public class ShowOrderAdapter extends RecyclerView.Adapter<ShowOrderAdapter.MyHo
     @NonNull
     @Override
     public ShowOrderAdapter.MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.new_order_item_layout,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.new_order_item_layout, parent, false);
         return new MyHolder(view);
     }
 
@@ -39,12 +41,12 @@ public class ShowOrderAdapter extends RecyclerView.Adapter<ShowOrderAdapter.MyHo
 
         ShoworderModel showorderModel = showorderModels.get(position);
 
-        holder.TextView_Item_NameId.setText(showorderModel.getName());
-        holder.TextView_Item_QuantityId.setText(showorderModel.getItemquantity());
-        holder.TextView_Item_PriceId.setText(showorderModel.getAmount());
-        holder.ImageView_Item_ImageId.setImageResource(showorderModel.getImage());
-        holder.order_price.setText(showorderModel.getOrderprice());
-        holder.order_qty.setText(showorderModel.getOrderqty());
+        holder.TextView_Item_NameId.setText(showorderModel.product_name);
+        holder.TextView_Item_QuantityId.setText(showorderModel.pack_size);
+        holder.TextView_Item_PriceId.setText(showorderModel.product_discounted_price);
+        Picasso.get().load(Const.URL.HOST_URL + showorderModel.product_image).error(R.drawable.okl).into(holder.ImageView_Item_ImageId);
+        holder.order_price.setText(showorderModel.product_amount);
+        holder.order_qty.setText(showorderModel.product_qty);
 
     }
 
@@ -56,7 +58,7 @@ public class ShowOrderAdapter extends RecyclerView.Adapter<ShowOrderAdapter.MyHo
 
     public class MyHolder extends RecyclerView.ViewHolder {
 
-        TextView TextView_Item_NameId, TextView_Item_QuantityId, TextView_Item_PriceId,order_qty,order_price;
+        TextView TextView_Item_NameId, TextView_Item_QuantityId, TextView_Item_PriceId, order_qty, order_price;
         ImageView ImageView_Item_ImageId;
 
         public MyHolder(@NonNull View itemView) {

@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.dollop.distributor.Fragment.CompleteOrderFragment;
-import com.dollop.distributor.Fragment.NewFragment;
+import com.dollop.distributor.Fragment.NewOrderFragment;
 import com.dollop.distributor.Fragment.ProcessingFragment;
 
 
@@ -30,16 +30,13 @@ public class OrderTabsAdapter extends FragmentPagerAdapter {
         switch (position){
 
             case 0:
-                 NewFragment newFragment = new NewFragment();
-                return newFragment;
+                return new NewOrderFragment();
 
             case 1:
-                ProcessingFragment processeFragment1 = new ProcessingFragment();
-                return processeFragment1;
+                return new ProcessingFragment();
 
             case 2:
-                CompleteOrderFragment completefragmet = new CompleteOrderFragment();
-                return completefragmet;
+                return new CompleteOrderFragment();
 
             default:
                 return null;

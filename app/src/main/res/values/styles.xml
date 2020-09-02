@@ -60,4 +60,9 @@
         <item name="fontFamily">@font/poppins_semibold</item>
     </style>
 
+
+    <style name="Switchtheme" parent="Theme.AppCompat">
+        <item name="android:textColorPrimaryDisableOnly">#1277BD</item>
+        <item name="colorAccent">#6200EE</item>
+    </style>
 </resources>

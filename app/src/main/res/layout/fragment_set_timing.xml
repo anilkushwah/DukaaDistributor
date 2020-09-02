@@ -26,15 +26,15 @@
 
             <ImageView
                 android:layout_gravity="center"
-                android:layout_width="@dimen/_25sdp"
-                android:layout_height="@dimen/_25sdp"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
                 android:id="@+id/iv_set_back_arrow"
                 android:src="@drawable/ic_back_left"/>
 
             <TextView
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:textSize="@dimen/_16sdp"
-                android:textColor="#ffffff"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/white"
                 style="@style/normalFont"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
                     android:layout_marginTop="@dimen/_20sdp"
                     >
                     <TextView
-                        android:textSize="@dimen/_12sdp"
+                        android:textSize="@dimen/_10sdp"
                         style="@style/normalFont"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
                     <TextView
                         android:layout_gravity="right"
                         android:gravity="right"
-                        android:textSize="@dimen/_12sdp"
+                        android:textSize="@dimen/_10sdp"
                         style="@style/normalFont"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -102,7 +102,6 @@
                     >
 
                     <TextView
-                        android:paddingTop="@dimen/_12sdp"
                         android:id="@+id/sone_open"
                         android:drawableRight="@drawable/ic_clock"
                         android:layout_marginHorizontal="@dimen/_10sdp"
@@ -112,13 +111,12 @@
                         android:layout_width="0dp"
                         android:background="@drawable/et_edittext_bck"
                         android:textColor="@color/grey_2"
-                        android:layout_height="@dimen/_45sdp"
+                        android:layout_height="@dimen/_35sdp"
                         android:layout_weight="0.5"
                         android:text="Select Time"/>
 
                     <TextView
                         android:id="@+id/sone_close"
-                        android:paddingTop="@dimen/_12sdp"
                         android:paddingLeft="@dimen/_10sdp"
                         android:drawableRight="@drawable/ic_clock"
                         android:layout_marginHorizontal="@dimen/_10sdp"
@@ -127,14 +125,14 @@
                         android:layout_width="0dp"
                         android:background="@drawable/et_edittext_bck"
                         android:textColor="@color/grey_2"
-                        android:layout_height="@dimen/_45sdp"
+                        android:layout_height="@dimen/_35sdp"
                         android:layout_weight="0.5"
                         android:text="Select Time"/>
 
                 </LinearLayout>
 
 
-                <LinearLayout
+               <!-- <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -143,7 +141,7 @@
                     android:layout_marginTop="@dimen/_20sdp"
                     >
                     <TextView
-                        android:textSize="@dimen/_12sdp"
+                        android:textSize="@dimen/_10sdp"
                         style="@style/normalFont"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -153,7 +151,7 @@
                     <TextView
                         android:layout_gravity="right"
                         android:gravity="right"
-                        android:textSize="@dimen/_12sdp"
+                        android:textSize="@dimen/_10sdp"
                         style="@style/normalFont"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -161,7 +159,6 @@
                         android:text="(Slot -2)"/>
 
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_marginTop="@dimen/_3sdp"
                     android:layout_width="match_parent"
@@ -172,7 +169,6 @@
 
                     <TextView
                         android:id="@+id/stwo_open"
-                        android:paddingTop="@dimen/_12sdp"
                         android:paddingLeft="@dimen/_10sdp"
                         android:drawableRight="@drawable/ic_clock"
                         android:layout_marginHorizontal="@dimen/_10sdp"
@@ -181,13 +177,12 @@
                         android:layout_width="0dp"
                         android:background="@drawable/et_edittext_bck"
                         android:textColor="@color/grey_2"
-                        android:layout_height="@dimen/_45sdp"
+                        android:layout_height="@dimen/_35sdp"
                         android:layout_weight="0.5"
                         android:text="Select Time"/>
 
                     <TextView
                         android:id="@+id/stwo_close"
-                        android:paddingTop="@dimen/_12sdp"
                         android:paddingLeft="@dimen/_10sdp"
                         android:drawableRight="@drawable/ic_clock"
                         android:layout_marginHorizontal="@dimen/_10sdp"
@@ -196,16 +191,13 @@
                         android:layout_width="0dp"
                         android:background="@drawable/et_edittext_bck"
                         android:textColor="@color/grey_2"
-                        android:layout_height="@dimen/_45sdp"
+                        android:layout_height="@dimen/_35sdp"
                         android:layout_weight="0.5"
                         android:text="Select Time"/>
 
-                </LinearLayout>
-
-
+                </LinearLayout>-->
                 <View
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="#dddddd"/>
@@ -219,7 +211,7 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     >
                     <TextView
-                        android:textSize="@dimen/_12sdp"
+                        android:textSize="@dimen/_10sdp"
                         style="@style/normalFont"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -229,7 +221,7 @@
                     <TextView
                         android:layout_gravity="right"
                         android:gravity="right"
-                        android:textSize="@dimen/_12sdp"
+                        android:textSize="@dimen/_10sdp"
                         style="@style/normalFont"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -248,7 +240,6 @@
 
                     <TextView
                         android:id="@+id/ssone_open"
-                        android:paddingTop="@dimen/_12sdp"
                         android:paddingLeft="@dimen/_10sdp"
                         android:drawableRight="@drawable/ic_clock"
                         android:layout_marginHorizontal="@dimen/_10sdp"
@@ -257,13 +248,12 @@
                         android:layout_width="0dp"
                         android:background="@drawable/et_edittext_bck"
                         android:textColor="@color/grey_2"
-                        android:layout_height="@dimen/_45sdp"
+                        android:layout_height="@dimen/_35sdp"
                         android:layout_weight="0.5"
                         android:text="Select Time"/>
 
                     <TextView
                         android:id="@+id/ssone_close"
-                        android:paddingTop="@dimen/_12sdp"
                         android:paddingLeft="@dimen/_10sdp"
                         android:drawableRight="@drawable/ic_clock"
                         android:layout_marginHorizontal="@dimen/_10sdp"
@@ -272,13 +262,13 @@
                         android:layout_width="0dp"
                         android:background="@drawable/et_edittext_bck"
                         android:textColor="@color/grey_2"
-                        android:layout_height="@dimen/_45sdp"
+                        android:layout_height="@dimen/_35sdp"
                         android:layout_weight="0.5"
                         android:text="Select Time"/>
 
                 </LinearLayout>
 
-                <LinearLayout
+              <!--  <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -287,7 +277,7 @@
                     android:layout_marginTop="@dimen/_20sdp"
                     >
                     <TextView
-                        android:textSize="@dimen/_12sdp"
+                        android:textSize="@dimen/_10sdp"
                         style="@style/normalFont"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -297,7 +287,7 @@
                     <TextView
                         android:layout_gravity="right"
                         android:gravity="right"
-                        android:textSize="@dimen/_12sdp"
+                        android:textSize="@dimen/_10sdp"
                         style="@style/normalFont"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -316,7 +306,6 @@
 
                     <TextView
                         android:id="@+id/sstwo_open"
-                        android:paddingTop="@dimen/_12sdp"
                         android:paddingLeft="@dimen/_10sdp"
                         android:drawableRight="@drawable/ic_clock"
                         android:layout_marginHorizontal="@dimen/_10sdp"
@@ -325,12 +314,12 @@
                         android:layout_width="0dp"
                         android:background="@drawable/et_edittext_bck"
                         android:textColor="@color/grey_2"
-                        android:layout_height="@dimen/_45sdp"
+                        android:layout_height="@dimen/_35sdp"
                         android:layout_weight="0.5"
                         android:text="Select Time"/>
 
                     <TextView
-                        android:paddingTop="@dimen/_12sdp"
+
                         android:id="@+id/sstwo_close"
                         android:paddingLeft="@dimen/_10sdp"
                         android:drawableRight="@drawable/ic_clock"
@@ -340,11 +329,11 @@
                         android:layout_width="0dp"
                         android:background="@drawable/et_edittext_bck"
                         android:textColor="@color/grey_2"
-                        android:layout_height="@dimen/_45sdp"
+                        android:layout_height="@dimen/_35sdp"
                         android:layout_weight="0.5"
                         android:text="Select Time"/>
 
-                </LinearLayout>
+                </LinearLayout>-->
 
 
 
@@ -371,8 +360,9 @@
                 android:gravity="center"
                 android:id="@+id/time_save"
                 android:text="Save"
-                android:textSize="@dimen/_18sdp"
-                android:fontFamily="@font/poppins"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_light"
                 />
 
         </LinearLayout>

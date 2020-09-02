@@ -5,12 +5,8 @@
         android:radius="@dimen/_25sdp"/>
 
     <solid
-        android:color="#881277BD"/>
+        android:color="#1B8BE5"/>
 
-    <padding
-        android:top="@dimen/_6sdp"
-        android:right="@dimen/_6sdp"
-        android:left="@dimen/_6sdp"
-        android:bottom="@dimen/_6sdp"/>
+
 
 </shape>

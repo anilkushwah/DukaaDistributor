@@ -46,23 +46,23 @@ public class StatusordershowActivity extends AppCompatActivity {
             }
         });
 
-        ShoworderModel modal = new ShoworderModel();
+      /*  ShoworderModel modal = new ShoworderModel();
 
-        modal.setAmount("60.00");
+         *//* modal.setAmount("60.00");
         modal.setName("Apple");
         modal.setItemquantity("(1kg)");
         modal.setOrderqty("3");
         modal.setOrderprice("20");
-        modal.setImage(R.drawable.soft_drink);
+        modal.setImage(R.drawable.soft_drink);*//*
         showModelList.add(modal);
 
         ShoworderModel modal1 = new ShoworderModel();
-        modal1.setAmount("40.00");
+    *//*    modal1.setAmount("40.00");
         modal1.setName("Banana");
         modal1.setItemquantity("(12pcs)");
         modal1.setOrderqty("2");
         modal1.setOrderprice("20");
-        modal1.setImage(R.drawable.soft_drink);
+        modal1.setImage(R.drawable.soft_drink);*//*
         showModelList.add(modal1);
 
         ShoworderModel modal2 = new ShoworderModel();
@@ -93,7 +93,7 @@ public class StatusordershowActivity extends AppCompatActivity {
         moda.setItemquantity("(1kg)");
         moda.setImage(R.drawable.soft_drink);
         showModelList.add(moda);
-
+*/
 
         All_Complains_recyclerviewId.setLayoutManager(new LinearLayoutManager(StatusordershowActivity.this, RecyclerView.VERTICAL, false));
         ShowOrderAdapter showAdapter = new ShowOrderAdapter(StatusordershowActivity.this, showModelList);

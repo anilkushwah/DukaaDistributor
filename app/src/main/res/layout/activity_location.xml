@@ -61,7 +61,8 @@
 
 
             <LinearLayout
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
                 android:padding="@dimen/_4sdp"
                 android:id="@+id/btn_use_Location_Id"
                 android:layout_width="match_parent"
@@ -106,7 +107,7 @@
                     android:gravity="center"
                     android:text="OR"
                     android:textSize="@dimen/_13sdp"
-                    android:textColor="@android:color/black"/>
+                    android:textColor="@color/black"/>
 
                 <View
                     android:layout_width="0dp"
@@ -120,6 +121,7 @@
 
 
             <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
                 android:padding="@dimen/_4sdp"
                 android:id="@+id/add_location_manually"
                 android:layout_width="match_parent"
