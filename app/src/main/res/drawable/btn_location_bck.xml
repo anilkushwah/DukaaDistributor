@@ -7,7 +7,7 @@
 
 
     <solid
-        android:color="@color/logo_color_code"/>
+        android:color="@color/colorBlue"/>
 
 
 </shape>

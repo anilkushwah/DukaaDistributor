@@ -6,8 +6,8 @@ package com.dollop.distributor.UtilityTools;
 
 public class Const {
   public interface URL {
-    //    String HOST_URL = "https://app.dukaa.co.ke/";
-    String HOST_URL = "http://116.75.243.44:8080/dukaa/";
+    String HOST_URL = "https://app.dukaa.co.ke/";
+    //    String HOST_URL = "http://116.75.243.44:8080/dukaa/";
     String distributor_register = HOST_URL + "distributor_register";
     String update_distributor = HOST_URL + "update_distributor";
     String login = HOST_URL + "login";
