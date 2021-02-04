@@ -3,8 +3,8 @@
     android:dither="true"
     android:useLevel="true">
     <size
-        android:width="@dimen/_18sdp"
-        android:height="@dimen/_4sdp" />
+        android:width="18dip"
+        android:height="4dip" />
     <solid android:color="@color/colorBlue" />
 
     <corners

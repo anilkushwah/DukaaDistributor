@@ -3,9 +3,9 @@
     android:dither="true"
     android:useLevel="true">
     <size
-        android:width="@dimen/_8sdp"
-        android:height="@dimen/_4sdp" />
-    <solid android:color="@color/colorBody" />
+        android:width="8dip"
+        android:height="4dip" />
+    <solid android:color="#661277BD" />
 
     <corners
         android:radius="@dimen/_10sdp"/>
