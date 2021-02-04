@@ -30,6 +30,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         sessionManager = new SessionManager(this);
         //getSupportActionBar().setElevation(0);
         //hideSystemUI();
