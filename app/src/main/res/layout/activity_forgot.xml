@@ -97,8 +97,9 @@
         android:orientation="vertical">
 
         <ImageView
+            android:padding="@dimen/_35sdp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:src="@drawable/ic_color_logo"/>
 
     </LinearLayout>
@@ -118,14 +119,15 @@
             android:layout_height="0dp"
             android:orientation="vertical">
 
+
             <TextView
                 android:textColor="@color/subhading_black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enter Mobile Number Or Email to recover your password"
+                android:text="Mobile Number"
                 android:fontFamily="@font/poppins"
                 android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_15sdp"/>
 
@@ -147,14 +149,15 @@
                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:gravity="center|left"
-                    android:inputType="text"
+                    android:inputType="phone"
+                    android:maxLength="9"
                     android:textSize="@dimen/_12sdp"
                     android:id="@+id/et_forgot_mobile_number"
                     android:layout_marginLeft="@dimen/_5sdp"
                     android:paddingTop="@dimen/_5sdp"
                     android:paddingBottom="@dimen/_2sdp"
                     android:fontFamily="@font/poppins_light"
-                    android:hint="  Mobile number Or Email Id"/>
+                    android:hint=" Enter Mobile number"/>
 
 
 

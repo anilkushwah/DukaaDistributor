@@ -71,6 +71,14 @@ public class UserDataHelper {
         values.put(UserModel.KEY_IMAGE_ID, userModel.getImage());
         values.put(UserModel.KEY_MOBILE_ID, userModel.getMobile());
         values.put(UserModel.KEY_NAME_ID, userModel.getName());
+        values.put(UserModel.KEY_SET_TIME, userModel.getTime());
+        values.put(UserModel.KEY_SET_LOCATION, userModel.getLocation());
+        values.put(UserModel.KEY_MF_slot1_start_time, userModel.getMf_start());
+        values.put(UserModel.KEY_MF_slot1_end_time, userModel.getMf_close());
+        values.put(UserModel.KEY_SS_slot1_start_time, userModel.getSs_start());
+        values.put(UserModel.KEY_SS_slot1_end_time, userModel.getSs_close());
+        values.put(UserModel.KEY_STORE_LAT, userModel.getStore_lat());
+        values.put(UserModel.KEY_STORE_LONG, userModel.getStore_long());
 
         if (!isExist(userModel)) {
             Utils.E("insert successfully");
@@ -96,6 +104,14 @@ public class UserDataHelper {
                 taxiModel.setMobile(cursor.getString(cursor.getColumnIndex(UserModel.KEY_MOBILE_ID)));
                 taxiModel.setImage(cursor.getString(cursor.getColumnIndex(UserModel.KEY_IMAGE_ID)));
                 taxiModel.setName(cursor.getString(cursor.getColumnIndex(UserModel.KEY_NAME_ID)));
+                taxiModel.setTime(cursor.getString(cursor.getColumnIndex(UserModel.KEY_SET_TIME)));
+                taxiModel.setLocation(cursor.getString(cursor.getColumnIndex(UserModel.KEY_SET_LOCATION)));
+                taxiModel.setMf_start(cursor.getString(cursor.getColumnIndex(UserModel.KEY_MF_slot1_start_time)));
+                taxiModel.setMf_close(cursor.getString(cursor.getColumnIndex(UserModel.KEY_MF_slot1_end_time)));
+                taxiModel.setSs_start(cursor.getString(cursor.getColumnIndex(UserModel.KEY_SS_slot1_start_time)));
+                taxiModel.setSs_close(cursor.getString(cursor.getColumnIndex(UserModel.KEY_SS_slot1_end_time)));
+                taxiModel.setStore_lat(cursor.getString(cursor.getColumnIndex(UserModel.KEY_STORE_LAT)));
+                taxiModel.setStore_long(cursor.getString(cursor.getColumnIndex(UserModel.KEY_STORE_LONG)));
                 userItem.add(taxiModel);
             } while ((cursor.moveToPrevious()));
             cursor.close();

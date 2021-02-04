@@ -35,8 +35,8 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         NotificationModelList homeViewModel = notificationModelLists.get(position);
-        holder.tv_notificationTime.setText(homeViewModel.getNotifcationTime());
-        holder.tv_notificaiton_Description.setText(homeViewModel.getNotificationDescription());
+        holder.tv_notificationTime.setText(homeViewModel.createdDate);
+        holder.tv_notificaiton_Description.setText(homeViewModel.message);
 
     }
 

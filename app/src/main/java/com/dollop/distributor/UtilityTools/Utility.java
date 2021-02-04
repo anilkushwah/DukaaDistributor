@@ -112,20 +112,21 @@ public class Utility {
         }
         return date;
     }
+
     public static String strToDate(String start_dt) {
-        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        Date date = null;
+        DateFormat output = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",
+                Locale.ENGLISH);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM yyyy h:mm a");
+        Date dateasdf = null;
         try {
-            date = formatter.parse(start_dt);
-            Log.e("date", date.toString());
+            dateasdf = output.parse(start_dt);
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        SimpleDateFormat newFormat = new SimpleDateFormat("dd/MM/yyyy");
-        String finalString = newFormat.format(date);
+        SimpleDateFormat newFormat = new SimpleDateFormat("dd MMM yyyy h:mm a");
+        String finalString = newFormat.format(dateasdf);
         return finalString;
     }
-
     public static Date retirnStrToDate(String strDate) {
         Date date = null;
         try {

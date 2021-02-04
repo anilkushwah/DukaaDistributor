@@ -93,7 +93,7 @@
                         android:layout_weight="0.5"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="items"/>
+                        android:text="3 Units (5Kg)"/>
 
                 </LinearLayout>
 
@@ -130,7 +130,7 @@
 
                         <TextView
                             android:drawablePadding="@dimen/_5sdp"
-                            android:drawableLeft="@drawable/ic_rupee_white_small"
+
                             android:textSize="@dimen/_10sdp"
                             style="@style/normalFont"
                             android:textColor="@color/white"

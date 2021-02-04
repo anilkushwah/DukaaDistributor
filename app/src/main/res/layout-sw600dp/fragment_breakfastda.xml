@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_10sdp"
-        android:background="@android:color/white"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <LinearLayout
@@ -26,7 +26,7 @@
                 android:layout_weight="0.5"
                 android:layout_height="wrap_content"
                 android:text="Breakfast &amp; Dairy"
-                android:textSize="@dimen/_13sdp"
+                android:textSize="@dimen/_12sdp"
                 android:fontFamily="@font/poppins_light"/>
 
 
@@ -38,7 +38,7 @@
                 android:layout_weight="0.5"
                 android:layout_height="wrap_content"
                 android:text="7 Item"
-                android:textSize="@dimen/_13sdp"
+                android:textSize="@dimen/_12sdp"
                 android:fontFamily="@font/poppins_light"/>
 
 
@@ -69,27 +69,25 @@
     </LinearLayout>
 
     <FrameLayout
-        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         android:id="@+id/emp_addbtn"
-        android:padding="@dimen/_5sdp"
-        android:layout_width="@dimen/_120sdp"
+        android:layout_width="@dimen/_110sdp"
         android:layout_marginLeft="@dimen/_10sdp"
         android:layout_marginRight="@dimen/_10sdp"
-        android:layout_height="@dimen/_45sdp"
+        android:layout_height="@dimen/_40sdp"
         android:background="@drawable/button_back"
         android:layout_gravity="bottom|right">
 
         <TextView
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:drawablePadding="@dimen/_10sdp"
-            android:drawableLeft="@drawable/ic_plus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/_14sdp"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_plus"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="center"
             android:text="Add Items"
             android:textColor="@android:color/white"
-            />
+            android:textSize="@dimen/_12sdp" />
     </FrameLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

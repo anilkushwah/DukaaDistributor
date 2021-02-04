@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.dollop.distributor.R;
+import com.dollop.distributor.UtilityTools.NetworkUtil;
+import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.adapter.SearchStoreProductAdapter;
 import com.dollop.distributor.model.SearchStoreModelList;
 
@@ -24,10 +26,17 @@ public class SearchStoreActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_search_store);
         rv_search_store_Id = findViewById(R.id.rv_search_store_Id);
 
+        boolean status = NetworkUtil.getConnectivityStatus(SearchStoreActivity.this);
+        if(status == true) {
+
+        }else{
+            Utils.T(SearchStoreActivity.this,"No Internet Connection available. Please try again");
+        }
+
 
         SearchStoreModelList searchStoreModelList = new SearchStoreModelList();
         searchStoreModelList.setSearchRating("4.5");
-        searchStoreModelList.setSearchStoreImage(R.drawable.backeryy);
+        searchStoreModelList.setSearchStoreImage(R.drawable.no_product);
         searchStoreModelList.setSearchStoreName("The Fresh Market");
         searchStoreModelList.setSearchStoreVarietyName("Fruits and Veggies");
         searchStoreModelList.setSearchStoreOffPrice("Rs. 200");
@@ -36,7 +45,7 @@ public class SearchStoreActivity extends AppCompatActivity implements View.OnCli
 
         SearchStoreModelList searchStoreModelList1 = new SearchStoreModelList();
         searchStoreModelList1.setSearchRating("4.5");
-        searchStoreModelList1.setSearchStoreImage(R.drawable.backeryy);
+        searchStoreModelList1.setSearchStoreImage(R.drawable.no_product);
         searchStoreModelList1.setSearchStoreName("Harvert Market");
         searchStoreModelList1.setSearchStoreVarietyName("Fruits and Veggies");
         searchStoreModelList1.setSearchStoreOffPrice("Rs. 400");
@@ -45,7 +54,7 @@ public class SearchStoreActivity extends AppCompatActivity implements View.OnCli
 
         SearchStoreModelList searchStoreModelList2 = new SearchStoreModelList();
         searchStoreModelList2.setSearchRating("4.5");
-        searchStoreModelList2.setSearchStoreImage(R.drawable.backeryy);
+        searchStoreModelList2.setSearchStoreImage(R.drawable.no_product);
         searchStoreModelList2.setSearchStoreName("Whole Food Market");
         searchStoreModelList2.setSearchStoreVarietyName("Fruits and Veggies");
         searchStoreModelList2.setSearchStoreProductOff("Extra 10% Off on purchase of");
@@ -53,7 +62,7 @@ public class SearchStoreActivity extends AppCompatActivity implements View.OnCli
 
         SearchStoreModelList searchStoreModelList3 = new SearchStoreModelList();
         searchStoreModelList3.setSearchRating("4.5");
-        searchStoreModelList3.setSearchStoreImage(R.drawable.backeryy);
+        searchStoreModelList3.setSearchStoreImage(R.drawable.no_product);
         searchStoreModelList3.setSearchStoreName("The Fresh Market");
         searchStoreModelList3.setSearchStoreVarietyName("Fruits and Veggies");
         searchStoreModelList3.setSearchStoreOffPrice("Rs. 200");

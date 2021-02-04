@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -25,6 +25,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.dollop.distributor.R;
+import com.dollop.distributor.UtilityTools.Const;
+import com.dollop.distributor.UtilityTools.NetworkUtil;
 import com.dollop.distributor.UtilityTools.UserAccount;
 import com.dollop.distributor.UtilityTools.Utils;
 
@@ -34,10 +36,11 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import okhttp3.internal.Util;
+
 public class ForgotActivity extends AppCompatActivity implements View.OnClickListener  {
 
     Button btn_forgot_send;
-
     EditText et_forgot_mobile_number;
     TextView tv_forgot_mobile_req;
     LinearLayout ll_forgot_mobi;
@@ -53,47 +56,61 @@ public class ForgotActivity extends AppCompatActivity implements View.OnClickLis
         ll_forgot_mobi = findViewById(R.id.ll_forgot_mobi);
 
         btn_forgot_send.setOnClickListener(this);
+
+        boolean status = NetworkUtil.getConnectivityStatus(ForgotActivity.this);
+        if(status == true) {
+
+        }else{
+            Utils.T(ForgotActivity.this,"No Internet Connection available. Please try again");
+        }
     }
 
 
     @Override
     public void onClick(View v) {
         if(v ==btn_forgot_send){
+
             if (!UserAccount.isEmpty(et_forgot_mobile_number)){
-                et_forgot_mobile_number.setError("Please enter mobile number or email");
+                et_forgot_mobile_number.setError("please enter mobile number");
+                et_forgot_mobile_number.requestFocus();
+            }
+           else if (!UserAccount.isPhoneNumberLength(et_forgot_mobile_number)){
+                et_forgot_mobile_number.setError("Please enter 9 digit mobile number");
                 et_forgot_mobile_number.requestFocus();
             }
             else{
-
-                Utils.I(ForgotActivity.this, ForgotMatchOtpActivity.class,null);
-             //   Forgot();
+                //Utils.I(ForgotActivity.this, ForgotMatchOtpActivity.class,null);
+                Forgot();
             }
         }
     }
 
-    /*    private void Forgot() {
+        private void Forgot() {
         {
             final Dialog dialog = Utils.initProgressDialog(this);
             RequestQueue queue = Volley.newRequestQueue(this);
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, Const.URL.forgot_password, new Response.Listener<String>() {
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, Const.URL.distributor_forgot_password, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
                     dialog.dismiss();
 
-                    Log.e("dukkaLogin:", "dukkaLogin:--" + response);
+                    Log.e("forgot_password:", "forgot_password:--" + response);
                     try {
                         JSONObject jsonObject = new JSONObject(response);
 
-                        Toast.makeText(ForgotActivity.this,jsonObject.getString("message"),Toast.LENGTH_LONG).show();
+                       // Toast.makeText(ForgotActivity.this,jsonObject.getString("message"),Toast.LENGTH_LONG).show();
 
                         if (jsonObject.getInt("status")==200) {
 
                             String otpdata = jsonObject.getString("data");
 
-                            Intent intent = new Intent(ForgotActivity.this, ForgotMatchOtpActivity.class);
-                            intent.putExtra("otp",otpdata.toString());
-                            intent.putExtra("mobile",et_forgot_mobile_number.getText().toString());
-                            startActivity(intent);
+                            Bundle bundle   = new Bundle();
+                            bundle.putString("otp",otpdata);
+                            bundle.putString("mobile",et_forgot_mobile_number.getText().toString());
+                            Utils.I(ForgotActivity.this, ForgotMatchOtpActivity.class,bundle);
+
+                        }else {
+                            Utils.T(ForgotActivity.this, jsonObject.getString("message"));
                         }
 
                     } catch (JSONException e) {
@@ -156,5 +173,5 @@ public class ForgotActivity extends AppCompatActivity implements View.OnClickLis
                     DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
             queue.add(stringRequest);
         }
-    }*/
+    }
 }

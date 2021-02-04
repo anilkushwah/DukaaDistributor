@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:id="@+id/user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:padding="@dimen/_1sdp"
+            android:id="@+id/user_profile_pic_riv"
+            app:srcCompat="@drawable/ic_user_blue"
+             />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/user_profile_pic_riv"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alex Carey"
+                android:textColor="#000000"
+                android:id="@+id/user_name_tv"
+                android:textSize="@dimen/_10sdp" />
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RatingBar
+        android:id="@+id/my_rating_ratebar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_below="@+id/user_info"
+        android:max="5"
+        android:numStars="5"
+        android:rating="3"
+        android:scaleX="0.4"
+        android:scaleY="0.4"
+        android:stepSize=".5"
+        android:transformPivotY="0dp" />
+
+
+    <TextView
+        android:id="@+id/rating_by_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_info"
+        android:layout_toRightOf="@+id/my_rating_ratebar"
+        android:textSize="@dimen/_11sdp"
+        android:text="3.0 Rating" />
+
+
+    <TextView
+        android:id="@+id/review_by_user_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_rating_ratebar"
+        android:text=""
+        android:visibility="gone"
+        android:textSize="@dimen/_9sdp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/review_by_user_tv"
+        android:id="@+id/review_time_tv"
+        android:text="25 Jun 2020 | 10:45 AM"
+        android:gravity="end"
+        android:layout_marginRight="@dimen/_5sdp"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@+id/review_time_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="#D5D5D5"/>
+
+</RelativeLayout>

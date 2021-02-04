@@ -1,383 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBlue"
-    android:orientation="vertical"
-    android:weightSum="2"
-    >
+    android:background="@color/colorBlue">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.3"
-        android:layout_marginLeft="@dimen/_10sdp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:paddingTop="@dimen/_25sdp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <ImageView
-                android:layout_gravity="center"
-                android:layout_width="@dimen/_25sdp"
-                android:layout_height="@dimen/_25sdp"
-                android:id="@+id/iv_set_back_arrow"
-                android:src="@drawable/ic_back_left"/>
-
-            <TextView
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:textSize="@dimen/_16sdp"
-                android:textColor="#ffffff"
-                style="@style/normalFont"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Set Timings"/>
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.7"
-        android:background="@drawable/curve_bg_white_login"
-        android:orientation="vertical">
-
-
-
-        <androidx.core.widget.NestedScrollView
-            android:layout_weight="0.9"
-            android:layout_width="match_parent"
             android:layout_height="0dp"
-            >
+
+            android:layout_weight=".3"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                >
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-                <LinearLayout
+                <ImageView
+                    android:id="@+id/iv_set_back_arrow"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/ic_back_left" />
+
+                <TextView
+                    style="@style/normalFont"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="1"
-                    android:layout_marginHorizontal="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_20sdp"
-                    >
-                    <TextView
-                        android:textSize="@dimen/_12sdp"
-                        style="@style/normalFont"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:text="Monday to Friday"/>
-
-                    <TextView
-                        android:layout_gravity="right"
-                        android:gravity="right"
-                        android:textSize="@dimen/_12sdp"
-                        style="@style/normalFont"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:text="(Slot -1)"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_marginTop="@dimen/_3sdp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="1"
-                    >
-
-                    <TextView
-                        android:paddingTop="@dimen/_12sdp"
-                        android:id="@+id/sone_open"
-                        android:drawableRight="@drawable/ic_clock"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:textSize="@dimen/_12sdp"
-                        android:paddingLeft="@dimen/_10sdp"
-                        style="@style/normalFont"
-                        android:layout_width="0dp"
-                        android:background="@drawable/et_edittext_bck"
-                        android:textColor="@color/grey_2"
-                        android:layout_height="@dimen/_45sdp"
-                        android:layout_weight="0.5"
-                        android:text="Select Time"/>
-
-                    <TextView
-                        android:id="@+id/sone_close"
-                        android:paddingTop="@dimen/_12sdp"
-                        android:paddingLeft="@dimen/_10sdp"
-                        android:drawableRight="@drawable/ic_clock"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:textSize="@dimen/_12sdp"
-                        style="@style/normalFont"
-                        android:layout_width="0dp"
-                        android:background="@drawable/et_edittext_bck"
-                        android:textColor="@color/grey_2"
-                        android:layout_height="@dimen/_45sdp"
-                        android:layout_weight="0.5"
-                        android:text="Select Time"/>
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="1"
-                    android:layout_marginHorizontal="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_20sdp"
-                    >
-                    <TextView
-                        android:textSize="@dimen/_12sdp"
-                        style="@style/normalFont"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:text="Monday to Friday"/>
-
-                    <TextView
-                        android:layout_gravity="right"
-                        android:gravity="right"
-                        android:textSize="@dimen/_12sdp"
-                        style="@style/normalFont"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:text="(Slot -2)"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_marginTop="@dimen/_3sdp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="1"
-                    >
-
-                    <TextView
-                        android:id="@+id/stwo_open"
-                        android:paddingTop="@dimen/_12sdp"
-                        android:paddingLeft="@dimen/_10sdp"
-                        android:drawableRight="@drawable/ic_clock"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:textSize="@dimen/_12sdp"
-                        style="@style/normalFont"
-                        android:layout_width="0dp"
-                        android:background="@drawable/et_edittext_bck"
-                        android:textColor="@color/grey_2"
-                        android:layout_height="@dimen/_45sdp"
-                        android:layout_weight="0.5"
-                        android:text="Select Time"/>
-
-                    <TextView
-                        android:id="@+id/stwo_close"
-                        android:paddingTop="@dimen/_12sdp"
-                        android:paddingLeft="@dimen/_10sdp"
-                        android:drawableRight="@drawable/ic_clock"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:textSize="@dimen/_12sdp"
-                        style="@style/normalFont"
-                        android:layout_width="0dp"
-                        android:background="@drawable/et_edittext_bck"
-                        android:textColor="@color/grey_2"
-                        android:layout_height="@dimen/_45sdp"
-                        android:layout_weight="0.5"
-                        android:text="Select Time"/>
-
-                </LinearLayout>
-
-
-                <View
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginBottom="@dimen/_5sdp"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#dddddd"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="1"
-                    android:layout_marginHorizontal="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    >
-                    <TextView
-                        android:textSize="@dimen/_12sdp"
-                        style="@style/normalFont"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:text="Saturday to Sunday"/>
-
-                    <TextView
-                        android:layout_gravity="right"
-                        android:gravity="right"
-                        android:textSize="@dimen/_12sdp"
-                        style="@style/normalFont"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:text="(Slot -1)"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_marginTop="@dimen/_3sdp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="1"
-                    >
-
-                    <TextView
-                        android:id="@+id/ssone_open"
-                        android:paddingTop="@dimen/_12sdp"
-                        android:paddingLeft="@dimen/_10sdp"
-                        android:drawableRight="@drawable/ic_clock"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:textSize="@dimen/_12sdp"
-                        style="@style/normalFont"
-                        android:layout_width="0dp"
-                        android:background="@drawable/et_edittext_bck"
-                        android:textColor="@color/grey_2"
-                        android:layout_height="@dimen/_45sdp"
-                        android:layout_weight="0.5"
-                        android:text="Select Time"/>
-
-                    <TextView
-                        android:id="@+id/ssone_close"
-                        android:paddingTop="@dimen/_12sdp"
-                        android:paddingLeft="@dimen/_10sdp"
-                        android:drawableRight="@drawable/ic_clock"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:textSize="@dimen/_12sdp"
-                        style="@style/normalFont"
-                        android:layout_width="0dp"
-                        android:background="@drawable/et_edittext_bck"
-                        android:textColor="@color/grey_2"
-                        android:layout_height="@dimen/_45sdp"
-                        android:layout_weight="0.5"
-                        android:text="Select Time"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="1"
-                    android:layout_marginHorizontal="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_20sdp"
-                    >
-                    <TextView
-                        android:textSize="@dimen/_12sdp"
-                        style="@style/normalFont"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:text="Saturday to Sunday"/>
-
-                    <TextView
-                        android:layout_gravity="right"
-                        android:gravity="right"
-                        android:textSize="@dimen/_12sdp"
-                        style="@style/normalFont"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:text="(Slot -2)"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_marginTop="@dimen/_3sdp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="1"
-                    >
-
-                    <TextView
-                        android:id="@+id/sstwo_open"
-                        android:paddingTop="@dimen/_12sdp"
-                        android:paddingLeft="@dimen/_10sdp"
-                        android:drawableRight="@drawable/ic_clock"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:textSize="@dimen/_12sdp"
-                        style="@style/normalFont"
-                        android:layout_width="0dp"
-                        android:background="@drawable/et_edittext_bck"
-                        android:textColor="@color/grey_2"
-                        android:layout_height="@dimen/_45sdp"
-                        android:layout_weight="0.5"
-                        android:text="Select Time"/>
-
-                    <TextView
-                        android:paddingTop="@dimen/_12sdp"
-                        android:id="@+id/sstwo_close"
-                        android:paddingLeft="@dimen/_10sdp"
-                        android:drawableRight="@drawable/ic_clock"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:textSize="@dimen/_12sdp"
-                        style="@style/normalFont"
-                        android:layout_width="0dp"
-                        android:background="@drawable/et_edittext_bck"
-                        android:textColor="@color/grey_2"
-                        android:layout_height="@dimen/_45sdp"
-                        android:layout_weight="0.5"
-                        android:text="Select Time"/>
-
-                </LinearLayout>
-
-
-
-
+                    android:text="Set Timings"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
             </LinearLayout>
 
-        </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="vertical"
-            android:layout_weight="0.1"
-            android:background="@drawable/button_shap"
-            android:layout_alignParentBottom="true"
+            android:layout_weight=".7"
+            android:background="@drawable/curve_bg_white_login"
+            android:orientation="vertical">
 
-            >
 
-            <TextView
+            <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColor="@color/white"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:id="@+id/time_save"
-                android:text="Save"
-                android:textSize="@dimen/_18sdp"
-                android:fontFamily="@font/poppins"
-                />
+                android:layout_height="0dp"
+                android:layout_weight="0.9">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            style="@style/normalFont"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_weight="0.5"
+                            android:text="Monday to Friday"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            style="@style/normalFont"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_weight="0.5"
+                            android:gravity="right"
+                            android:text=""
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/sone_open"
+                            style="@style/normalFont"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:background="@drawable/et_edittext_bck"
+                            android:drawableRight="@drawable/ic_clock"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:text="Select Open Time"
+                            android:textColor="@color/grey_2"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:id="@+id/sone_close"
+                            style="@style/normalFont"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:background="@drawable/et_edittext_bck"
+                            android:drawableRight="@drawable/ic_clock"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:text="Select Close Time"
+                            android:textColor="@color/grey_2"
+                            android:textSize="@dimen/_11sdp" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            style="@style/normalFont"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_weight="0.5"
+                            android:text="Saturday to Sunday"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            style="@style/normalFont"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_weight="0.5"
+                            android:gravity="right"
+                            android:text=""
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/ssone_open"
+                            style="@style/normalFont"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:background="@drawable/et_edittext_bck"
+                            android:drawableRight="@drawable/ic_clock"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:text="Select Open Time"
+                            android:textColor="@color/grey_2"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:id="@+id/ssone_close"
+                            style="@style/normalFont"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:background="@drawable/et_edittext_bck"
+                            android:drawableRight="@drawable/ic_clock"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:text="Select Close Time"
+                            android:textColor="@color/grey_2"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
 
         </LinearLayout>
 
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:id="@+id/time_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_shap"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
 
     </LinearLayout>
 
-</LinearLayout>
+
+</RelativeLayout>

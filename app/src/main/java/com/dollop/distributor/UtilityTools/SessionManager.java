@@ -21,12 +21,12 @@ public class SessionManager {
     private static final String Country = "country";
     private static final String State = "State";
     private static final String City = "city";
-
+    private static final String tokenFcm = "fcm_id";
     private static final String Store_location = "store_location";
     private static final String Store_address = "store_address";
     private static final String Store_lat = "store_lat";
     private static final String Store_long = "store_long";
-    private static final String Contact_name = "contact_name";
+    private static final String ADDRESS = "address";
 
     Context _context;
     SharedPreferences.Editor editor;
@@ -55,26 +55,31 @@ public class SessionManager {
     }
 
 
-    public void setRegisterUser(UserDTO mUser) {
-        editor.putString(Customer_id, mUser.getDistributorId());
-        editor.putString(Name, mUser.getName());
-        editor.putString(Email, mUser.getEmail());
-        editor.putString(Phone, mUser.getMobile());
-        editor.putString(Password, mUser.getPassword());
-        editor.putString(Designation, mUser.getDesignation());
-        editor.putString(Country, mUser.getCountry());
-        editor.putString(State, mUser.getState());
-        editor.putString(City, mUser.getCity());
-        editor.putString(Store_location, mUser.getStoreLocation());
-        editor.putString(Store_address, mUser.getStoreAddress());
-        editor.putString(Store_lat, mUser.getStoreLat());
-        editor.putString(Store_long, mUser.getStoreLong());
-        editor.putString(Contact_name, mUser.getContactName());
 
 
+    public void setADDRESS(boolean bool) {
+        editor.putBoolean(ADDRESS, bool);
+        editor.commit();
+    }
+
+    public boolean isADDRESS() {
+        return pref.getBoolean(ADDRESS, false);
+    }
+
+
+    public void setTokenFCM(String token) {
+        editor.putString(tokenFcm, token);
         editor.commit();
 
     }
+
+    public String getTokenFCM() {
+
+        Utils.E("GETTOKEN" + pref.getString(tokenFcm, null));
+        return pref.getString(tokenFcm, null);
+
+    }
+
 
 
 

@@ -1,215 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBlue"
-    android:orientation="vertical"
-    android:weightSum="2"
-    >
+    android:background="@color/colorBlue">
 
     <LinearLayout
+        android:id="@+id/toolbar_LL"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.8"
-        android:layout_marginLeft="@dimen/_10sdp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:paddingTop="@dimen/_15sdp"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
 
-        <ImageView
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:id="@+id/iv_login_back_arrow"
-            android:src="@drawable/ic_back_left"/>
 
         <LinearLayout
+
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="@dimen/_minus50sdp"
-            android:weightSum="2">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_weight="1">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Enter"
-                    android:textSize="@dimen/_28sdp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:textColor="@android:color/white"
-                   />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="OTP"
-                    android:textSize="@dimen/_20sdp"
-                    android:fontFamily="@font/poppins_light"
-                    android:textColor="@android:color/white"
-                    android:paddingRight="@dimen/_15sdp"
-                    android:paddingBottom="@dimen/_5sdp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_weight="1">
-
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_color_logo"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.2"
-        android:weightSum="3"
-        android:background="@drawable/curve_bg_white_login"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_weight="1.5"
             android:layout_height="0dp"
-            android:gravity="center"
+            android:layout_weight=".8"
             android:orientation="vertical">
 
-            <TextView
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Enter OTP"
-                android:fontFamily="@font/poppins"
-                android:textStyle="bold"
-                android:padding="@dimen/_5sdp"
-                android:textSize="@dimen/_14sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_15sdp"/>
+                android:layout_height="wrap_content">
 
-            <com.chaos.view.PinView
-                android:id="@+id/firstPinView"
-                style="@style/PinWidget.PinView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:cursorVisible="true"
-                android:hint="0"
-                android:itemBackground="@drawable/pin_view_background"
-                android:layout_margin="@dimen/_15sdp"
-                android:inputType="number"
-                android:gravity="center"
-                android:padding="@dimen/_5sdp"
-                android:textColor="@color/grey_2"
-                android:textSize="@dimen/_18sdp"
-                app:cursorColor="@color/colorBlue"
-                app:cursorWidth="@dimen/_2sdp"
-                app:hideLineWhenFilled="false"
-                app:itemCount="6"
-                app:itemHeight="@dimen/_35sdp"
-                app:itemRadius="@dimen/_4sdp"
-                app:itemSpacing="@dimen/_10sdp"
-                app:itemWidth="@dimen/_35sdp"
-                app:lineColor="#DDDDDD"
-                app:lineWidth="@dimen/_2sdp"
-                app:viewType="none" />
+                <ImageView
+                    android:id="@+id/iv_login_back_arrow"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/ic_back_left"
+                    android:visibility="gone" />
 
-            <LinearLayout
-                android:id="@+id/lv_cound_down_timerForgot_Id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:weightSum="2">
+                <ImageView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:src="@drawable/ic_color_logo" />
 
-                <TextView
-                    style="@style/normalFont"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.2"
-                    android:gravity="right"
-                    android:text="OTP will be send in"
-                    android:textSize="@dimen/_12sdp" />
-
-                <TextView
-                    style="@style/normalFont"
-                    android:id="@+id/tv_resend_otp_timer"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.8"
-                    android:paddingLeft="@dimen/_10sdp"
-                    android:text="00"
-                    android:textSize="@dimen/_13sdp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <TextView
-                style="@style/normalFont"
-                android:id="@+id/tv_resend_Ot"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="@dimen/_3sdp"
-                android:text="Resend"
-                android:textColor="@color/colorBlue"
-                android:textSize="@dimen/_15sdp"
-                android:textStyle="bold"
-                android:visibility="gone" />
-
+            </RelativeLayout>
 
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/otp_LL"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_below="@+id/toolbar_LL"
+            android:layout_weight="1.2"
+            android:background="@drawable/curve_bg_white_login"
             android:orientation="vertical"
-            android:layout_weight="1.1"/>
+            android:weightSum="3">
 
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            android:layout_weight="0.4"
-            android:background="@drawable/button_shap"
-            >
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColor="@color/white"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
                 android:gravity="center"
-                android:layout_alignParentBottom="true"
-                android:id="@+id/btn_submit_otp"
-                android:text="Submit"
-                android:textSize="@dimen/_18sdp"
-                android:fontFamily="@font/poppins"
-                />
+                android:orientation="vertical">
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Enter OTP"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+                <com.chaos.view.PinView
+                    android:id="@+id/firstPinView"
+                    style="@style/PinWidget.PinView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:cursorVisible="true"
+                    android:hint="0000"
+
+                    android:inputType="number"
+                    android:itemBackground="@drawable/pin_view_background"
+                    android:textColor="@color/grey_2"
+                    android:textColorHint="#000000"
+                    android:textSize="@dimen/_18sdp"
+                    app:cursorColor="@color/colorBlue"
+                    app:cursorWidth="@dimen/_2sdp"
+                    app:hideLineWhenFilled="false"
+                    app:itemCount="4"
+                    app:itemHeight="@dimen/_40sdp"
+                    app:itemRadius="@dimen/_4sdp"
+                    app:itemSpacing="@dimen/_10sdp"
+                    app:itemWidth="@dimen/_40sdp"
+                    app:lineColor="#DDDDDD"
+                    app:lineWidth="@dimen/_2sdp"
+                    app:viewType="none" />
+
+                <LinearLayout
+                    android:id="@+id/lv_cound_down_timerForgot_Id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/normalFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:text="OTP will be send in"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_resend_otp_timer"
+                        style="@style/normalFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_resend_Ot"
+                    style="@style/normalFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:text="Resend"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.1"
+                android:orientation="vertical" />
+
+
+        </LinearLayout>
 
     </LinearLayout>
 
-</LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_shap"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btn_submit_otp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

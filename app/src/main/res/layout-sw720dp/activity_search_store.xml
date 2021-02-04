@@ -28,8 +28,8 @@
                 android:weightSum="3">
 
                 <ImageView
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_20sdp"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
                     android:layout_gravity="left"
                     android:src="@drawable/ic_back_left"/>
 
@@ -47,8 +47,8 @@
                     android:layout_weight="0.5">
 
                     <LinearLayout
-                        android:layout_width="@dimen/_30sdp"
-                        android:layout_height="@dimen/_30sdp"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
                         android:gravity="center"
                         android:background="@drawable/filter_bck">
 
@@ -91,9 +91,9 @@
                     android:padding="@dimen/_15sdp"
                     android:fontFamily="@font/poppins_semibold"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_18sdp"
+                    android:textSize="@dimen/_20sdp"
                     android:layout_marginLeft="@dimen/_10sdp"
-                    />
+                   />
 
             </LinearLayout>
 
@@ -117,7 +117,7 @@
                         android:layout_weight="1.5"
                         android:layout_height="wrap_content"
                         android:text="Showing 1-6 of 10 results"
-                        android:textSize="@dimen/_12sdp"
+                        android:textSize="@dimen/_13sdp"
                         android:fontFamily="@font/poppins_light"/>
 
 
@@ -128,7 +128,7 @@
                         android:text="Filter"
                         android:id="@+id/tv_wishlist_Edit"
                         android:gravity="center|right"
-                        android:textSize="@dimen/_12sdp"
+                        android:textSize="@dimen/_13sdp"
                         android:fontFamily="@font/poppins_semibold"/>
 
                     <ImageView

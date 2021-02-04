@@ -19,69 +19,62 @@
         android:paddingTop="@dimen/_15sdp"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:id="@+id/iv_login_back_arrow"
-            android:src="@drawable/ic_back_left"/>
 
-        <LinearLayout
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/_minus50sdp"
-            android:gravity="center"
-            android:weightSum="2">
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:id="@+id/iv_login_back_arrow"
+                android:src="@drawable/ic_back_left"/>
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:id="@+id/ll_enterotp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:gravity="center"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_weight="1">
-
+                >
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Enter"
-                    android:textSize="@dimen/_20sdp"
-                    android:fontFamily="@font/poppins_light"
-                    android:textFontWeight="600"
+                    android:textSize="@dimen/_22sdp"
+                    android:fontFamily="@font/poppins_semibold"
                     android:textColor="@android:color/white"
                     android:paddingRight="@dimen/_15sdp"
                     android:paddingTop="@dimen/_15sdp"/>
-
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="OTP"
-                    android:textSize="@dimen/_18sdp"
+                    android:textSize="@dimen/_16sdp"
                     android:fontFamily="@font/poppins_light"
                     android:textColor="@android:color/white"
                     android:paddingRight="@dimen/_15sdp"
                     android:paddingBottom="@dimen/_5sdp"/>
-
             </LinearLayout>
 
             <ImageView
-                android:visibility="gone"
-                android:layout_width="0dp"
+                android:layout_toRightOf="@+id/ll_enterotp"
+                android:padding="@dimen/_25sdp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                android:layout_weight="1"
-                android:layout_gravity="right"
-                android:src="@drawable/new_logo_animation_transparent"/>
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="@dimen/_6sdp"
                 android:layout_gravity="right"
                 android:src="@drawable/ic_color_logo"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
     </LinearLayout>
 

@@ -7,7 +7,7 @@
     android:background="@color/colorBlue"
     android:orientation="vertical"
     android:weightSum="2"
-    tools:context=".LoginActivity">
+    tools:context=".Activity.SignUpActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,11 +46,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Welcome"
-                    android:textSize="@dimen/_28sdp"
+                    android:textSize="@dimen/_20sdp"
                     android:fontFamily="@font/poppins_semibold"
                     android:textColor="@android:color/white"
                     android:paddingRight="@dimen/_15sdp"
-                    android:paddingTop="@dimen/_15sdp"/>
+                    android:paddingTop="@dimen/_25sdp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -79,8 +79,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
-                android:padding="@dimen/_60sdp"
+
                 android:layout_weight="1"
+                android:padding="@dimen/_18sdp"
                 android:layout_gravity="right"
                 android:src="@drawable/ic_color_logo"/>
 
@@ -185,7 +186,7 @@
                     android:background="@null"
                     android:gravity="center|left"
                     android:inputType="number"
-                    android:maxLength="10"
+                    android:maxLength="9"
                     android:textSize="@dimen/_13sdp"
                     android:ems="10"
                     android:layout_marginLeft="@dimen/_5sdp"
@@ -265,7 +266,16 @@
                     android:layout_marginRight="@dimen/_15sdp"/>
 
             </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
 
+                android:fontFamily="@font/poppins_light"
+
+                android:padding="@dimen/_4sdp"
+                android:text="By continuing you agree to our Terms and Conditions and our Privacy Policy"
+                android:textSize="@dimen/_12sdp" />
         </LinearLayout>
 
         <LinearLayout

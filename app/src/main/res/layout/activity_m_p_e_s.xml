@@ -4,46 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBlue"
+    android:background="@color/colorBody"
     android:orientation="vertical"
     android:weightSum="2"
     >
 
     <LinearLayout
+        android:layout_weight="0.3"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.3"
-        android:layout_marginLeft="@dimen/_10sdp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:paddingTop="@dimen/_25sdp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@drawable/lv_home_bck">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:id="@+id/mpesa_back_arrow"
+            app:srcCompat="@drawable/ic_back_left"/>
+
+        <TextView
+            android:textFontWeight="600"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <ImageView
-                android:layout_gravity="center"
-                android:layout_width="@dimen/_25sdp"
-                android:layout_height="@dimen/_25sdp"
-                android:id="@+id/mpesa_back_arrow"
-                android:src="@drawable/ic_back_left"/>
-
-            <TextView
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:textSize="@dimen/_16sdp"
-                android:textColor="#ffffff"
-                style="@style/normalFont"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="MPESA"/>
-        </LinearLayout>
+            android:layout_gravity="left|center"
+            android:text="MPESA"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            />
 
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="@dimen/_12sdp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.7"
@@ -58,8 +55,8 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="@dimen/_55sdp"
-                android:layout_height="@dimen/_55sdp"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_margin="@dimen/_2sdp"
                 android:background="@drawable/home_prdct_blue_bck">
 
@@ -92,7 +89,7 @@
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_gravity="center"
                         android:text="MPESA"
-                        android:textSize="@dimen/_14sdp" />
+                        android:textSize="@dimen/_13sdp" />
 
 
                     <LinearLayout
@@ -106,21 +103,30 @@
 
 
                         <TextView
+                            android:id="@+id/tv_link_mpesa"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/_2sdp"
                             android:breakStrategy="high_quality"
                             android:fontFamily="@font/poppins"
-                            android:text="Total Balance"
+                            android:text="Link Account"
                             android:layout_marginRight="@dimen/_15sdp"
                             android:textColor="@color/colorAccent"
-                            android:textSize="@dimen/_14sdp" />
+                            android:textSize="@dimen/_12sdp" />
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/ll_amount"
+                            >
 
                         <ImageView
-                            android:layout_width="@dimen/_13sdp"
-                            android:layout_height="@dimen/_13sdp"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_rupee" />
+                            />
 
                         <TextView
                             android:id="@+id/tv_ProductRealtedActualPrice"
@@ -131,7 +137,9 @@
                             android:fontFamily="@font/poppins"
                             android:text="38"
                             android:textColor="@color/colorGreen"
-                            android:textSize="@dimen/_14sdp" />
+                            android:textSize="@dimen/_12sdp" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 

@@ -39,13 +39,15 @@
                 android:padding="@dimen/_2sdp"
                 android:textSize="@dimen/_12sdp"
                 android:id="@+id/address_name"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorAccent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
                 android:text="kiosk"/>
 
 
             <TextView
+                android:fontFamily="@font/poppins_light"
                 android:padding="@dimen/_2sdp"
                 android:textSize="@dimen/_10sdp"
                 android:id="@+id/full_address"

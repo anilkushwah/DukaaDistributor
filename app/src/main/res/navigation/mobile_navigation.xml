@@ -34,7 +34,7 @@
         android:label="AllItemFragment" />
     <fragment
         android:id="@+id/setTiming"
-        android:name="com.dollop.distributor.Fragment.SetTimingFragment"
+        android:name="com.dollop.distributor.Activity.SetTimingActivity"
         android:label="SetTimingFragment" />
     <fragment
         android:id="@+id/nav_newFragment"

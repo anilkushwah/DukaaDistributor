@@ -14,18 +14,22 @@
         android:layout_marginTop="@dimen/_10sdp">
 
         <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/wishlist_prdct_blue_bck"
             android:layout_width="0dp"
             android:layout_height="@dimen/_40sdp"
             android:layout_weight=".5"
-            android:src="@drawable/ic_arrow_back_black"
-            android:background="@color/colorBody">
+            >
+
 
             <ImageView
                 android:id="@+id/ImageView_Item_ImageId"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_30sdp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/client_03" />
+                android:src="@drawable/no_product" />
+
 
         </LinearLayout>
 
@@ -51,7 +55,7 @@
                 android:id="@+id/TextView_Item_QuantityId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="(2Kg)"
+                android:text="(2 Unit)"
                 android:textSize="@dimen/_10sdp"/>
 
         </LinearLayout>
@@ -90,7 +94,7 @@
                 style="@style/normalFont"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="55"
+                android:text="12"
                 android:textSize="@dimen/_10sdp"
                 android:textColor="@color/colorBlue"/>
 
@@ -112,7 +116,6 @@
                 android:textSize="@dimen/_10sdp"
                 style="@style/normalFont"
                 android:drawablePadding="@dimen/_5sdp"
-                android:drawableLeft="@drawable/ic_rupee_black_720"
                 android:id="@+id/TextView_Item_amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

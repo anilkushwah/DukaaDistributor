@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:layout_marginTop="@dimen/_30sdp"
+        android:id="@+id/edt_stock_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/et_totalstock_back"
+        android:fontFamily="@font/poppins_light"
+        android:hint="Total Quantity"
+        android:inputType="number"
+        android:paddingLeft="@dimen/_15sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingRight="@dimen/_4sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:singleLine="true"
+        android:textSize="@dimen/_9sdp" />
+
+
+    <TextView
+        android:id="@+id/tv_savestock"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@drawable/location_other_btn"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:padding="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:text="Save"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp" />
+
+
+</LinearLayout>

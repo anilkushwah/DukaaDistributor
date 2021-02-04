@@ -7,11 +7,6 @@
     android:layout_height="wrap_content">
 
 
-
-
-
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,24 +25,33 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     >
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="@dimen/_50sdp"
+
+
+                    <com.dollop.distributor.Activity.RoundedCornerImageLayout
+                        android:layout_width="match_parent"
                         android:layout_height="@dimen/_50sdp"
-                        app:cardCornerRadius="@dimen/_10sdp"
+                        android:layout_gravity="center"
                         >
+
                         <ImageView
+                            android:scaleType="fitXY"
                             android:padding="@dimen/_2sdp"
                             android:id="@+id/image"
-                            android:layout_width="@dimen/_49sdp"
-                            android:layout_height="@dimen/_49sdp"
-                            android:src="@drawable/client_03"
-                            android:scaleType="fitXY"/>
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_user_blue"
 
-                    </androidx.cardview.widget.CardView>
+                             />
+
+                    </com.dollop.distributor.Activity.RoundedCornerImageLayout>
+
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_5sdp"
                     android:layout_width="0dp"
                     android:layout_weight="1.7"
                     android:layout_height="wrap_content"
@@ -62,6 +66,7 @@
                         android:layout_marginHorizontal="@dimen/_5sdp"
                         >
                         <TextView
+                            android:textSize="@dimen/_10sdp"
                             android:id="@+id/name"
                         style="@style/normalFont"
                         android:layout_weight="0.5"
@@ -70,6 +75,7 @@
                         android:text="Alex Carey"/>
 
                         <TextView
+                            android:textSize="@dimen/_10sdp"
                             android:id="@+id/amount_type"
                             android:gravity="right"
                             style="@style/normalFont"
@@ -88,6 +94,7 @@
                         android:layout_marginHorizontal="@dimen/_5sdp"
                         >
                         <TextView
+                            android:textSize="@dimen/_10sdp"
                             android:id="@+id/address"
                             android:textColor="@color/grey_2"
                             style="@style/normalFont"
@@ -104,11 +111,11 @@
                             >
 
                         <TextView
+                            android:textSize="@dimen/_10sdp"
                             android:textColor="@color/colorGreen"
                             android:id="@+id/amount"
                             android:drawablePadding="@dimen/_5sdp"
-                            android:drawableLeft="@drawable/ic_rupee_green_small"
-                            android:gravity="right"
+                           android:gravity="right"
                             style="@style/normalFont"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -125,9 +132,10 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="1"
-                android:padding="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
                 >
                 <TextView
+                    android:fontFamily="@font/poppins"
                     android:id="@+id/date"
                     android:layout_weight="0.5"
                     android:textSize="@dimen/_10sdp"
@@ -137,6 +145,7 @@
                     android:text="28 jun 2020,10:29 AM"/>
 
                 <TextView
+                    android:fontFamily="@font/poppins"
                     android:id="@+id/tv_view_details"
                     android:gravity="right"
                     android:layout_weight="0.5"

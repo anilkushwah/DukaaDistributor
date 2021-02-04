@@ -11,9 +11,13 @@ public class SavedData {
     private static final String adminlogin = "adminlogin";
     private static final String emp_name = "empname";
     private static final String emp_image = "empimage";
-    private static final String active_user = "active_admin";
-
-
+    private static final String active_user = "active_user";
+    private static final String set_time = "set_time";
+    private static final String set_location = "set_location";
+    private static final String set_Distributor_id = "distributor_id";
+    private static final String accesse_type = "accesse_type";
+    private static final String DEVICE_TOKEN = "DEVICE_TOKEN";
+    private static final String sub_member_distributor_id = "sub_member_distributor_id";
     private static SharedPreferences prefs;
     private static SharedPreferences.Editor editor;
 
@@ -38,6 +42,37 @@ public class SavedData {
 
 
 
+
+    public static String getSet_time() {
+        return getInstance().getString(set_time, "");
+    }
+
+    public static void saveSetTime(String startKm) {
+        SharedPreferences.Editor editor = getInstance().edit();
+        editor.putString(set_time, startKm);
+        editor.commit();
+        editor.apply();
+    }
+    public static String get_Distributor_id() {
+        return getInstance().getString(set_Distributor_id, "");
+    }
+
+    public static void saveDisID(String startKm) {
+        SharedPreferences.Editor editor = getInstance().edit();
+        editor.putString(set_Distributor_id, startKm);
+        editor.commit();
+        editor.apply();
+    }
+    public static String getSet_location() {
+        return getInstance().getString(set_location, "");
+    }
+
+    public static void saveSetlocation(String startKm) {
+        SharedPreferences.Editor editor = getInstance().edit();
+        editor.putString(set_location, startKm);
+        editor.commit();
+        editor.apply();
+    }
 
     public static String getActive_user() {
         return getInstance().getString(active_user, "");
@@ -80,6 +115,39 @@ public class SavedData {
     public static void saveadminlogin(String startKm) {
         SharedPreferences.Editor editor = getInstance().edit();
         editor.putString(adminlogin, startKm);
+        editor.commit();
+        editor.apply();
+    }
+
+    public static String get_AccessType() {
+        return getInstance().getString(accesse_type, "");
+    }
+
+    public static void saveAccessType(String startKm) {
+        SharedPreferences.Editor editor = getInstance().edit();
+        editor.putString(accesse_type, startKm);
+        editor.commit();
+        editor.apply();
+    }
+
+    public static String get_MainMemberId() {
+        return getInstance().getString(sub_member_distributor_id, "");
+    }
+
+    public static void saveMainMemberID(String startKm) {
+        SharedPreferences.Editor editor = getInstance().edit();
+        editor.putString(sub_member_distributor_id, startKm);
+        editor.commit();
+        editor.apply();
+    }
+
+    public static String get_DeviceToken() {
+        return getInstance().getString(DEVICE_TOKEN, "");
+    }
+
+    public static void saveDeviceTokan(String startKm) {
+        SharedPreferences.Editor editor = getInstance().edit();
+        editor.putString(DEVICE_TOKEN, startKm);
         editor.commit();
         editor.apply();
     }

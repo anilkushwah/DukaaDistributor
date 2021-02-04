@@ -9,12 +9,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 /**
- * Created by kanchan 17/08/2020.
+ * Created by Anil 17/08/2020.
  */
 
 public class ApiClient {
-     public static final String BASE_URL = "http://laxmi1963.com/dukka/";
-    public static final String BASE_URLImage = "";
+     public static final String BASE_URL =   "https://app.dukaa.co.ke/";
+
     private static Retrofit retrofit = null;
     public static final String REGISTRATION_COMPLETE = "registration_complete";
 

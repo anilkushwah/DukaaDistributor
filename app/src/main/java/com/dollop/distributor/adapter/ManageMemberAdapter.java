@@ -1,34 +1,10 @@
 package com.dollop.distributor.adapter;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.os.Bundle;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.view.menu.MenuBuilder;
-import androidx.appcompat.view.menu.MenuPopupHelper;
-import androidx.appcompat.widget.PopupMenu;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.dollop.distributor.Activity.NewOrderActivity;
-import com.dollop.distributor.R;
-import com.dollop.distributor.UtilityTools.Utils;
-import com.dollop.distributor.model.ManageMemberModel;
-import com.dollop.distributor.model.TotalEarningmodel;
-
-import java.util.ArrayList;
-import java.util.List;
-
+/*
 public class ManageMemberAdapter extends RecyclerView.Adapter<ManageMemberAdapter.MyViewHolder> {
     Context context;
     List<ManageMemberModel>   manageMemberModels;
+    int alldata ;
 
     public ManageMemberAdapter(Context context, List<ManageMemberModel> manageMemberModels) {
         this.context = context;
@@ -45,6 +21,12 @@ public class ManageMemberAdapter extends RecyclerView.Adapter<ManageMemberAdapte
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         ManageMemberModel  current  = manageMemberModels.get(position);
+
+        if (alldata==position){
+            holder.lastitem_space.setVisibility(View.VISIBLE);
+        }else {
+            holder.lastitem_space.setVisibility(View.GONE);
+        }
 
         holder.name.setText(current.getName().toString());
         holder.role.setText(current.getRole().toString());
@@ -82,6 +64,7 @@ public class ManageMemberAdapter extends RecyclerView.Adapter<ManageMemberAdapte
 
     @Override
     public int getItemCount() {
+        alldata=(manageMemberModels.size()-1);
         return manageMemberModels.size();
     }
 
@@ -90,7 +73,7 @@ public class ManageMemberAdapter extends RecyclerView.Adapter<ManageMemberAdapte
     public class MyViewHolder extends RecyclerView.ViewHolder {
        private   TextView name,role;
         private ImageView image;
-        LinearLayout ll_member_menu,ll_full_access,ll_partial_access;
+        LinearLayout ll_member_menu,ll_full_access,ll_partial_access,lastitem_space;
 
 
 
@@ -102,6 +85,8 @@ public class ManageMemberAdapter extends RecyclerView.Adapter<ManageMemberAdapte
             ll_partial_access = itemView.findViewById(R.id.ll_partial_access);
             ll_full_access = itemView.findViewById(R.id.ll_full_access);
             ll_member_menu = itemView.findViewById(R.id.ll_member_menu);
+            lastitem_space = itemView.findViewById(R.id.lastitem_space);
         }
     }
 }
+*/

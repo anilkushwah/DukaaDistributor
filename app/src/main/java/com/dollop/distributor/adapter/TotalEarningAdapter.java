@@ -11,19 +11,22 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.dollop.distributor.Activity.NewOrderActivity;
+import com.dollop.distributor.Activity.OrderDetailsActivity;
 import com.dollop.distributor.R;
+import com.dollop.distributor.UtilityTools.Const;
+import com.dollop.distributor.UtilityTools.Utility;
 import com.dollop.distributor.UtilityTools.Utils;
-import com.dollop.distributor.model.TotalEarningmodel;
+import com.dollop.distributor.model.Datum;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TotalEarningAdapter extends RecyclerView.Adapter<TotalEarningAdapter.MyViewHolder> {
     Context context;
-    List<TotalEarningmodel>  totalEarningmodels  = new ArrayList<>();
+    List<Datum>  totalEarningmodels  = new ArrayList<>();
 
-    public TotalEarningAdapter(Context context, List<TotalEarningmodel> totalEarningmodels) {
+    public TotalEarningAdapter(Context context, List<Datum> totalEarningmodels) {
         this.context = context;
         this.totalEarningmodels = totalEarningmodels;
     }
@@ -36,24 +39,30 @@ public class TotalEarningAdapter extends RecyclerView.Adapter<TotalEarningAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        TotalEarningmodel  current  = totalEarningmodels.get(position);
+    public void onBindViewHolder(@NonNull MyViewHolder holder,final int position) {
+        Datum mDatum  = totalEarningmodels.get(position);
 
-        holder.name.setText(current.getName());
-        holder.date.setText(current.getDate());
-        holder.amount.setText(current.getAmount());
-        holder.amount_type.setText(current.getAmount_type());
-        holder.address.setText(current.getAddress());
+        holder.name.setText(mDatum.retailerName);
+        holder.date.setText(""+ Utility.strToDate(mDatum.createDate));
+        holder.amount.setText(mDatum.totalAmount);
+        holder.amount_type.setText(mDatum.transactionMode);
+        holder.address.setText(mDatum.retailerAddress);
+
         holder.tv_view_details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Bundle bundle=new Bundle();
-                bundle.putString("order_status","complete");
-                Utils.I(context, NewOrderActivity.class,bundle);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("orderData", totalEarningmodels.get(position));
+                bundle.putSerializable("type", "earning");
+                Utils.I(context, OrderDetailsActivity.class, bundle);
 
             }
         });
+
+        if (mDatum.shopImage!=null) {
+            Picasso.get().load(Const.URL.HOST_URL + mDatum.shopImage).into(holder.image);
+
+        }
 
     }
 

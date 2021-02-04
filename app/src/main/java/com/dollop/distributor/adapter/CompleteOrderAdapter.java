@@ -1,31 +1,21 @@
 package com.dollop.distributor.adapter;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.dollop.distributor.Activity.NewOrderActivity;
 import com.dollop.distributor.Activity.OrderDetailsActivity;
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.model.AllOrderDTO;
-import com.dollop.distributor.model.CompleteOderlist;
-import com.dollop.distributor.model.NewOderlist;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
-import java.util.TimeZone;
 
 public class CompleteOrderAdapter extends RecyclerView.Adapter<CompleteOrderAdapter.MyViewHolder> {
     Context context;

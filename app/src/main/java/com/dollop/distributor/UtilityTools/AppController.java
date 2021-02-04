@@ -7,6 +7,7 @@ import android.net.NetworkInfo;
 import android.text.TextUtils;
 import android.util.Log;
 
+import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 
 import com.android.volley.Request;
@@ -49,7 +50,7 @@ public class AppController extends MultiDexApplication {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(LocaleHelper.onAttach(base, LocaleHelper.getLanguage(base)));
       //  super.attachBaseContext(base);
-//        MultiDex.install(this);
+        MultiDex.install(this);
 
     }
 
@@ -87,7 +88,6 @@ public class AppController extends MultiDexApplication {
         if (mRequestQueue == null) {
             mRequestQueue = Volley.newRequestQueue(getApplicationContext());
         }
-
         return mRequestQueue;
     }
 
@@ -101,18 +101,12 @@ public class AppController extends MultiDexApplication {
         getRequestQueue().add(req);
     }
 
-
     @Override
     public void onCreate() {
-//        MultiDex.install(this);
+        MultiDex.install(this);
         super.onCreate();
         mInstance = this;
         new UserDataHelper(this);
-
-
-
-
-
     }
 
     public void handleUncaughtException(Thread thread, Throwable e) {

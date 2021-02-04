@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dollop.distributor">
-    <!--
-        The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-        Google Maps Android API v2, but you must specify either coarse or fine
-        location permissions for the 'MyLocation' functionality.
-    -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    package="com.dollop.distributor" >
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.Manifest.permission.READ_PHONE_STATE" />
     <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".UtilityTools.AppController"
         android:allowBackup="true"
-        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
@@ -23,77 +24,151 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
-
-
-        <activity android:name=".Activity.CutomerDetailsActivity" />
-        <activity android:name=".Activity.CutomerDetailsAcceptActivity" />
-        <activity android:name=".Activity.CutomerDetailsCancelActivity" />
-        <activity android:name=".Activity.AllCreditRequestActivity" />
-        <activity android:name=".Activity.CreateSubMamberActivity" />
-        <activity android:name=".Activity.ManageMemberActivity" />
-        <activity android:name=".Activity.CreditSettingActivity" />
-        <activity android:name=".Activity.UpdatePasswordActivity" />
-        <activity android:name=".Activity.ForgotMatchOtpActivity" />
-        <activity android:name=".Activity.ForgotActivity" />
-        <activity android:name=".Activity.PersonalDeatilsActivity" />
-        <activity android:name=".Activity.StockQuantityActivity" />
-        <activity android:name=".Activity.AssignOrderDetailsActivity" />
-        <activity android:name=".Activity.OrderDetilsBackActivity" />
-        <activity android:name=".Activity.TrackingActivity" />
-        <activity android:name=".Activity.AssignActivity" />
-        <activity android:name=".Activity.OrderDetailsActivity" />
-        <activity android:name=".Activity.ChangePasswordActivity" />
-        <activity android:name=".Activity.BankDetailsActivity" />
-        <activity android:name=".Activity.MPESActivity" />
-        <activity android:name=".Activity.SearchMapsActivity" />
-        <!--
-           The API key for Google Maps-based APIs is defined as a string resource.
-           (See the file "res/values/google_maps_api.xml").
-           Note that the API key is linked to the encryption key used to sign the APK.
-           You need a different API key for each encryption key, including the release key that is used to
-           sign the APK for publishing.
-           You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
-        <activity android:name=".Activity.NewOrderActivity" />
-        <activity android:name=".Activity.DeliveryCompletedActivity" />
-        <activity android:name=".Activity.StatusordershowActivity" />
-        <activity android:name=".Activity.CreateAccountActivity" />
-        <activity android:name=".Activity.ShowOrderActivity" />
-        <activity android:name=".Activity.NotificationActivity" />
-        <activity android:name=".Activity.ProductDetailsActivity" />
-        <activity
-            android:name=".ScrollingActivity"
-            android:label="@string/title_activity_scrolling"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activity.WishListActivity" />
-        <activity android:name=".Fragment.SetTimingFragment" />
-        <activity android:name=".Activity.SavedAddressActivity" />
-        <activity android:name=".Activity.SearchStoreActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".Activity.MyOrderActivity" />
-        <activity android:name=".Fragment.EditProfileFragment" />
-        <activity
-            android:name=".LocationActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".OtpSendActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".HomeActivity"
-            android:label="@string/title_activity_home" />
+        android:usesCleartextTraffic="true" >
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Activity.SplashActivity">
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity android:name=".Activity.OrderHistory" />
+        <activity
+            android:name=".Activity.CreateOfferActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activity.OfferActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activity.MyRatingActivity"
+            android:screenOrientation="portrait" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <activity
+            android:name=".Activity.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.EditSubMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PastorderDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PastorderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.TotalEarningDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ManageDocumentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CutomerDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CutomerDetailsAcceptActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CutomerDetailsCancelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AllCreditRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CreateSubMamberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ManageMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CreditSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.UpdatePasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activity.ForgotMatchOtpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ForgotActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PersonalDeatilsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.StockQuantityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.TrackingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AssignActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.OrderDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.BankDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.MPESActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SearchMapsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CreateAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ProductDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SetTimingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SearchStoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.EditProfileFragment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.LocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.OtpSendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -111,10 +186,11 @@
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.facebook.CustomTabActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -124,6 +200,59 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <uses-library
+            android:name="com.google.android.maps"
+            android:required="true" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <service
+            android:name=".firebase.MyFirebaseMessagingService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_logo_color" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
     </application>
 
 </manifest>

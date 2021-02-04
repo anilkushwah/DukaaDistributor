@@ -14,6 +14,9 @@ import android.widget.EditText;
 
 import androidx.core.app.ActivityCompat;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import static androidx.core.content.PermissionChecker.checkSelfPermission;
 
 /**
@@ -76,7 +79,7 @@ public class UserAccount {
 
     public static boolean isPasswordValid(EditText tv) {
         //add your own logic
-        if (tv.getText().toString().length() >= 6) {
+        if (tv.getText().toString().length() > 5) {
             return true;
         } else {
             EditTextPointer = tv;
@@ -87,11 +90,11 @@ public class UserAccount {
 
     public static boolean isPhoneNumberLength(EditText tv) {
         //add your own logic
-        if (tv.getText().toString().length() == 10) {
+        if (tv.getText().toString().length() == 9) {
             return true;
         } else {
             EditTextPointer = tv;
-            errorMessage = "Enter 10 digits number";
+            errorMessage = "Enter 9 digits number";
             return false;
         }
     }
@@ -110,6 +113,8 @@ public class UserAccount {
         }
     }
 
+
+
     public static boolean isEmpty(EditText... arg) {
         for (int i = 0; i < arg.length; i++) {
             if (arg[i].getText().length() <= 0) {
@@ -120,6 +125,33 @@ public class UserAccount {
 
         }
         return true;
+    }
+    public static boolean isValidKRAPin(EditText tv) {
+
+        if(tv.getText().toString().length()!=11){
+            return false;
+        }
+
+        // Regex to check valid pin code of India.
+        String regex = "^[PpAa][0-9]+[a-zA-Z]";
+
+        // Compile the ReGex
+        Pattern p = Pattern.compile(regex);
+
+        // If the pin code is empty
+        // return false
+        if (tv.getText().toString() == null) {
+            return false;
+        }
+
+        // Pattern class contains matcher() method
+        // to find matching between given pin code
+        // and regular expression.
+        Matcher m = p.matcher(tv.getText().toString());
+
+        // Return if the pin code
+        // matched the ReGex
+        return m.matches();
     }
 
     public boolean loginViaLocal(String vUserName, String vPassword) {

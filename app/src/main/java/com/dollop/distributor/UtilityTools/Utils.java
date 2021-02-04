@@ -1,22 +1,29 @@
 package com.dollop.distributor.UtilityTools;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
 import android.view.Window;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.dollop.distributor.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
 
@@ -119,12 +126,16 @@ public class Utils {
         return dialog;
     }
 
-    public static void T(Context c, String msg) {
-        Toast.makeText(c, msg, Toast.LENGTH_SHORT).show();
+
+
+    public static void T_C_L(Context c, String msg) {
+        Toast toast =    Toast.makeText(c, msg, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
     }
 
 
-    /*public static void Snack(View view, String message) {
+  /*  public static void Snack(View view, String message) {
         Snackbar snackbar = Snackbar.make(view, message, Snackbar.LENGTH_LONG);
         snackbar.setActionTextColor(Color.RED);
         View sbView = snackbar.getView();
@@ -162,4 +173,25 @@ public class Utils {
     public static void T_Long(Context c, String msg) {
         Toast.makeText(c, msg, Toast.LENGTH_LONG).show();
     }
+
+
+    public static void T(Context c, String msg) {
+        // Toast.makeText(c, msg, Toast.LENGTH_SHORT).show();
+        AlertDialog.Builder builder = new AlertDialog.Builder(c);
+       // builder.setTitle("Info !");
+        builder.setMessage(msg)
+
+                .setNegativeButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // Toast.makeText(getApplicationContext(), "This is a negative button", Toast.LENGTH_LONG).show();
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alertdialog = builder.create();
+        alertdialog.show();
+    }
+
+    /* public static void T(Context c, String msg) {
+        Toast.makeText(c, msg, Toast.LENGTH_SHORT).show();
+    }*/
 }

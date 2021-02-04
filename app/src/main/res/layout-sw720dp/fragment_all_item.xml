@@ -4,19 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/colorBody"
-    android:layout_marginBottom="@dimen/_50sdp"
-    >
-
-
+    android:orientation="vertical"
+  >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,118 +19,14 @@
             android:background="@color/colorBody"
             android:orientation="vertical">
 
-            <RelativeLayout
+
+
+            <fragment
+                android:id="@+id/fragmentParent"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_170sdp"
-                android:background="@drawable/lv_home_bck">
+                android:name="com.dollop.distributor.Fragment.ProductParentFragment"
 
-                <ImageView
-                    android:layout_width="@dimen/_100sdp"
-                    android:layout_height="@dimen/_100sdp"
-                    android:src="@drawable/home_top_shape_bg"
-                    android:layout_alignParentRight="true"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    >
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/_5sdp"
-                        android:layout_marginLeft="@dimen/_5sdp"
-                        android:layout_marginRight="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_15sdp"
-                        android:weightSum="2"
-                        >
-
-                        <TextView
-                            style="@style/normalFont"
-                            android:layout_weight="1"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="All Items"
-                            android:textColor="#ffffff"
-                            android:textSize="@dimen/_16sdp"
-                            />
-
-                        <LinearLayout
-                            android:layout_gravity="right"
-                            android:gravity="right"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_marginRight="@dimen/_10sdp"
-                            android:orientation="horizontal"
-                            >
-
-
-                            <LinearLayout
-                                android:layout_width="@dimen/_35sdp"
-                                android:layout_height="@dimen/_35sdp"
-                                android:gravity="center"
-                                android:background="@drawable/filter_bck">
-
-                                <ImageView
-                                    android:layout_width="@dimen/_15sdp"
-                                    android:layout_height="@dimen/_15sdp"
-                                    android:src="@drawable/ic_search"/>
-
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/_5sdp"
-                        android:background="@drawable/order_tabback"
-                        android:layout_marginLeft="@dimen/_10sdp"
-                        android:layout_marginRight="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_40sdp"
-                        >
-
-                        <com.google.android.material.tabs.TabLayout
-                            android:layout_height="?attr/actionBarSize"
-                            android:elevation="0dp"
-                            app:tabMaxWidth="0dp"
-                            app:tabGravity="fill"
-                            app:tabMode="fixed"
-                            android:layout_width="match_parent"
-                            style="@style/MyCustomTextAppearance"
-                            app:tabIndicatorColor="#ffffff"
-                            app:tabIndicator="@drawable/tab_indicator"
-                            app:tabIndicatorFullWidth="false"
-                            app:tabTextAppearance="@style/CustomViewAllTab"
-                            android:id="@+id/tabsallitem"
-                            android:fitsSystemWindows="true"
-                            app:tabTextColor="@color/white"
-                            app:tabSelectedTextColor="@color/white"
-                            />
-
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-            </RelativeLayout>
-
-            <androidx.viewpager.widget.ViewPager
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_20sdp"
-                android:background="@color/white"
-                android:id="@+id/vp_allitems"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                android:layout_height="match_parent" />
 
         </LinearLayout>
 
@@ -143,4 +34,77 @@
 
 </LinearLayout>
 
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorBody"
+        android:layout_marginBottom="@dimen/_50sdp"
+        >
 
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBody"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_130sdp"
+                    android:background="@drawable/lv_home_bck">
+
+                    <ImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:src="@drawable/home_top_shape_bg"
+                        android:layout_alignParentRight="true"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            style="@style/normalFont"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Total Earning"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_16sdp"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@color/white"
+                    android:id="@+id/vp_allitems"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>-->

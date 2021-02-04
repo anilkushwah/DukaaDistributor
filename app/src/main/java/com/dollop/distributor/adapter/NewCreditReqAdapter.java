@@ -1,28 +1,31 @@
 package com.dollop.distributor.adapter;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dollop.distributor.Activity.CutomerDetailsActivity;
-import com.dollop.distributor.Activity.NewOrderActivity;
 import com.dollop.distributor.R;
+import com.dollop.distributor.UtilityTools.Const;
 import com.dollop.distributor.UtilityTools.Utils;
-import com.dollop.distributor.model.AllOrderDTO;
 import com.dollop.distributor.model.NewCreditReq_Model;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class NewCreditReqAdapter extends RecyclerView.Adapter<NewCreditReqAdapter.MyViewHolder> {
     Context context;
     List<NewCreditReq_Model> newCreditReq_models;
+    Activity activity;
 
     public NewCreditReqAdapter(Context context, List<NewCreditReq_Model> newCreditReq_models) {
         this.context = context;
@@ -38,83 +41,55 @@ public class NewCreditReqAdapter extends RecyclerView.Adapter<NewCreditReqAdapte
 
     @SuppressLint("ResourceAsColor")
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
-       /* AllOrderDTO mOrderDTO = mAllOrderDTOArrayList.get(position);
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
 
-        holder.o_amount.setText(mOrderDTO.getTotalAmount(), TextView.BufferType.SPANNABLE);
-        holder.gen_order_id.setText(mOrderDTO.getGenOrderId());
-        holder.o_item.setText(mOrderDTO.getItemCount() + "  Items");
-        holder.tv_agencyname.setText(mOrderDTO.getName());
+        final NewCreditReq_Model reqModel = newCreditReq_models.get(position);
 
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        format.setTimeZone(TimeZone.getTimeZone("UTC"));
-        try {
-            Date date = format.parse(mOrderDTO.getCreateDate());
+        holder.credit_status.setText(reqModel.getStatus());
+        holder.name.setText(reqModel.getRetailerName());
+        holder.mobile.setText(reqModel.getRetailerMobile());
+        holder.store_name.setText(reqModel.getRetailerShopName());
+        holder.tv_reqamount.setText("$ "+reqModel.getAmount());
 
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
-            String Date = dateFormat.format(date);
-            holder.or_date.setText(Date);
-        } catch (ParseException e) {
-            e.printStackTrace();
+        if (reqModel.getRetailerImage()!=null) {
+            Picasso.get().load(Const.URL.HOST_URL +reqModel.getRetailerImage()).error(R.drawable.ic_user_blue).into(holder.retailer_image);
+
         }
-        String status = mOrderDTO.getOrderStatusData();
-        Utils.E("status::"+status);
-        if (status.equals("pending")) {
-            //  holder.ll_card_back.setBackgroundColor(R.color.colorPrimary);
-            holder.ll_card_back.setBackgroundResource(R.drawable.schedule_back);
-        } else if (status.equals("canceled")) {
-            holder.ll_card_back.setBackgroundResource(R.drawable.deliverry_back);
-        } else if (status.equals("Pickup")) {
-            holder.ll_card_back.setBackgroundResource(R.drawable.pickup_back);
-            //  holder.ll_card_back.setBackgroundColor(R.color.orange);
-            // holder.ll_card_back.setBackgroundColor(Color.parseColor("#F5C639"));
-        }
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Bundle bundle = new Bundle();
-                bundle.putString("order_status",mAllOrderDTOArrayList.get(position).getOrderStatusData());
-                bundle.putSerializable("Order_id", mAllOrderDTOArrayList.get(position).getId());
-                Utils.I(context, NewOrderActivity.class, bundle);
-            }
-        });*/
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                /*Bundle bundle = new Bundle();
-                bundle.putString("order_status",mAllOrderDTOArrayList.get(position).getOrderStatusData());
-                bundle.putSerializable("Order_id", mAllOrderDTOArrayList.get(position).getId());
-                Utils.I(context, NewOrderActivity.class, bundle);*/
-                Utils.I(context, CutomerDetailsActivity.class, null);
-
+                bundle.putSerializable("modelData",reqModel);
+                Utils.I(context, CutomerDetailsActivity.class, bundle);
             }
         });
-
-
     }
 
     @Override
     public int getItemCount() {
-       // return mAllOrderDTOArrayList.size();
-        return 7;
+        return newCreditReq_models.size();
+
     }
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        private TextView gen_order_id, o_item, o_amount, tv_agencyname, or_date;
-        private LinearLayout ll_card_back;
+        private TextView name, mobile, credit_status, store_name,tv_reqamount;
+        ImageView retailer_image;
 
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            gen_order_id = itemView.findViewById(R.id.gen_order_id);
-            o_item = itemView.findViewById(R.id.or_items);
-            o_amount = itemView.findViewById(R.id.order_amount);
-            tv_agencyname = itemView.findViewById(R.id.tv_agencyname);
-            or_date = itemView.findViewById(R.id.or_date);
-            ll_card_back = itemView.findViewById(R.id.ll_card_back);
+            tv_reqamount = itemView.findViewById(R.id.tv_reqamount);
+            name = itemView.findViewById(R.id.name);
+            mobile = itemView.findViewById(R.id.mobile);
+            credit_status = itemView.findViewById(R.id.credit_status);
+            store_name = itemView.findViewById(R.id.store_name);
+            retailer_image = itemView.findViewById(R.id.retailer_image);
+
+
 
         }
     }

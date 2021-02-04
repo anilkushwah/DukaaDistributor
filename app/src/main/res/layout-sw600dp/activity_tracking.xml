@@ -70,7 +70,7 @@
                     android:padding="@dimen/_3sdp"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_55sdp"
-                    android:src="@drawable/client_03"/>
+                    android:src="@drawable/ic_user_blue"/>
 
             </LinearLayout>
 

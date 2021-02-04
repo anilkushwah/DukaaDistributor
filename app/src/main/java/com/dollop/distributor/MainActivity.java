@@ -1,129 +1,61 @@
 package com.dollop.distributor;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
+import android.view.Menu;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.navigation.NavigationView;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
-import com.dollop.distributor.adapter.ViewPagerAdapter;
+public class MainActivity extends AppCompatActivity {
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    ViewPager vpimgs;
-    LinearLayout llindicators;
-    List<View> viewList = new ArrayList<>();
-    ImageView[] dots=null;
-    int pos;
-    Button btnsplashNextId;
-
-
-
-
+    private AppBarConfiguration mAppBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        llindicators = findViewById(R.id.llindicators);
-        vpimgs = findViewById(R.id.vpimgs);
-        btnsplashNextId = findViewById(R.id.btnsplashNextId);
-        viewList.clear();
-
-
-        LayoutInflater inflater = getLayoutInflater();
-        RelativeLayout relativeLayout1 = (RelativeLayout) inflater.inflate(R.layout.splashscreenlatout1,null);
-        RelativeLayout relativeLayout2 = (RelativeLayout) inflater.inflate(R.layout.splashscreenlayout2,null);
-        RelativeLayout relativeLayout3 = (RelativeLayout) inflater.inflate(R.layout.splashscreenlayout3,null);
-        viewList.add(relativeLayout1);
-        viewList.add(relativeLayout2);
-        viewList.add(relativeLayout3);
-
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this,viewList);
-        vpimgs.setAdapter(viewPagerAdapter);
-        final int dotsCount=viewPagerAdapter.getCount();
-        llindicators.setVisibility(View.VISIBLE);
-        dots=setUiPageViewController(llindicators,dotsCount);
-
-        final ImageView[] finalDots = dots;
-
-
-        vpimgs.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        setContentView(R.layout.activity_main2);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-
-                pos = position;
-
-                if(finalDots!=null) {
-                    for (int i = 0; i < dotsCount; i++) {
-                        finalDots[i].setImageDrawable(getApplicationContext().getResources().getDrawable(R.drawable.nonselecteditem_dot));
-                    }
-                    finalDots[pos].setImageDrawable(getApplicationContext().getResources().getDrawable(R.drawable.selecteditem_dot));
-                }
-                if (pos==2){
-                    btnsplashNextId.setText("Done");
-                }
-
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
-
-        btnsplashNextId.setOnClickListener(this);
-    }
-
-    private ImageView[] setUiPageViewController(LinearLayout pager_indicator, int dotsCount) {
-
-        ImageView[] dots = new ImageView[dotsCount];
-        pager_indicator.removeAllViews();
-        for (int i = 0; i < dotsCount; i++) {
-            dots[i] = new ImageView(this);
-            dots[i].setImageDrawable(this.getResources().getDrawable(R.drawable.nonselecteditem_dot));
-
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT
-            );
-
-            params.setMargins(8, 0, 8, 0);
-            pager_indicator.addView(dots[i], params);
-        }
-
-        dots[0].setImageDrawable(this.getResources().getDrawable(R.drawable.selecteditem_dot));
-
-        return dots;
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        mAppBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                .setDrawerLayout(drawer)
+                .build();
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+        NavigationUI.setupWithNavController(navigationView, navController);
     }
 
     @Override
-    public void onClick(View v) {
-        if (v == btnsplashNextId) {
-            switch (v.getId()) {
-                case R.id.btnsplashNextId:
-                    if (pos <= 1) {
-                        vpimgs.setCurrentItem(pos + 1);
-                    }else if (pos == 2){
-                        Intent intent = new Intent(MainActivity.this,LoginActivity.class);
-                        startActivity(intent);
-                    }
-                    break;
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
 
-            }
-        }
+    @Override
+    public boolean onSupportNavigateUp() {
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
+                || super.onSupportNavigateUp();
     }
 }

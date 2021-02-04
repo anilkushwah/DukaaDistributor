@@ -8,12 +8,9 @@
     >
 
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:orientation="vertical">
 
         <LinearLayout
@@ -33,7 +30,7 @@
             <TextView
                 android:textFontWeight="600"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="left|center"
                 android:text="Manage Members"
                 android:gravity="center"
@@ -70,20 +67,16 @@
                     android:textSize="@dimen/_12sdp"
                     android:fontFamily="@font/poppins_light"/>
 
-
                 <TextView
                     android:textFontWeight="600"
                     android:layout_gravity="right"
                     android:gravity="right"
                     android:layout_width="0dp"
                     android:layout_weight="0.5"
+                    android:id="@+id/member_count_tv"
                     android:layout_height="wrap_content"
-                    android:text="14 Members"
                     android:textSize="@dimen/_12sdp"
                     android:fontFamily="@font/poppins_light"/>
-
-
-
 
             </LinearLayout>
 
@@ -107,7 +100,7 @@
     <FrameLayout
         android:layout_marginBottom="@dimen/_10sdp"
         android:id="@+id/member_add"
-        android:layout_width="@dimen/_130sdp"
+        android:layout_width="@dimen/_120sdp"
         android:layout_marginLeft="@dimen/_10sdp"
         android:layout_marginRight="@dimen/_10sdp"
         android:layout_height="@dimen/_40sdp"
@@ -117,7 +110,7 @@
         <TextView
             android:layout_gravity="center"
             android:gravity="center"
-            android:drawablePadding="@dimen/_10sdp"
+            android:drawablePadding="@dimen/_8sdp"
             android:drawableLeft="@drawable/ic_plus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

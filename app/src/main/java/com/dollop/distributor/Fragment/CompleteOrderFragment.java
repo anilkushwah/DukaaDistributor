@@ -6,25 +6,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.NetworkResponse;
-import com.android.volley.NoConnectionError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.TimeoutError;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.dollop.distributor.R;
-import com.dollop.distributor.UtilityTools.Const;
+
+import com.dollop.distributor.UtilityTools.NetworkUtil;
 import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.adapter.CompleteOrderAdapter;
 import com.dollop.distributor.adapter.NewOrderAdapter;
@@ -34,11 +24,7 @@ import com.dollop.distributor.model.CompleteOderlist;
 import com.dollop.distributor.model.NewOderlist;
 import com.dollop.distributor.retrofit.ApiClient;
 import com.dollop.distributor.retrofit.ApiInterface;
-import com.dollop.distributor.ui.home.HomeFragment;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -64,13 +50,19 @@ public class CompleteOrderFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_completorder, container, false);
         rv_completeorder = root.findViewById(R.id.rv_completeorder);
 
-      //  completOderList = body.getData();
+        //  completOderList = body.getData();
         rv_completeorder.setLayoutManager(new LinearLayoutManager(getActivity()));
         completOrderAdapter = new CompleteOrderAdapter(getActivity(), completOderList);
         rv_completeorder.setAdapter(completOrderAdapter);
         completOrderAdapter.notifyDataSetChanged();
 
-       // allOrderMethod();
+        boolean status = NetworkUtil.getConnectivityStatus(getActivity());
+        if (status == true) {
+
+        } else {
+            Utils.T(getActivity(), "No Internet Connection available. Please try again");
+        }
+        // allOrderMethod();
 
         return root;
     }
@@ -101,6 +93,7 @@ public class CompleteOrderFragment extends Fragment {
                         completOrderAdapter.notifyDataSetChanged();
 
                     } else {
+                        Utils.T(getActivity(), body.getMessage());
 
 
                     }

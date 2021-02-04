@@ -22,7 +22,7 @@ public class ShowOrderAdapter extends RecyclerView.Adapter<ShowOrderAdapter.MyHo
 
 
     Context context;
-    List<ShoworderModel> showorderModels = new ArrayList<>();
+    List<ShoworderModel> showorderModels;
 
     public ShowOrderAdapter(Context context, List<ShoworderModel> showorderModels) {
         this.context = context;
@@ -44,7 +44,7 @@ public class ShowOrderAdapter extends RecyclerView.Adapter<ShowOrderAdapter.MyHo
         holder.TextView_Item_NameId.setText(showorderModel.product_name);
         holder.TextView_Item_QuantityId.setText(showorderModel.pack_size);
         holder.TextView_Item_PriceId.setText(showorderModel.product_discounted_price);
-        Picasso.get().load(Const.URL.HOST_URL + showorderModel.product_image).error(R.drawable.okl).into(holder.ImageView_Item_ImageId);
+        Picasso.get().load(Const.URL.HOST_URL + showorderModel.product_image).error(R.drawable.no_product).into(holder.ImageView_Item_ImageId);
         holder.order_price.setText(showorderModel.product_amount);
         holder.order_qty.setText(showorderModel.product_qty);
 
@@ -52,7 +52,7 @@ public class ShowOrderAdapter extends RecyclerView.Adapter<ShowOrderAdapter.MyHo
 
     @Override
     public int getItemCount() {
-        return showorderModels.size();
+       return showorderModels.size();
     }
 
 

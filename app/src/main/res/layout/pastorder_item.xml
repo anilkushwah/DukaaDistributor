@@ -59,7 +59,7 @@
                 style="@style/normalFont"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5 Items"
+                android:text="5 Unit"
                 android:textColor="@color/colorBlue"
                 android:textSize="@dimen/_10sdp"/>
 

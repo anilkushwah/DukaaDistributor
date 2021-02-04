@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -74,33 +74,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-        <ImageView
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_100sdp"
-            android:background="@drawable/top_shape_bg"
-            android:id="@+id/lv_top_right_img"
-            android:layout_alignParentRight="true"/>
-
-    </RelativeLayout>
-
+    <LinearLayout
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:background="@drawable/top_shape_bg"
+        android:id="@+id/lv_top_right_img"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:layout_below="@+id/lv_top_right_img"
         android:weightSum="2">
-
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -170,6 +161,9 @@
 
         </LinearLayout>
     </LinearLayout>
+
+
+
 
 
 </RelativeLayout>-->

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <EditText
+        android:id="@+id/et_enter_name_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/searchbox_bck"
+        android:hint="Search"
+        android:drawableRight="@drawable/ic_search_small"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:textColorHint="@color/black"
+        android:textSize="@dimen/_12sdp"></EditText>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/country_RV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_enter_name_id"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp" />
+
+</RelativeLayout>
