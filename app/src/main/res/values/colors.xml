@@ -30,4 +30,7 @@
     <color name="colorPrimaryDark_old">#2196f3</color>
     <color name="colorAccent_old">#6200EE</color>
 
+    <color name="textColor">#48000000</color>
+    <color name="logo_color_code">#f5cb39</color>
+    <color name="off_white">#f1f1f1</color>
 </resources>

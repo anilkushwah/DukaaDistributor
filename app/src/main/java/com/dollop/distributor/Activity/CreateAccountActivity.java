@@ -86,6 +86,7 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
 
     public static final int Cover_GALLERY = 1;
     protected static final int Cover_CAMERA_REQUEST = 2;
+    private static final String TAG = "CreateAccountActivity";
     Bitmap profileBitmap, coverBitmap, certificateof_incorporationBitmap, business_permitBitmap, copyofdirectorBitmap;
     Uri profileUri, coverUri, certificateof_incorporationUri, business_permitUri, copyofdirectorUri;
     public static final int GALLERY = 5;
@@ -429,6 +430,7 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
         HashMap<String, String> hm = new HashMap<>();
 
+        Log.d(TAG, "stateMethod: " + UserDataHelper.getInstance().getList());
         hm.put("country_id", "113");
         hm.put("distributor_id", UserDataHelper.getInstance().getList().get(0).getDistributorId());
         Call<StateData> call = apiService.getState(hm);
