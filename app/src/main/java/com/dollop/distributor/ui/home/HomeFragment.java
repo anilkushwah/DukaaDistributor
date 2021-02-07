@@ -18,6 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -56,7 +57,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
   private static final int REQUESTCODE = 301;
   TabLayout tabLayout;
-  LinearLayout ll_tab_processing, ll_tab_completed, ll_tab_new, main_tab, fragment_container, ll_tab_readyfor;
+  LinearLayout ll_tab_processing, ll_tab_completed, ll_tab_new, fragment_container, ll_tab_readyfor;
   TextView tvDispatchId, tv_new, tv_completed, tv_readyfor;
   public static TextView new_count, processing_count;
   ArrayList<NewCreditReq_Model> newCreditReq_models;
@@ -200,7 +201,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     rl_creditreq = root.findViewById(R.id.rl_creditreq);
     rvOrderId = root.findViewById(R.id.rvOrderId);
     tv_readyfor = root.findViewById(R.id.tv_readyfor);
-    main_tab = root.findViewById(R.id.main_tab);
     ll_tab_processing = root.findViewById(R.id.ll_tab_processing);
     ll_tab_new = root.findViewById(R.id.ll_tab_new);
     ll_tab_completed = root.findViewById(R.id.ll_tab_completed);
@@ -220,13 +220,15 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     CompleteCount_LL = root.findViewById(R.id.CompleteCount_LL);
 
     tab_newMethod();
+    Unselect_completed();
+    Unselect_DispatchMethod();
+    Unselect_readyforMethod();
 
     if (SavedData.get_AccessType().equals("Partial Access")) {
       request_credit_LL.setVisibility(View.GONE);
     }
 
     rl_creditreq.setOnClickListener(this);
-    main_tab.setOnClickListener(this);
     ll_tab_readyfor.setOnClickListener(this);
     ll_tab_completed.setOnClickListener(this);
     ll_tab_processing.setOnClickListener(this);
@@ -289,7 +291,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
           tvCompleteCountId.setText("" + body.deliveredCount);
 
           NewOrderAdapter orderDetailsAdapter = new NewOrderAdapter(getActivity(), datumArrayList);
-          rvOrderId.setLayoutManager(new LinearLayoutManager(getActivity()));
+          rvOrderId.setLayoutManager(new GridLayoutManager(getActivity(), 1));
           rvOrderId.setAdapter(orderDetailsAdapter);
 
 
@@ -312,56 +314,55 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
   public void tab_newMethod() {
 
-    ll_tab_new.setBackgroundResource(R.drawable.tab_background_selected);
-    tv_new.setTextColor(getResources().getColor(R.color.colorBlue));
-    new_count_LL.setBackgroundResource(R.drawable.ic_tab_blue_circle);
-    new_count.setTextColor(getResources().getColor(R.color.white));
+    tv_new.setBackgroundResource(R.drawable.selected_item);
+    tv_new.setTextColor(getResources().getColor(R.color.white));
+//    new_count_LL.setBackgroundResource(R.drawable.ic_tab_blue_circle);
+//    new_count.setTextColor(getResources().getColor(R.color.white));
     NewOrder("1");
   }
 
   public void Unceletct_newMethod() {
-    ll_tab_new.setBackgroundResource(R.drawable.ordertabselected_back);
-    tv_new.setTextColor(getResources().getColor(R.color.white));
-    new_count_LL.setBackgroundResource(R.drawable.ic_tab_circle);
-    new_count.setTextColor(getResources().getColor(R.color.colorBlue));
+    tv_new.setBackgroundResource(R.drawable.unselected_item);
+    tv_new.setTextColor(getResources().getColor(R.color.black));
+//    new_count_LL.setBackgroundResource(R.drawable.ic_tab_circle);
+//    new_count.setTextColor(getResources().getColor(R.color.white));
 
 
   }
 
   public void tab_readyforMethod() {
 
-    ll_tab_readyfor.setBackgroundResource(R.drawable.tab_background_selected);
-    tv_readyfor.setTextColor(getResources().getColor(R.color.colorBlue));
-    ready_For_Pickup_LL.setBackgroundResource(R.drawable.ic_tab_blue_circle);
-    tvReadyForPickupCountId.setTextColor(getResources().getColor(R.color.white));
+    tv_readyfor.setBackgroundResource(R.drawable.selected_item);
+    tv_readyfor.setTextColor(getResources().getColor(R.color.white));
+//    ready_For_Pickup_LL.setBackgroundResource(R.drawable.ic_tab_blue_circle);
+//    tvReadyForPickupCountId.setTextColor(getResources().getColor(R.color.white));
     NewOrder("2");
   }
 
   public void Unselect_readyforMethod() {
 
-    ll_tab_readyfor.setBackgroundResource(R.drawable.ordertabselected_back);
-    tv_readyfor.setTextColor(getResources().getColor(R.color.white));
-    ready_For_Pickup_LL.setBackgroundResource(R.drawable.ic_tab_circle);
-    tvReadyForPickupCountId.setTextColor(getResources().getColor(R.color.colorBlue));
+    tv_readyfor.setBackgroundResource(R.drawable.unselected_item);
+    tv_readyfor.setTextColor(getResources().getColor(R.color.black));
+//    ready_For_Pickup_LL.setBackgroundResource(R.drawable.ic_tab_circle);
+//    tvReadyForPickupCountId.setTextColor(getResources().getColor(R.color.white));
 
 
   }
 
   public void DispatchMethod() {
-    ll_tab_processing.setBackgroundResource(R.drawable.tab_background_selected);
-    tvDispatchId.setTextColor(getResources().getColor(R.color.colorBlue));
-    dispatch_LL.setBackgroundResource(R.drawable.ic_tab_blue_circle);
-    tvDispatchCountId.setTextColor(getResources().getColor(R.color.white));
+    tvDispatchId.setBackgroundResource(R.drawable.selected_item);
+    tvDispatchId.setTextColor(getResources().getColor(R.color.white));
+//    dispatch_LL.setBackgroundResource(R.drawable.ic_tab_blue_circle);
+//    tvDispatchCountId.setTextColor(getResources().getColor(R.color.white));
     NewOrder("3");
 
   }
 
   public void Unselect_DispatchMethod() {
-
-    ll_tab_processing.setBackgroundResource(R.drawable.ordertabselected_back);
-    tvDispatchId.setTextColor(getResources().getColor(R.color.white));
-    dispatch_LL.setBackgroundResource(R.drawable.ic_tab_circle);
-    tvDispatchCountId.setTextColor(getResources().getColor(R.color.colorBlue));
+    tvDispatchId.setBackground(null);
+    tvDispatchId.setTextColor(getResources().getColor(R.color.black));
+//    dispatch_LL.setBackgroundResource(R.drawable.ic_tab_circle);
+//    tvDispatchCountId.setTextColor(getResources().getColor(R.color.white));
 
   }
 
@@ -369,18 +370,18 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     NewOrder("5");
 
-    ll_tab_completed.setBackgroundResource(R.drawable.tab_background_selected);
-    tv_completed.setTextColor(getResources().getColor(R.color.colorBlue));
-    CompleteCount_LL.setBackgroundResource(R.drawable.ic_tab_blue_circle);
-    tvCompleteCountId.setTextColor(getResources().getColor(R.color.white));
+    tv_completed.setBackgroundResource(R.drawable.selected_item);
+    tv_completed.setTextColor(getResources().getColor(R.color.white));
+//    CompleteCount_LL.setBackgroundResource(R.drawable.ic_tab_blue_circle);
+//    tvCompleteCountId.setTextColor(getResources().getColor(R.color.white));
   }
 
   public void Unselect_completed() {
-
-    ll_tab_completed.setBackgroundResource(R.drawable.ordertabselected_back);
-    tv_completed.setTextColor(getResources().getColor(R.color.white));
-    CompleteCount_LL.setBackgroundResource(R.drawable.ic_tab_circle);
-    tvCompleteCountId.setTextColor(getResources().getColor(R.color.colorBlue));
+    tv_completed.setBackground(null);
+//    ll_tab_completed.setBackgroundResource(R.drawable.ordertabselected_back);
+    tv_completed.setTextColor(getResources().getColor(R.color.black));
+//    CompleteCount_LL.setBackgroundResource(R.drawable.ic_tab_circle);
+//    tvCompleteCountId.setTextColor(getResources().getColor(R.color.white));
 
 
   }
@@ -391,7 +392,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     if (v == ll_tab_new) {
 
       tab_newMethod();
-
       Unselect_readyforMethod();
       Unselect_DispatchMethod();
       Unselect_completed();
