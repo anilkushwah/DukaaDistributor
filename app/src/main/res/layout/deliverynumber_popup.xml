@@ -24,7 +24,7 @@
             android:textSize="@dimen/_12sdp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/nexa_regular"
             android:textColor="@color/subhading_black"
             android:text="Delivery Number"/>
 
@@ -33,7 +33,7 @@
             android:textSize="@dimen/_12sdp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/nexa_regular"
             android:text="#67556693"/>
 
 

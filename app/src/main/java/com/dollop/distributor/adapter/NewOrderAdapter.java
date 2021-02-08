@@ -52,10 +52,10 @@ public class NewOrderAdapter extends RecyclerView.Adapter<NewOrderAdapter.MyView
         Utils.E("check TranscationRespoinse::"+mOrderDTO.tansactionResponse);
 
         if (mOrderDTO.deliveryType.equals("Delivery")) {
-            holder.ll_card_back.setBackground(context.getResources().getDrawable(R.drawable.schedule_back));
+            holder.ll_card_back.setBackground(context.getResources().getDrawable(R.drawable.card_blue));
 
         } else if (mOrderDTO.deliveryType.equals("Self PickUp")) {
-            holder.ll_card_back.setBackground(context.getResources().getDrawable(R.drawable.pickup_back));
+            holder.ll_card_back.setBackground(context.getResources().getDrawable(R.drawable.card_orange));
         }
 
 

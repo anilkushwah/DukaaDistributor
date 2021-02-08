@@ -81,7 +81,7 @@
 
                     <TextView
                         android:id="@+id/mobile"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/nexa_regular"
                         android:textSize="@dimen/_10sdp"
                         android:gravity="right"
                         style="@style/lightFont"
@@ -91,7 +91,7 @@
 
                     <TextView
                         android:id="@+id/credit_status"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/nexa_regular"
                         android:textSize="@dimen/_10sdp"
                         style="@style/lightFont"
                         android:textColor="@color/colorPrimary"
@@ -134,7 +134,7 @@
                                 android:maxLines="1"
                                 android:id="@+id/store_name"
                                 android:textSize="@dimen/_10sdp"
-                                android:fontFamily="@font/poppins"
+                                android:fontFamily="@font/nexa_regular"
                                 android:paddingLeft="@dimen/_5sdp"
                                 android:paddingRight="@dimen/_5sdp"
                                 android:layout_gravity="center"
@@ -168,7 +168,7 @@
                         android:textColor="@color/colorGreen"
                         android:textFontWeight="600"
                         android:textSize="@dimen/_11sdp"
-                        android:fontFamily="@font/poppins"/>
+                        android:fontFamily="@font/nexa_regular"/>
 
 
 

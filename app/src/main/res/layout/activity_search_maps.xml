@@ -53,7 +53,7 @@
                     android:id="@+id/et_searchLocation"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:singleLine="true"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/nexa_regular"
                     android:textSize="@dimen/_13sdp"/>
 
                 <ImageView
@@ -86,7 +86,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="VishnuPuri"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:textStyle="bold"
                 android:padding="@dimen/_4sdp"
                 android:textSize="@dimen/_13sdp"
@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
             android:textStyle="normal"
             android:text="302 dollop infotech VishnuPuri indore near ATM indore"
-            android:fontFamily="@font/poppins_light"
+            android:fontFamily="@font/nexa_light"
             android:padding="@dimen/_3sdp"
             android:textSize="@dimen/_10sdp"
             android:textColor="#F3EEEE"
@@ -125,7 +125,7 @@
 
     <Button
         android:id="@+id/btn_save_location"
-        android:fontFamily="@font/poppins_light"
+        android:fontFamily="@font/nexa_light"
         android:layout_alignParentBottom="true"
         android:background="@drawable/button_shap"
         android:layout_width="match_parent"

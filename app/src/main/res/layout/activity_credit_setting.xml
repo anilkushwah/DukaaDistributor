@@ -35,7 +35,7 @@
                 android:layout_gravity="left|center"
                 android:text="Credit Setting"
                 android:gravity="center"
-                android:fontFamily="@font/poppins_light"
+                android:fontFamily="@font/nexa_light"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_14sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
@@ -66,7 +66,7 @@
                             android:layout_height="wrap_content"
                             android:text="Current Credit Limit"
                             android:textSize="@dimen/_12sdp"
-                            android:fontFamily="@font/poppins"/>
+                            android:fontFamily="@font/nexa_regular"/>
 
                     <TextView
                         android:id="@+id/tv_reqamount"
@@ -85,7 +85,7 @@
                         android:textColor="@color/colorGreen"
                         android:textFontWeight="600"
                         android:textSize="@dimen/_14sdp"
-                        android:fontFamily="@font/poppins"/>
+                        android:fontFamily="@font/nexa_regular"/>
 
         </LinearLayout>
 
@@ -97,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:text="Enter Credit Limit"
                     android:textSize="@dimen/_12sdp"
-                    android:fontFamily="@font/poppins"/>
+                    android:fontFamily="@font/nexa_regular"/>
 
 
             <View
@@ -127,7 +127,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Credit Limit"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/nexa_regular"
                         android:textSize="@dimen/_12sdp"
                         android:layout_marginLeft="@dimen/_20sdp"
                         android:layout_marginRight="@dimen/_15sdp"/>
@@ -156,7 +156,7 @@
                             android:id="@+id/et_credit_amount"
                             android:layout_marginLeft="@dimen/_5sdp"
                             android:paddingTop="@dimen/_2sdp"
-                            android:fontFamily="@font/poppins_light"
+                            android:fontFamily="@font/nexa_light"
                             android:hint="Enter Amount"/>
 
                         <TextView
@@ -166,7 +166,7 @@
                             android:layout_height="wrap_content"
                             android:text="$"
                             android:textSize="@dimen/_16sdp"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/nexa_regular"
                             android:textFontWeight="600"/>
 
                      </RelativeLayout>
@@ -181,7 +181,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="View Limit History"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/nexa_regular"
                         android:textSize="@dimen/_14sdp"
 
                         android:layout_marginLeft="@dimen/_20sdp"
@@ -201,7 +201,7 @@
 
                     <TextView
                         android:id="@+id/tv_updateamount"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/nexa_regular"
                         android:textSize="@dimen/_14sdp"
                         android:layout_gravity="center"
                         android:gravity="center"

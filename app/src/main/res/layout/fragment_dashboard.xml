@@ -76,7 +76,7 @@
                             android:layout_marginLeft="@dimen/_10sdp"
 
                             android:drawablePadding="@dimen/_5sdp"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/nexa_regular"
                             android:text="Stock Left"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_14sdp" />
@@ -87,7 +87,7 @@
                             android:layout_alignParentRight="true"
                             android:layout_marginRight="@dimen/_10sdp"
                             android:drawablePadding="@dimen/_5sdp"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/nexa_regular"
                             android:text="View All"
                             android:textColor="@color/colorBlue"
                             android:textSize="@dimen/_14sdp" />
@@ -105,7 +105,7 @@
                             android:layout_marginLeft="@dimen/_10sdp"
                             android:drawableRight="@drawable/ic_sales"
                             android:drawablePadding="@dimen/_5sdp"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/nexa_regular"
                             android:text="Total Orders Received"
                             android:textColor="@color/grey"
                             android:textSize="@dimen/_12sdp" />
@@ -295,7 +295,7 @@
                             android:layout_marginLeft="@dimen/_10sdp"
                             android:drawableRight="@drawable/ic_sales"
                             android:drawablePadding="@dimen/_5sdp"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/nexa_regular"
                             android:text="Value of Orders Sold"
                             android:textColor="@color/grey"
                             android:textSize="@dimen/_12sdp" />

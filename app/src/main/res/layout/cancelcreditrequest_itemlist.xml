@@ -79,7 +79,7 @@
                         android:text="Alex Carey"/>
 
                     <TextView
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/nexa_regular"
                         android:textSize="@dimen/_10sdp"
                         android:gravity="right"
                         style="@style/lightFont"
@@ -88,7 +88,7 @@
                         android:text="+1-7865475643"/>
 
                     <TextView
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/nexa_regular"
                         android:textSize="@dimen/_10sdp"
                         style="@style/lightFont"
                         android:textColor="@color/colorRed"
@@ -117,7 +117,7 @@
 
                         <TextView
                             android:textSize="@dimen/_10sdp"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/nexa_regular"
                             android:paddingLeft="@dimen/_5sdp"
                             android:paddingRight="@dimen/_5sdp"
                             android:layout_gravity="center"

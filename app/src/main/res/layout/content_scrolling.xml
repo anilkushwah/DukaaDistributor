@@ -29,7 +29,7 @@
                 android:text="Wishlist"
                 android:gravity="bottom"
                 android:padding="@dimen/_15sdp"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:textColor="#fff"
                 android:textSize="@dimen/_20sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
@@ -58,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:text="All Products of wishlist"
                     android:textSize="@dimen/_13sdp"
-                    android:fontFamily="@font/poppins_light"/>
+                    android:fontFamily="@font/nexa_light"/>
 
 
                 <TextView
@@ -71,7 +71,7 @@
                     android:layout_marginRight="@dimen/_10sdp"
                     android:textSize="@dimen/_13sdp"
                     android:textColor="@color/colorBlue"
-                    android:fontFamily="@font/poppins_light"/>
+                    android:fontFamily="@font/nexa_light"/>
 
 
                 <TextView
@@ -85,7 +85,7 @@
                     android:layout_marginRight="@dimen/_10sdp"
                     android:textSize="@dimen/_13sdp"
                     android:textColor="@color/colorBlue"
-                    android:fontFamily="@font/poppins_light"/>
+                    android:fontFamily="@font/nexa_light"/>
 
 
             </LinearLayout>

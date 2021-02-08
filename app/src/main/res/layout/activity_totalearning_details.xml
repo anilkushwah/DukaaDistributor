@@ -140,7 +140,7 @@
                     android:padding="@dimen/_5sdp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/nexa_regular"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:layout_width="match_parent"

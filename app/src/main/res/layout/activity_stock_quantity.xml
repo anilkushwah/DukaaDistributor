@@ -32,7 +32,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/_8sdp"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:gravity="center"
                 android:text="Stock Quantity"
                 android:textColor="@color/white"
@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_8sdp"
-        android:fontFamily="@font/poppins"
+        android:fontFamily="@font/nexa_regular"
         android:text="Stock Item"
         android:textColor="@color/grey_2"
         android:textSize="@dimen/_12sdp" />

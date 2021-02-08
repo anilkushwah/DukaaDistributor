@@ -19,7 +19,7 @@
         android:orientation="vertical"
         >
         <TextView
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/nexa_regular"
             android:textSize="@dimen/_12sdp"
             android:textColor="@color/black"
             android:layout_width="match_parent"
@@ -50,7 +50,7 @@
                 android:inputType="text"
                 android:textSize="@dimen/_12sdp"
                 android:id="@+id/et_reason_text"
-                android:fontFamily="@font/poppins_light"
+                android:fontFamily="@font/nexa_light"
                 android:text="Reason for cancellation"/>
 
         </LinearLayout>
@@ -72,7 +72,7 @@
                 android:inputType="text"
                 android:textSize="@dimen/_12sdp"
                 android:id="@+id/et_reason_"
-                android:fontFamily="@font/poppins_light"
+                android:fontFamily="@font/nexa_light"
                 android:hint="Write a Message!"/>
 
         </LinearLayout>
@@ -92,7 +92,7 @@
             <TextView
                 android:textSize="@dimen/_12sdp"
                 android:id="@+id/tv_submit"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:paddingLeft="@dimen/_10sdp"
                 android:paddingRight="@dimen/_10sdp"
                 android:layout_gravity="center"

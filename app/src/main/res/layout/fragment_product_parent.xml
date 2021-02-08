@@ -4,80 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical">
 
-    <RelativeLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_100sdp"
-        android:background="@drawable/lv_home_bck">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_100sdp"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/home_top_shape_bg" />
+            android:id="@+id/back_back"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_margin="@dimen/_10sdp"
+            app:srcCompat="@drawable/ic_back_left_black"
+            tools:ignore="ContentDescription" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/nexa_bold"
+            android:text="All Items"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:layout_marginRight="@dimen/_5sdp"
-                android:orientation="horizontal"
+    </LinearLayout>
 
-                android:weightSum="2">
-
-                <ImageView
-                    android:id="@+id/back_back"
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_20sdp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:src="@drawable/ic_back_left" />
-
-                <TextView
-                    style="@style/normalFont"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:text="All Items"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_14sdp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_10sdp"
-                android:background="@drawable/order_tabback"
-                android:orientation="horizontal">
-
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/mytablayoutId"
-                    style="@style/MyCustomTextAppearance"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_30sdp"
-                    app:tabBackground="@drawable/ordertabselected_back"
-                    app:tabIndicatorColor="@color/white"
-                    app:tabIndicatorFullWidth="false"
-                    app:tabMode="scrollable"
-                    app:tabSelectedTextColor="@color/white"
-                    app:tabTextAppearance="@style/CustomViewAllTab"
-                    app:tabTextColor="@color/white" />
-
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-
-    </RelativeLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/mytablayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        app:tabBackground="@drawable/ordertabselected_back"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorFullWidth="false"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white"
+        android:foregroundTint="@color/orange"/>
 
 
     <androidx.viewpager.widget.ViewPager

@@ -73,7 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Welcome"
-                    android:fontFamily="@font/poppins_semibold"
+                    android:fontFamily="@font/nexa_bold"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_18sdp"
                     android:padding="@dimen/_10sdp"/>
@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_30sdp"
-                android:fontFamily="@font/poppins_light"
+                android:fontFamily="@font/nexa_light"
                 android:lineSpacingExtra="0.3dp"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet."
                 android:textColor="#FFFFFF"

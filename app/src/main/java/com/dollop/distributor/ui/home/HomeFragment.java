@@ -295,6 +295,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
           rvOrderId.setAdapter(orderDetailsAdapter);
 
 
+
         } catch (Exception e) {
           e.printStackTrace();
         }

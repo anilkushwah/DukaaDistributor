@@ -19,7 +19,7 @@
             android:id="@+id/tvProductId"
             android:textColor="@color/black"
             android:textSize="@dimen/_12sdp"
-            android:fontFamily="@font/poppins_light"/>
+            android:fontFamily="@font/nexa_light"/>
 
         <TextView
             android:paddingLeft="@dimen/_8sdp"
@@ -32,7 +32,7 @@
             android:gravity="center"
             android:textColor="@color/black"
             android:textSize="@dimen/_12sdp"
-            android:fontFamily="@font/poppins_light"/>
+            android:fontFamily="@font/nexa_light"/>
  <TextView
             android:paddingLeft="@dimen/_8sdp"
             android:layout_weight="1"
@@ -44,7 +44,7 @@
             android:gravity="center"
             android:textColor="@color/black"
             android:textSize="@dimen/_12sdp"
-            android:fontFamily="@font/poppins_light"/>
+            android:fontFamily="@font/nexa_light"/>
 
         <TextView
             android:paddingRight="@dimen/_8sdp"
@@ -57,7 +57,7 @@
             android:textColor="@color/black"
             android:textSize="@dimen/_12sdp"
             android:id="@+id/tvTotalId"
-            android:fontFamily="@font/poppins_light"/>
+            android:fontFamily="@font/nexa_light"/>
 
     </LinearLayout>
 

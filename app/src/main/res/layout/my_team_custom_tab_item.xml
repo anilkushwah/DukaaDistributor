@@ -9,7 +9,7 @@
         android:id="@+id/tvCustomTabId"
         android:layout_width="@dimen/_80sdp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins"
+        android:fontFamily="@font/nexa_regular"
         android:gravity="center"
         android:singleLine="true"
         android:paddingHorizontal="@dimen/_3sdp"

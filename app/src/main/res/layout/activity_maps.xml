@@ -62,7 +62,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/nexa_regular"
                         android:text=""
                         android:id="@+id/driver_name_tv"
                         android:textColor="@color/black"
@@ -71,7 +71,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/nexa_regular"
                         android:text=""
                         android:id="@+id/driver_mobile_tv"
                         android:textSize="@dimen/_10sdp" />
@@ -79,7 +79,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/nexa_regular"
                         android:text=""
                         android:id="@+id/vehicle_number_tv"
                         android:textSize="@dimen/_10sdp" />
@@ -133,7 +133,7 @@
                     android:id="@+id/location_txt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/nexa_regular"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_12sdp" />
 
@@ -146,7 +146,7 @@
                         android:id="@+id/retailer_name_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/nexa_regular"
                         android:text=""
                         android:textSize="@dimen/_10sdp" />
 
@@ -154,7 +154,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins"
+                        android:fontFamily="@font/nexa_regular"
                         android:text=""
                         android:id="@+id/retailer_number_tv"
                         android:textSize="@dimen/_10sdp" />

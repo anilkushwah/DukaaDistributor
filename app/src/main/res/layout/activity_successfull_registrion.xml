@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_10sdp"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/nexa_regular"
             android:gravity="center"
             android:text="Your Profile Under Verification Please Wait!"
             android:textColor="#000000"
@@ -46,7 +46,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_20sdp"
             android:background="@drawable/button_shap"
-            android:fontFamily="@font/poppins_light"
+            android:fontFamily="@font/nexa_light"
             android:text="OK"
             android:textColor="#FFFFFF"
             android:textSize="@dimen/_14sdp" />

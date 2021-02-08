@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="My Orders"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/nexa_regular"
             android:textColor="#ffffff"
             android:textSize="@dimen/_16sdp"
             android:layout_marginLeft="@dimen/_10sdp"
@@ -81,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:text="View your all orders"
                     android:textSize="@dimen/_12sdp"
-                    android:fontFamily="@font/poppins_light"/>
+                    android:fontFamily="@font/nexa_light"/>
 
 
 

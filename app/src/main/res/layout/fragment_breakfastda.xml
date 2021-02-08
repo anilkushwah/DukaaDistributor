@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:text="Breakfast &amp; Dairy"
                 android:textSize="@dimen/_12sdp"
-                android:fontFamily="@font/poppins_light"/>
+                android:fontFamily="@font/nexa_light"/>
 
 
             <TextView
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:text="7 Item"
                 android:textSize="@dimen/_12sdp"
-                android:fontFamily="@font/poppins_light"/>
+                android:fontFamily="@font/nexa_light"/>
 
 
 

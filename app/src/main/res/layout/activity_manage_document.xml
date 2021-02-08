@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left|center"
             android:layout_marginLeft="@dimen/_10sdp"
-            android:fontFamily="@font/poppins_light"
+            android:fontFamily="@font/nexa_light"
             android:gravity="center"
             android:text="Manage Document"
             android:textColor="@color/white"
@@ -62,7 +62,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_10sdp"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/nexa_regular"
                     android:text="Current Business Permit"
                     android:textFontWeight="600"
                     android:textSize="@dimen/_12sdp" />
@@ -88,7 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_10sdp"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/nexa_regular"
                     android:text="Id Copy Of Director"
                     android:textFontWeight="600"
                     android:textSize="@dimen/_12sdp" />
@@ -114,7 +114,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_10sdp"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/nexa_regular"
                     android:text="Certificate Of Incorporation "
                     android:textFontWeight="600"
                     android:textSize="@dimen/_12sdp" />
@@ -140,7 +140,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_10sdp"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/nexa_regular"
                     android:text="Return Policy"
                     android:textFontWeight="600"
                     android:textSize="@dimen/_12sdp" />

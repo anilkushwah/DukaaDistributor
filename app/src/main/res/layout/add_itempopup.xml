@@ -1024,7 +1024,7 @@
                     android:layout_height="@dimen/_50sdp"
                     android:layout_alignParentBottom="true"
                     android:background="@drawable/button_shap"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/nexa_regular"
                     android:text="Add Product"
                     android:textAllCaps="false"
                     android:textColor="@android:color/white"

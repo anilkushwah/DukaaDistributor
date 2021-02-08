@@ -286,7 +286,7 @@
                 android:id="@+id/btn_submit_otp"
                 android:text="ADD NEW BANK ACCOUNT"
                 android:textSize="@dimen/_14sdp"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:textAllCaps="false"
                 />
 

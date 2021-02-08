@@ -47,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:text="Welcome"
                     android:textSize="@dimen/_28sdp"
-                    android:fontFamily="@font/poppins_semibold"
+                    android:fontFamily="@font/nexa_bold"
                     android:textColor="@android:color/white"
                     android:paddingRight="@dimen/_15sdp"
                     android:paddingTop="@dimen/_15sdp"/>
@@ -57,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:text="Sign Up"
                     android:textSize="@dimen/_20sdp"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/nexa_light"
                     android:textColor="@android:color/white"
                     android:paddingRight="@dimen/_15sdp"
                     android:paddingBottom="@dimen/_5sdp"/>
@@ -106,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Enter Full Name "
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:textStyle="bold"
                 android:paddingLeft="@dimen/_5sdp"
                 android:paddingTop="@dimen/_5sdp"
@@ -135,7 +135,7 @@
                     android:textSize="@dimen/_13sdp"
                     android:ems="10"
                     android:paddingLeft="@dimen/_10sdp"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/nexa_light"
                     android:hint="User name"/>
 
             </LinearLayout>
@@ -144,7 +144,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Mobile Number"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:textStyle="bold"
                 android:paddingLeft="@dimen/_5sdp"
                 android:paddingTop="@dimen/_5sdp"
@@ -190,7 +190,7 @@
                     android:ems="10"
                     android:layout_marginLeft="@dimen/_5sdp"
                     android:paddingTop="@dimen/_5sdp"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/nexa_light"
                     android:hint="12345 67890"/>
 
             </LinearLayout>
@@ -199,7 +199,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Enter Address"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:textStyle="bold"
                 android:paddingLeft="@dimen/_5sdp"
                 android:paddingTop="@dimen/_5sdp"
@@ -227,7 +227,7 @@
                     android:inputType="textWebEmailAddress"
                     android:textSize="@dimen/_13sdp"
                     android:paddingLeft="@dimen/_10sdp"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/nexa_light"
                     android:hint="user123@gmail.com"/>
 
             </LinearLayout>
@@ -236,7 +236,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Enter Referral code(If have)"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:padding="@dimen/_5sdp"
                 android:textSize="@dimen/_12sdp"
                 android:textColor="@color/colorBlue"
@@ -259,7 +259,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Terms and condition agreement"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/nexa_regular"
                     android:textSize="@dimen/_12sdp"
                     android:layout_marginLeft="@dimen/_4sdp"
                     android:layout_marginRight="@dimen/_15sdp"/>
@@ -350,7 +350,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_20sdp"
 
-                android:fontFamily="@font/poppins_light"
+                android:fontFamily="@font/nexa_light"
 
                 android:padding="@dimen/_4sdp"
                 android:text="By continuing you agree to our Terms and Conditions and our Privacy Policy"
@@ -366,7 +366,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1.3"
                     android:text="Already have an Account?"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/nexa_light"
                     android:gravity="right"
                     android:padding="@dimen/_5sdp"
                     android:textSize="@dimen/_13sdp"
@@ -378,7 +378,7 @@
                     android:layout_weight="0.7"
                     android:text="Sign in"
                     android:id="@+id/tv_GoSignInId"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/nexa_light"
                     android:padding="@dimen/_5sdp"
                     android:textSize="@dimen/_14sdp"
                     android:textColor="@color/colorBlue"
@@ -405,7 +405,7 @@
                 android:text="Sign Up"
                 android:id="@+id/btn_send_otp"
                 android:textSize="@dimen/_18sdp"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:textAllCaps="false"
                 />
 

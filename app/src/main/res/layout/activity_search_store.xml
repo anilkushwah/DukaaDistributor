@@ -89,7 +89,7 @@
                     android:text="Stores"
                     android:gravity="bottom"
                     android:padding="@dimen/_15sdp"
-                    android:fontFamily="@font/poppins_semibold"
+                    android:fontFamily="@font/nexa_bold"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_20sdp"
                     android:layout_marginLeft="@dimen/_10sdp"
@@ -118,7 +118,7 @@
                         android:layout_height="wrap_content"
                         android:text="Showing 1-6 of 10 results"
                         android:textSize="@dimen/_13sdp"
-                        android:fontFamily="@font/poppins_light"/>
+                        android:fontFamily="@font/nexa_light"/>
 
 
                     <TextView
@@ -129,7 +129,7 @@
                         android:id="@+id/tv_wishlist_Edit"
                         android:gravity="center|right"
                         android:textSize="@dimen/_13sdp"
-                        android:fontFamily="@font/poppins_semibold"/>
+                        android:fontFamily="@font/nexa_bold"/>
 
                     <ImageView
                         android:layout_marginLeft="@dimen/_4sdp"

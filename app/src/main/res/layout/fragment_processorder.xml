@@ -52,7 +52,7 @@
                     android:gravity="right"
                     android:textSize="@dimen/_10sdp"
                     android:textColor="@color/colorBlue"
-                    android:fontFamily="@font/poppins_light"/>
+                    android:fontFamily="@font/nexa_light"/>
 
                 <ImageView
                     android:layout_marginLeft="@dimen/_5sdp"

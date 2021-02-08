@@ -42,7 +42,7 @@
                 android:layout_gravity="left|center"
                 android:text="Customer Details"
                 android:gravity="center"
-                android:fontFamily="@font/poppins_light"
+                android:fontFamily="@font/nexa_light"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_14sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
@@ -149,7 +149,7 @@
                             android:textColor="@color/colorGreen"
                             android:textFontWeight="600"
                             android:textSize="@dimen/_11sdp"
-                            android:fontFamily="@font/poppins"/>
+                            android:fontFamily="@font/nexa_regular"/>
                     </LinearLayout>
 
 
@@ -180,7 +180,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:text="Shop Name"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/nexa_regular"
                             android:textSize="@dimen/_12sdp"
                             android:textColor="@color/subhading_black"/>
 
@@ -190,7 +190,7 @@
                             android:layout_weight="0.1"
                             android:layout_height="wrap_content"
                             android:text=":"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/nexa_regular"
                             android:textSize="@dimen/_12sdp"
                             />
 
@@ -200,7 +200,7 @@
                             android:layout_weight="0.5"
                             android:layout_height="wrap_content"
                             android:text="Ondoor store"
-                            android:fontFamily="@font/poppins_light"
+                            android:fontFamily="@font/nexa_light"
                             android:textSize="@dimen/_12sdp"
                             android:textColor="@color/grey_1"/>
 
@@ -219,7 +219,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:text="Address"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/nexa_regular"
                             android:textSize="@dimen/_12sdp"
                             android:textColor="@color/subhading_black"/>
 
@@ -229,7 +229,7 @@
                             android:layout_weight="0.1"
                             android:layout_height="wrap_content"
                             android:text=":"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/nexa_regular"
                             android:textSize="@dimen/_12sdp"
                             />
 
@@ -239,7 +239,7 @@
                             android:layout_weight="0.5"
                             android:layout_height="wrap_content"
                             android:text="Royal Agency \n56 HospitalIndore,452001"
-                            android:fontFamily="@font/poppins_light"
+                            android:fontFamily="@font/nexa_light"
                             android:textSize="@dimen/_12sdp"
                             android:textColor="@color/grey_1"/>
 
@@ -258,7 +258,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:text="Shop Account"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/nexa_regular"
                             android:textSize="@dimen/_12sdp"
                             android:textColor="@color/subhading_black"/>
 
@@ -269,7 +269,7 @@
                             android:layout_weight="0.1"
                             android:layout_height="wrap_content"
                             android:text=":"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/nexa_regular"
                             android:textSize="@dimen/_12sdp"
                             />
 
@@ -280,7 +280,7 @@
                             android:layout_weight="0.5"
                             android:layout_height="wrap_content"
                             android:text="#53242422342"
-                            android:fontFamily="@font/poppins_light"
+                            android:fontFamily="@font/nexa_light"
                             android:textSize="@dimen/_12sdp"
                             android:textColor="@color/grey_1"/>
 
@@ -306,7 +306,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:text="Discription"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/nexa_regular"
                             android:textSize="@dimen/_12sdp"
                             android:textColor="@color/subhading_black"/>
 
@@ -316,7 +316,7 @@
                             android:layout_weight="0.1"
                             android:layout_height="wrap_content"
                             android:text=":"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/nexa_regular"
                             android:textSize="@dimen/_12sdp"
                             />
 
@@ -327,7 +327,7 @@
                             android:layout_height="wrap_content"
                             android:text="Ondoor store"
                             android:maxLines="2"
-                            android:fontFamily="@font/poppins_light"
+                            android:fontFamily="@font/nexa_light"
                             android:textSize="@dimen/_12sdp"
                             android:textColor="@color/grey_1"/>
 
@@ -358,7 +358,7 @@
                                 android:paddingLeft="@dimen/_3sdp"
                                 android:textSize="@dimen/_13sdp"
                                 android:textColor="@color/colorPrimary"
-                                android:fontFamily="@font/poppins"/>
+                                android:fontFamily="@font/nexa_regular"/>
 
                             <LinearLayout
                                 android:id="@+id/ll_pastorder"

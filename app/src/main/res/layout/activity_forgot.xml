@@ -52,7 +52,7 @@
                     android:layout_height="46dp"
                     android:layout_marginLeft="@dimen/_5sdp"
                     android:layout_marginTop="@dimen/_minus20sdp"
-                    android:fontFamily="@font/poppins_semibold"
+                    android:fontFamily="@font/nexa_bold"
                     android:text="Welcome"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_20sdp" />
@@ -64,7 +64,7 @@
                     android:text="Login"
                     android:layout_marginTop="@dimen/_minus3sdp"
                     android:textSize="@dimen/_18sdp"
-                    android:fontFamily="@font/poppins"
+                    android:fontFamily="@font/nexa_regular"
                     android:textColor="@color/white"/>
 
             </LinearLayout>
@@ -125,7 +125,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Mobile Number"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginLeft="@dimen/_20sdp"
@@ -156,7 +156,7 @@
                     android:layout_marginLeft="@dimen/_5sdp"
                     android:paddingTop="@dimen/_5sdp"
                     android:paddingBottom="@dimen/_2sdp"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/nexa_light"
                     android:hint=" Enter Mobile number"/>
 
 
@@ -213,7 +213,7 @@
                 android:text="Send OTP"
                 android:id="@+id/btn_forgot_send"
                 android:textSize="@dimen/_16sdp"
-                android:fontFamily="@font/poppins_light"
+                android:fontFamily="@font/nexa_light"
                 android:textFontWeight="600"
                 android:textAllCaps="false"
                 />
@@ -242,7 +242,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Email Id"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:textStyle="bold"
                 android:padding="@dimen/_5sdp"
                 android:textSize="@dimen/_14sdp"
@@ -278,7 +278,7 @@
                         android:id="@+id/et_login_emialid"
                         android:layout_marginLeft="@dimen/_5sdp"
                         android:paddingTop="@dimen/_5sdp"
-                        android:fontFamily="@font/poppins_light"
+                        android:fontFamily="@font/nexa_light"
                         android:hint="dukaa@gmail.com"/>
 
                 </LinearLayout>
@@ -305,7 +305,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Password"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:textStyle="bold"
                 android:padding="@dimen/_5sdp"
                 android:textSize="@dimen/_14sdp"
@@ -340,7 +340,7 @@
                         android:id="@+id/et_login_email_pass"
                         android:layout_marginLeft="@dimen/_5sdp"
                         android:paddingTop="@dimen/_5sdp"
-                        android:fontFamily="@font/poppins_light"
+                        android:fontFamily="@font/nexa_light"
                         android:hint="******"/>
 
                 </LinearLayout>
@@ -371,7 +371,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/_10sdp"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:padding="@dimen/_5sdp"
                 android:textSize="@dimen/_14sdp"
                 tools:ignore="RtlCompat"
@@ -396,7 +396,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1.3"
                     android:text="Don't have an Account?"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/nexa_light"
                     android:gravity="right"
                     android:padding="@dimen/_5sdp"
                     android:textSize="@dimen/_13sdp"
@@ -408,7 +408,7 @@
                     android:layout_weight="0.7"
                     android:text="Sign up"
                     android:id="@+id/tv_loginemail_signup"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/nexa_light"
                     android:padding="@dimen/_5sdp"
                     android:textSize="@dimen/_14sdp"
                     android:textColor="@color/colorBlue"
@@ -421,7 +421,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="OR"
-                android:fontFamily="@font/poppins_semibold"
+                android:fontFamily="@font/nexa_bold"
                 android:gravity="center"
                 android:padding="@dimen/_5sdp"
                 android:textSize="@dimen/_15sdp"
@@ -509,7 +509,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="-6dp"
                 android:background="@drawable/curve_bg_login"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:text="Submit"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"

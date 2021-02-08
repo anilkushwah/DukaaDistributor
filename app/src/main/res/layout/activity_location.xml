@@ -73,7 +73,7 @@
 
                 <TextView
                     android:textSize="@dimen/_12sdp"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/nexa_light"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:padding="@dimen/_5sdp"
@@ -132,7 +132,7 @@
 
                 <TextView
                     android:textSize="@dimen/_12sdp"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/nexa_light"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:padding="@dimen/_5sdp"

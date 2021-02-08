@@ -22,7 +22,7 @@
         <TextView
             android:padding="@dimen/_5sdp"
             android:drawableRight="@drawable/ic_digital_signature_small"
-            android:fontFamily="@font/poppins"
+            android:fontFamily="@font/nexa_regular"
             android:textSize="@dimen/_10sdp"
             android:textColor="@color/black"
             android:layout_width="match_parent"
@@ -42,7 +42,7 @@
             >
             <TextView
                 android:padding="@dimen/_5sdp"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:textSize="@dimen/_10sdp"
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
@@ -52,7 +52,7 @@
             <TextView
                 android:padding="@dimen/_5sdp"
                 android:id="@+id/driver_genral_id"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:textSize="@dimen/_10sdp"
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
@@ -132,7 +132,7 @@
                 android:textFontWeight="600"
                 android:textSize="@dimen/_12sdp"
                 android:id="@+id/sign_clear"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:paddingLeft="@dimen/_10sdp"
                 android:paddingRight="@dimen/_10sdp"
                 android:layout_gravity="center"
@@ -161,7 +161,7 @@
             <TextView
                 android:textSize="@dimen/_12sdp"
                 android:id="@+id/sign_submit"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/nexa_regular"
                 android:paddingLeft="@dimen/_10sdp"
                 android:paddingRight="@dimen/_10sdp"
                 android:layout_gravity="center"

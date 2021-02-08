@@ -109,7 +109,7 @@
                                     android:text="4"
                                     android:textSize="@dimen/_12sdp"
                                     android:textColor="@color/white"
-                                    android:fontFamily="@font/poppins"/>
+                                    android:fontFamily="@font/nexa_regular"/>
                             </RelativeLayout>
 
                         </LinearLayout>
@@ -380,7 +380,7 @@
                                     android:textSize="@dimen/_10sdp"
                                     android:paddingLeft="@dimen/_5sdp"
                                     android:paddingRight="@dimen/_5sdp"
-                                    android:fontFamily="@font/poppins"
+                                    android:fontFamily="@font/nexa_regular"
                                     android:textColor="@color/black"
                                     android:layout_gravity="center"
                                     android:gravity="center"

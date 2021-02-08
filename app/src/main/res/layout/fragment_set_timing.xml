@@ -221,7 +221,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_gravity="center"
             android:background="@drawable/button_shap"
-            android:fontFamily="@font/poppins_light"
+            android:fontFamily="@font/nexa_light"
             android:gravity="center"
             android:text="Save"
             android:textColor="@color/white"
