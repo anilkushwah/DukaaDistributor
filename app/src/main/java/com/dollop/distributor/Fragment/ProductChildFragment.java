@@ -46,6 +46,7 @@ import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.appcompat.view.menu.MenuPopupHelper;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -1253,7 +1254,7 @@ public class ProductChildFragment extends Fragment {
                             productModelList.add(productModel);
                         }
 
-                        rvProductId.setLayoutManager(new LinearLayoutManager(getActivity()));
+                        rvProductId.setLayoutManager(new GridLayoutManager(getActivity(), 1));
                         productAdapter = new ProductAdapter(getActivity(), productModelList);
                         rvProductId.setAdapter(productAdapter);
 

@@ -42,19 +42,17 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_30sdp"
         app:tabBackground="@drawable/ordertabselected_back"
-        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorColor="@null"
         app:tabIndicatorFullWidth="false"
         app:tabMode="scrollable"
         app:tabSelectedTextColor="@color/white"
-        app:tabTextColor="@color/white"
-        android:foregroundTint="@color/orange"/>
+        app:tabTextColor="@color/white" />
 
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/my_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_above="@+id/appbar_layout" />
+        android:layout_height="fill_parent" />
 
 
 </LinearLayout>
