@@ -49,7 +49,7 @@
         <TextView
             android:paddingRight="@dimen/_8sdp"
             android:layout_gravity="right"
-            android:gravity="right"
+            android:gravity="center_vertical|end"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

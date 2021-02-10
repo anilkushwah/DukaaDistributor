@@ -3,15 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBody"
-
+    android:background="@color/white"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/_110sdp"
         android:layout_marginBottom="@dimen/_12sdp"
-        android:background="@drawable/lv_home_bck"
+        android:background="@color/colorPrimary"
         android:orientation="vertical">
 
 
@@ -26,7 +25,7 @@
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
                 android:layout_margin="@dimen/_10sdp"
-                android:src="@drawable/ic_back_left" />
+                app:srcCompat="@drawable/ic_back_left" />
 
 
             <TextView
@@ -35,9 +34,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_toRightOf="@+id/back_back"
-                android:fontFamily="@font/nexa_regular"
+                android:fontFamily="@font/nexa_bold"
                 android:text="Profile"
-
                 android:textColor="@color/white"
                 android:textFontWeight="600"
                 android:textSize="@dimen/_14sdp" />
@@ -80,7 +78,6 @@
                 android:layout_width="@dimen/_60sdp"
                 android:layout_height="@dimen/_60sdp"
                 android:layout_gravity="center"
-
                 android:layout_margin="@dimen/_16sdp">
 
                 <ImageView
@@ -89,7 +86,7 @@
                     android:layout_height="@dimen/_60sdp"
                     android:background="@drawable/btn_unselected"
                     android:scaleType="fitXY"
-                    android:src="@drawable/ic_user_blue" />
+                    app:srcCompat="@drawable/ic_user_blue" />
 
             </com.dollop.distributor.Activity.RoundedCornerImageLayout>
 

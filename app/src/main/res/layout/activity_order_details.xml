@@ -4,103 +4,224 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
+
 
     <RelativeLayout
         android:id="@+id/rl_tool"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorBody">
+        android:background="@color/white"
+        android:paddingBottom="@dimen/_10sdp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_70sdp"
-            android:background="@drawable/lv_home_bck"
-            android:padding="@dimen/_8sdp">
-
-            <ImageView
-                android:id="@+id/order_back"
-                android:layout_width="@dimen/_25sdp"
-                android:layout_height="@dimen/_25sdp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerInParent="true"
-                android:layout_marginRight="@dimen/_10sdp"
-                app:srcCompat="@drawable/ic_back_left" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
-            <TextView
-                android:id="@+id/tv_ordetails"
-                style="@style/normalFont"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:layout_toRightOf="@+id/order_back"
-                android:text="Order Details -"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp"
-                android:visibility="gone" />
+                android:padding="8sp">
 
-            <TextView
-                android:id="@+id/orderid_text"
-                style="@style/normalFont"
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/order_back"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_back_left_black" />
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexa_bold"
+                    android:text="Order Details"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvTotalAmountId"
+                    app:layout_constraintStart_toEndOf="@id/order_back"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTotalAmountId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexa_bold"
+                    android:text="541.04"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:layout_toRightOf="@+id/tv_ordetails"
-                android:text=""
-                android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp"
-                android:visibility="gone" />
+                android:paddingHorizontal="8sp">
 
-            <TextView
-                android:id="@+id/orderid"
-                style="@style/normalFont"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_ordetails"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/order_back"
-                android:text="Order ID -"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/tvTotalAmountId"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/orderid"
-                android:layout_marginLeft="@dimen/_25sdp"
-                android:drawablePadding="@dimen/_5sdp"
-                android:fontFamily="@font/nexa_bold"
-                android:text="Total Amount:"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_11sdp" />
+                    <TextView
+                        style="@style/normalFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
 
+                    <TextView
+                        android:id="@+id/orderid"
+                        style="@style/normalFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
 
-            <TextView
+                        android:text="12458965"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
 
-                android:id="@+id/past_order_Tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerInParent="true"
-                android:layout_marginLeft="@dimen/_15sdp"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:background="@drawable/btn_unselected"
-                android:gravity="center"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_8sdp"
-                android:text="Past Order"
-                android:textColor="@color/colorBlue"
-                android:textSize="@dimen/_12sdp"
-                android:visibility="gone" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/tv_items_and_amount"-->
+<!--                        style="@style/normalFont"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="5"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/_12sdp" />-->
 
-        </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/past_order_Tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/primary_button"
+                    android:fontFamily="@font/nexa_regular"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Past Order"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
 
     </RelativeLayout>
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/rl_tool"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@color/colorBody">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="@dimen/_70sdp"-->
+    <!--            android:background="@drawable/lv_home_bck"-->
+    <!--            android:padding="@dimen/_8sdp">-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/order_back"-->
+    <!--                android:layout_width="@dimen/_25sdp"-->
+    <!--                android:layout_height="@dimen/_25sdp"-->
+    <!--                android:layout_alignParentLeft="true"-->
+    <!--                android:layout_centerInParent="true"-->
+    <!--                android:layout_marginRight="@dimen/_10sdp"-->
+    <!--                app:srcCompat="@drawable/ic_back_left" />-->
+
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tv_ordetails"-->
+    <!--                style="@style/normalFont"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerVertical="true"-->
+    <!--                android:layout_marginTop="@dimen/_8sdp"-->
+    <!--                android:layout_toRightOf="@+id/order_back"-->
+    <!--                android:text="Order Details -"-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="@dimen/_12sdp"-->
+    <!--                android:visibility="gone" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/orderid_text"-->
+    <!--                style="@style/normalFont"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerVertical="true"-->
+    <!--                android:layout_marginLeft="5dp"-->
+    <!--                android:layout_marginTop="@dimen/_8sdp"-->
+    <!--                android:layout_toRightOf="@+id/tv_ordetails"-->
+    <!--                android:text=""-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="@dimen/_12sdp"-->
+    <!--                android:visibility="gone" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/orderid"-->
+    <!--                style="@style/normalFont"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@id/tv_ordetails"-->
+    <!--                android:layout_centerVertical="true"-->
+    <!--                android:layout_toRightOf="@+id/order_back"-->
+    <!--                android:text="Order ID -"-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="@dimen/_12sdp" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvTotalAmountId"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@+id/orderid"-->
+    <!--                android:layout_marginLeft="@dimen/_25sdp"-->
+    <!--                android:drawablePadding="@dimen/_5sdp"-->
+    <!--                android:fontFamily="@font/nexa_bold"-->
+    <!--                android:text="Total Amount:"-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="@dimen/_11sdp" />-->
+
+
+    <!--            <TextView-->
+
+    <!--                android:id="@+id/past_order_Tv"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_alignParentRight="true"-->
+    <!--                android:layout_centerInParent="true"-->
+    <!--                android:layout_marginLeft="@dimen/_15sdp"-->
+    <!--                android:layout_marginRight="@dimen/_10sdp"-->
+    <!--                android:background="@drawable/btn_unselected"-->
+    <!--                android:gravity="center"-->
+    <!--                android:paddingHorizontal="@dimen/_8sdp"-->
+    <!--                android:paddingVertical="@dimen/_8sdp"-->
+    <!--                android:text="Past Order"-->
+    <!--                android:textColor="@color/colorBlue"-->
+    <!--                android:textSize="@dimen/_12sdp"-->
+    <!--                android:visibility="gone" />-->
+
+    <!--        </RelativeLayout>-->
+
+    <!--    </RelativeLayout>-->
     <!--/////////////////////-->
 
 
@@ -315,7 +436,7 @@
                 android:layout_height="@dimen/_15sdp"
                 android:layout_marginHorizontal="@dimen/_3sdp"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:background="@color/colorBody" />
+                android:background="@color/white" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -376,7 +497,7 @@
                 android:layout_height="@dimen/_15sdp"
                 android:layout_marginHorizontal="@dimen/_3sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:background="@color/colorBody" />
+                android:background="@color/white" />
 
 
             <LinearLayout
@@ -453,6 +574,7 @@
                             android:text="Unit"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_12sdp" />
+
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -464,6 +586,7 @@
                             android:text="Quantity"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_12sdp" />
+
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -723,9 +846,9 @@
                                 android:layout_height="@dimen/_8sdp"
                                 android:layout_marginTop="@dimen/_5sdp"
                                 android:background="@color/black"
-                                android:visibility="gone"
                                 android:fontFamily="@font/nexa_regular"
-                                android:textColor="@color/black" />
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -767,10 +890,10 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/_8sdp"
-                                android:visibility="gone"
                                 android:background="@color/black"
                                 android:fontFamily="@font/nexa_regular"
-                                android:textColor="@color/black" />
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -795,12 +918,12 @@
                 android:visibility="gone">
 
                 <TextView
+                    android:id="@+id/tvDriverSignatureId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_digital_signature_small"
                     android:fontFamily="@font/nexa_regular"
                     android:padding="@dimen/_3sdp"
-                    android:id="@+id/tvDriverSignatureId"
                     android:text="Driver Signature Here"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp" />
@@ -810,87 +933,92 @@
                     android:layout_height="1dp"
                     android:layout_marginRight="@dimen/_140sdp"
                     android:background="#EEEEEE" />
-<LinearLayout
-    android:orientation="vertical"
-    android:id="@+id/ll_driver_data"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nexa_regular"
-            android:padding="@dimen/_3sdp"
-            android:text="Driver ID -"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_10sdp" />
+                <LinearLayout
+                    android:id="@+id/ll_driver_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/driver_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nexa_regular"
-            android:padding="@dimen/_3sdp"
-            android:text="#878161"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_10sdp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nexa_regular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="Driver ID -"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nexa_regular"
-            android:padding="@dimen/_3sdp"
-            android:text="Driver Name -"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_10sdp" />
+                        <TextView
+                            android:id="@+id/driver_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nexa_regular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="#878161"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp" />
 
-        <TextView
-            android:id="@+id/driver_name_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nexa_regular"
-            android:padding="@dimen/_3sdp"
-            android:text="#878161"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_10sdp" />
+                    </LinearLayout>
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nexa_regular"
-            android:padding="@dimen/_3sdp"
-            android:text="Vehicle Registration Number"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_10sdp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nexa_regular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="Driver Name -"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp" />
 
-        <TextView
-            android:id="@+id/Registration_no_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nexa_regular"
-            android:padding="@dimen/_3sdp"
-            android:text="#878161"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_10sdp" />
+                        <TextView
+                            android:id="@+id/driver_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nexa_regular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="#878161"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp" />
 
-    </LinearLayout>
-</LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nexa_regular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="Vehicle Registration Number"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:id="@+id/Registration_no_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nexa_regular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="#878161"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
                 <TextView
                     android:id="@+id/driver_no_tv"
                     android:layout_width="wrap_content"
@@ -980,7 +1108,6 @@
 
 
     <LinearLayout
-
         android:id="@+id/ll_order_set"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"
