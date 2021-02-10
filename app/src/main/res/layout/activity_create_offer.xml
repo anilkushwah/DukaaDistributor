@@ -12,8 +12,7 @@
     <RelativeLayout
         android:id="@+id/toolbar_Rl"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_70sdp"
-        android:background="@drawable/lv_home_bck"
+        android:layout_height="wrap_content"
         android:paddingLeft="@dimen/_10sdp"
         android:paddingTop="@dimen/_15sdp">
 
@@ -22,7 +21,7 @@
             android:layout_width="@dimen/_22sdp"
             android:layout_height="@dimen/_22sdp"
             android:layout_alignParentLeft="true"
-            android:src="@drawable/ic_back_left" />
+            app:srcCompat="@drawable/ic_back_left_black" />
 
         <TextView
             android:layout_width="match_parent"
@@ -30,11 +29,12 @@
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_toRightOf="@+id/sub_member_back"
-            android:fontFamily="@font/nexa_regular"
+            android:fontFamily="@font/nexa_bold"
+            android:textStyle="bold"
             android:text="Create Offer"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textFontWeight="700"
-            android:textSize="@dimen/_16sdp" />
+            android:textSize="@dimen/_14sdp" />
 
     </RelativeLayout>
 
@@ -487,9 +487,10 @@
     <RelativeLayout
         android:id="@+id/btn_RL"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/curve_bg_login"
+        android:background="@drawable/the_button"
+        android:layout_margin="@dimen/_8sdp"
         android:orientation="vertical">
 
         <TextView
@@ -497,10 +498,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:fontFamily="@font/nexa_light"
+            android:fontFamily="@font/nexa_bold"
+            android:padding="@dimen/_8sdp"
             android:gravity="center"
             android:text="Add Offer"
-            android:textColor="@color/white"
+            android:textColor="@color/colorPrimary"
             android:textSize="@dimen/_14sdp" />
 
     </RelativeLayout>

@@ -29,7 +29,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="@dimen/_minus50sdp"
             android:gravity="center"
             android:weightSum="2">
 
@@ -38,7 +37,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_weight="1">
 
@@ -46,11 +44,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Welcome"
-                    android:textSize="@dimen/_28sdp"
+                    android:textSize="@dimen/_18sdp"
                     android:fontFamily="@font/nexa_bold"
-                    android:textColor="@android:color/white"
-                    android:paddingRight="@dimen/_15sdp"
-                    android:paddingTop="@dimen/_15sdp"/>
+                    android:textColor="@android:color/white"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -79,10 +75,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
-                android:padding="@dimen/_25sdp"
                 android:layout_weight="1"
                 android:layout_gravity="right"
-                android:src="@drawable/ic_color_logo"/>
+                android:src="@drawable/logo_mini"/>
 
         </LinearLayout>
 
@@ -93,7 +88,8 @@
         android:layout_height="0dp"
         android:layout_weight="1.5"
         android:weightSum="3"
-        android:background="@drawable/curve_bg_white_login"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <LinearLayout
@@ -391,13 +387,13 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             android:layout_weight="0.3"
-            >
+            android:layout_margin="@dimen/_8sdp">
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="@android:color/white"
-                android:background="@drawable/curve_bg_login"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/the_button"
                 android:layout_alignParentBottom="true"
                 android:text="Sign Up"
                 android:id="@+id/btn_send_otp"

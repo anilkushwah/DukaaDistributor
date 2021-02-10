@@ -30,16 +30,16 @@
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
                     android:layout_margin="@dimen/_10sdp"
-                    android:src="@drawable/ic_back_left"
+                    app:srcCompat="@drawable/ic_back_left"
                     android:visibility="gone" />
 
                 <ImageView
-                    android:layout_width="@dimen/_150sdp"
-                    android:layout_height="@dimen/_150sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="@dimen/_40sdp"
-                    android:src="@drawable/ic_color_logo" />
+                    android:src="@drawable/logo_mini" />
 
             </RelativeLayout>
 
@@ -51,7 +51,7 @@
             android:layout_height="0dp"
             android:layout_below="@+id/toolbar_LL"
             android:layout_weight="1.2"
-            android:background="@drawable/curve_bg_white_login"
+            android:background="@color/white"
             android:orientation="vertical"
             android:weightSum="3">
 
@@ -155,19 +155,20 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/button_shap"
-        android:orientation="vertical">
+        android:background="@drawable/the_button"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_8sdp">
 
         <TextView
             android:id="@+id/btn_submit_otp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
-            android:fontFamily="@font/nexa_light"
+            android:fontFamily="@font/nexa_bold"
             android:gravity="center"
             android:text="Submit"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp" />
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_16sdp" />
 
     </RelativeLayout>
 

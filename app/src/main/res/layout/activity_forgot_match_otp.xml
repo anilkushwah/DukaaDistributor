@@ -69,10 +69,10 @@
             <ImageView
                 android:layout_toRightOf="@+id/ll_enterotp"
                 android:padding="@dimen/_25sdp"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:src="@drawable/ic_color_logo"/>
+                android:src="@drawable/logo_mini"/>
 
         </RelativeLayout>
 
@@ -83,7 +83,7 @@
         android:layout_height="0dp"
         android:layout_weight="1.2"
         android:weightSum="3"
-        android:background="@drawable/curve_bg_white_login"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <LinearLayout
@@ -196,14 +196,16 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             android:layout_weight="0.4"
+            android:layout_margin="@dimen/_8sdp"
             >
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="@color/white"
-                android:background="@drawable/curve_bg_login"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/the_button"
                 android:textFontWeight="600"
+                android:padding="@dimen/_8sdp"
                 android:layout_alignParentBottom="true"
                 android:id="@+id/btn_submit_otp"
                 android:text="Submit"

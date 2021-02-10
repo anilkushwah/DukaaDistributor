@@ -2,7 +2,7 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBody"
+    android:background="@color/white"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <androidx.fragment.app.FragmentContainerView
@@ -21,7 +21,7 @@
         android:id="@+id/tool_searchbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_160sdp"
-        android:background="@drawable/lv_home_bck"
+        android:background="@color/colorPrimary"
         android:orientation="vertical">
 
 
@@ -127,12 +127,14 @@
         android:id="@+id/btn_save_location"
         android:fontFamily="@font/nexa_light"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/button_shap"
+        android:background="@drawable/the_button"
+        android:layout_margin="@dimen/_8sdp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"
         android:text="Save Location"
         android:textSize="@dimen/_14sdp"
-        android:textColor="@color/white"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
         android:textAllCaps="false"/>
 
 

@@ -110,10 +110,10 @@ public class DashboardFragment extends Fragment {
         tvWeeklyId.setTextColor(Color.WHITE);
 
         tv_monthly.setBackgroundResource(R.drawable.btn_unselected);
-        tv_monthly.setTextColor(Color.BLUE);
+        tv_monthly.setTextColor(Color.BLACK);
 
         tv_yearly.setBackgroundResource(R.drawable.btn_unselected);
-        tv_yearly.setTextColor(Color.BLUE);
+        tv_yearly.setTextColor(Color.BLACK);
 
         getProductSold("Weekly");
 
@@ -122,10 +122,10 @@ public class DashboardFragment extends Fragment {
         tvWeeklyId_total_Sold.setTextColor(Color.WHITE);
 
         tv_monthly_total_sold.setBackgroundResource(R.drawable.btn_unselected);
-        tv_monthly_total_sold.setTextColor(Color.BLUE);
+        tv_monthly_total_sold.setTextColor(Color.BLACK);
 
         tv_yearly_total_sold.setBackgroundResource(R.drawable.btn_unselected);
-        tv_yearly_total_sold.setTextColor(Color.BLUE);
+        tv_yearly_total_sold.setTextColor(Color.BLACK);
 
         getDashBoardDetail("Weekly");
 
@@ -149,10 +149,10 @@ public class DashboardFragment extends Fragment {
                 tvWeeklyId.setTextColor(Color.WHITE);
 
                 tv_monthly.setBackgroundResource(R.drawable.btn_unselected);
-                tv_monthly.setTextColor(Color.BLUE);
+                tv_monthly.setTextColor(Color.BLACK);
 
                 tv_yearly.setBackgroundResource(R.drawable.btn_unselected);
-                tv_yearly.setTextColor(Color.BLUE);
+                tv_yearly.setTextColor(Color.BLACK);
                 resetChart();
 
                 getProductSold("Weekly");
@@ -169,10 +169,10 @@ public class DashboardFragment extends Fragment {
                 tv_monthly.setTextColor(Color.WHITE);
 
                 tvWeeklyId.setBackgroundResource(R.drawable.btn_unselected);
-                tvWeeklyId.setTextColor(Color.BLUE);
+                tvWeeklyId.setTextColor(Color.BLACK);
 
                 tv_yearly.setBackgroundResource(R.drawable.btn_unselected);
-                tv_yearly.setTextColor(Color.BLUE);
+                tv_yearly.setTextColor(Color.BLACK);
 
                 resetChart();
                 getProductSold("Monthly");
@@ -185,10 +185,10 @@ public class DashboardFragment extends Fragment {
                 tv_yearly.setTextColor(Color.WHITE);
 
                 tvWeeklyId.setBackgroundResource(R.drawable.btn_unselected);
-                tvWeeklyId.setTextColor(Color.BLUE);
+                tvWeeklyId.setTextColor(Color.BLACK);
 
                 tv_monthly.setBackgroundResource(R.drawable.btn_unselected);
-                tv_monthly.setTextColor(Color.BLUE);
+                tv_monthly.setTextColor(Color.BLACK);
                 resetChart();
                 getProductSold("Yearly");
             }
@@ -209,10 +209,10 @@ public class DashboardFragment extends Fragment {
                 tvWeeklyId_total_Sold.setTextColor(Color.WHITE);
 
                 tv_monthly_total_sold.setBackgroundResource(R.drawable.btn_unselected);
-                tv_monthly_total_sold.setTextColor(Color.BLUE);
+                tv_monthly_total_sold.setTextColor(Color.BLACK);
 
                 tv_yearly_total_sold.setBackgroundResource(R.drawable.btn_unselected);
-                tv_yearly_total_sold.setTextColor(Color.BLUE);
+                tv_yearly_total_sold.setTextColor(Color.BLACK);
                 resetChartSale();
 
                 getDashBoardDetail("Weekly");
@@ -229,10 +229,10 @@ public class DashboardFragment extends Fragment {
                 tv_monthly_total_sold.setTextColor(Color.WHITE);
 
                 tvWeeklyId_total_Sold.setBackgroundResource(R.drawable.btn_unselected);
-                tvWeeklyId_total_Sold.setTextColor(Color.BLUE);
+                tvWeeklyId_total_Sold.setTextColor(Color.BLACK);
 
                 tv_yearly_total_sold.setBackgroundResource(R.drawable.btn_unselected);
-                tv_yearly_total_sold.setTextColor(Color.BLUE);
+                tv_yearly_total_sold.setTextColor(Color.BLACK);
 
                 resetChartSale();
                 getDashBoardDetail("Monthly");
@@ -245,10 +245,10 @@ public class DashboardFragment extends Fragment {
                 tv_yearly_total_sold.setTextColor(Color.WHITE);
 
                 tvWeeklyId_total_Sold.setBackgroundResource(R.drawable.btn_unselected);
-                tvWeeklyId_total_Sold.setTextColor(Color.BLUE);
+                tvWeeklyId_total_Sold.setTextColor(Color.BLACK);
 
                 tv_monthly_total_sold.setBackgroundResource(R.drawable.btn_unselected);
-                tv_monthly_total_sold.setTextColor(Color.BLUE);
+                tv_monthly_total_sold.setTextColor(Color.BLACK);
                 resetChartSale();
                 getDashBoardDetail("Yearly");
             }

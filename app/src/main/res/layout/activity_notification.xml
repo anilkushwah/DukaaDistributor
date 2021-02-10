@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBody"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".Activity.NotificationActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_90sdp"
-        android:background="@drawable/lv_home_bck"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -24,19 +23,19 @@
                 android:layout_height="@dimen/_22sdp"
                 android:layout_alignParentLeft="true"
                 android:layout_gravity="left"
-                android:src="@drawable/ic_back_left" />
+                app:srcCompat="@drawable/ic_back_left_black" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_20sdp"
-                android:layout_toRightOf="@+id/noti_back"
-                android:fontFamily="@font/nexa_regular"
+                android:fontFamily="@font/nexa_bold"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/noti_back"
                 android:text="Notification"
-                android:textColor="@color/white"
-                android:textFontWeight="600"
-                android:textSize="@dimen/_16sdp" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
 
 
         </RelativeLayout>

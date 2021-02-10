@@ -11,14 +11,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBody"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_70sdp"
-            android:orientation="horizontal"
-            android:background="@drawable/lv_home_bck">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_marginLeft="@dimen/_10sdp"
@@ -26,17 +25,17 @@
                 android:layout_width="@dimen/_22sdp"
                 android:layout_height="@dimen/_22sdp"
                 android:id="@+id/credit_setback"
-                android:src="@drawable/ic_back_left"/>
+                app:srcCompat="@drawable/ic_back_left_black"/>
 
             <TextView
-                android:textFontWeight="600"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left|center"
+                android:layout_gravity="start|center_vertical"
                 android:text="Credit Setting"
                 android:gravity="center"
-                android:fontFamily="@font/nexa_light"
-                android:textColor="@color/white"
+                android:fontFamily="@font/nexa_bold"
+                android:textStyle="bold"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 />
@@ -196,7 +195,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_40sdp"
                     android:padding="@dimen/_10sdp"
-                    android:background="@drawable/button_shap"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:background="@drawable/the_button"
                     >
 
                     <TextView
@@ -205,7 +205,7 @@
                         android:textSize="@dimen/_14sdp"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Update Amount"/>

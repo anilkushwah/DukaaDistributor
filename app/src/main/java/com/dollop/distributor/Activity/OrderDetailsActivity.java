@@ -566,7 +566,7 @@ TextView tvDriverSignatureId;
         //  payment_status_tv = findViewById(R.id.tvPaymentStatusId);
         tvDispatchLL = findViewById(R.id.tvDispatchLL);
         detail_LL = findViewById(R.id.detail_LL);
-        driver_genral_id = findViewById(R.id.driver_genral_id);
+        driver_genral_id = findViewById(R.id.driver_id);
         final_image = findViewById(R.id.final_image);
 
         ivRetailerImageId = findViewById(R.id.iv_reatailer_image);

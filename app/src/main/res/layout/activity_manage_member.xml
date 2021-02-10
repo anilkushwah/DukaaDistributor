@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBody"
-    android:orientation="vertical"
-    >
+    android:background="@color/white"
+    android:orientation="vertical">
 
 
     <LinearLayout
@@ -15,109 +15,109 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
             android:orientation="horizontal"
-            android:background="@drawable/lv_home_bck">
+            android:padding="@dimen/_8sdp">
 
             <ImageView
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_gravity="center"
+                android:id="@+id/memberback"
                 android:layout_width="@dimen/_22sdp"
                 android:layout_height="@dimen/_22sdp"
-                android:id="@+id/memberback"
-                android:src="@drawable/ic_back_left"/>
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_10sdp"
+                app:srcCompat="@drawable/ic_back_left_black" />
 
             <TextView
-                android:textFontWeight="600"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left|center"
-                android:text="Manage Members"
-                android:gravity="center"
-                android:fontFamily="@font/nexa_light"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_14sdp"
+                android:layout_gravity="start|center"
                 android:layout_marginLeft="@dimen/_10sdp"
-                />
+                android:fontFamily="@font/nexa_bold"
+                android:gravity="center"
+                android:text="Manage Members"
+                android:textColor="@color/black"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
 
         <LinearLayout
-            android:layout_marginTop="@dimen/_12sdp"
-            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@color/white"
             android:orientation="vertical">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="1"
+                android:orientation="horizontal"
                 android:padding="@dimen/_10sdp"
-                android:orientation="horizontal">
+                android:weightSum="1">
 
                 <TextView
-                    android:textFontWeight="600"
                     android:layout_width="0dp"
-                    android:layout_weight="0.5"
                     android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/nexa_light"
                     android:text="All Members"
-                    android:textSize="@dimen/_12sdp"
-                    android:fontFamily="@font/nexa_light"/>
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_12sdp" />
 
                 <TextView
-                    android:textFontWeight="600"
-                    android:layout_gravity="right"
-                    android:gravity="right"
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
                     android:id="@+id/member_count_tv"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/_12sdp"
-                    android:fontFamily="@font/nexa_light"/>
+                    android:layout_gravity="right"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/nexa_light"
+                    android:gravity="right"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_12sdp" />
 
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#DDDDDD"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginRight="@dimen/_10sdp"/>
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="#DDDDDD" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/rv_memberList"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
     </LinearLayout>
 
     <FrameLayout
-        android:layout_marginBottom="@dimen/_10sdp"
         android:id="@+id/member_add"
         android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="bottom|right"
         android:layout_marginLeft="@dimen/_10sdp"
         android:layout_marginRight="@dimen/_10sdp"
-        android:layout_height="@dimen/_40sdp"
-        android:background="@drawable/button_back"
-        android:layout_gravity="bottom|right">
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/button_back">
 
         <TextView
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:drawablePadding="@dimen/_8sdp"
-            android:drawableLeft="@drawable/ic_plus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/_12sdp"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_plus"
+            android:drawablePadding="@dimen/_8sdp"
+            android:drawableTint="@color/white"
+            android:gravity="center"
             android:text="Add Members"
             android:textColor="@android:color/white"
-            />
+            android:textSize="@dimen/_12sdp" />
     </FrameLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

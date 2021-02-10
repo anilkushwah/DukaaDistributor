@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBody"
+    android:background="@color/white"
     android:orientation="vertical"
     android:weightSum="2"
     >
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:background="@drawable/lv_home_bck">
+        android:background="@color/white">
 
         <ImageView
             android:layout_marginLeft="@dimen/_10sdp"
@@ -22,7 +22,7 @@
             android:layout_width="@dimen/_22sdp"
             android:layout_height="@dimen/_22sdp"
             android:id="@+id/mpesa_back_arrow"
-            app:srcCompat="@drawable/ic_back_left"/>
+            app:srcCompat="@drawable/ic_back_left_black"/>
 
         <TextView
             android:textFontWeight="600"
@@ -31,8 +31,9 @@
             android:layout_gravity="left|center"
             android:text="MPESA"
             android:gravity="center"
-            android:fontFamily="@font/nexa_light"
-            android:textColor="@color/white"
+            android:fontFamily="@font/nexa_bold"
+            android:textStyle="bold"
+            android:textColor="@color/black"
             android:textSize="@dimen/_14sdp"
             android:layout_marginLeft="@dimen/_10sdp"
             />
@@ -44,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.7"
-        android:background="@drawable/curve_bg_white_login"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <LinearLayout

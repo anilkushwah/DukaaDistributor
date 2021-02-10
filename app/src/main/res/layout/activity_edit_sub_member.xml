@@ -9,8 +9,7 @@
     <RelativeLayout
         android:id="@+id/toolbar_RL"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_60sdp"
-        android:background="@drawable/lv_home_bck">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/sub_member_back"
@@ -18,7 +17,7 @@
             android:layout_height="@dimen/_20sdp"
             android:layout_alignParentLeft="true"
             android:layout_margin="@dimen/_10sdp"
-            android:src="@drawable/ic_back_left" />
+            android:src="@drawable/ic_back_left_black" />
 
         <TextView
             android:layout_width="match_parent"
@@ -26,9 +25,10 @@
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_toRightOf="@+id/sub_member_back"
-            android:fontFamily="@font/nexa_regular"
+            android:fontFamily="@font/nexa_bold"
+            android:textStyle="bold"
             android:text="Update Member"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textFontWeight="700"
             android:textSize="@dimen/_14sdp" />
 
@@ -346,7 +346,7 @@
     <RelativeLayout
         android:id="@+id/btn_RL"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
         android:orientation="vertical">
@@ -354,12 +354,14 @@
         <TextView
             android:id="@+id/tv_add_member"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:background="@drawable/curve_bg_login"
+            android:layout_height="wrap_content"
+            android:background="@drawable/the_button"
+            android:layout_margin="@dimen/_8sdp"
+            android:padding="@dimen/_8sdp"
             android:fontFamily="@font/nexa_light"
             android:gravity="center"
             android:text="Update Member"
-            android:textColor="@color/white"
+            android:textColor="@color/colorPrimary"
             android:textFontWeight="600"
             android:textSize="@dimen/_12sdp" />
 

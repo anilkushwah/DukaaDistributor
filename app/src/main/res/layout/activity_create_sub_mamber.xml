@@ -3,15 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBody"
+    android:background="@color/white"
     android:orientation="vertical">
 
 
     <RelativeLayout
         android:id="@+id/toolbar_RL"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_60sdp"
-        android:background="@drawable/lv_home_bck">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/sub_member_back"
@@ -19,7 +18,7 @@
             android:layout_height="@dimen/_22sdp"
             android:layout_alignParentLeft="true"
             android:layout_margin="@dimen/_10sdp"
-            android:src="@drawable/ic_back_left" />
+            android:src="@drawable/ic_back_left_black" />
 
         <TextView
             android:layout_width="match_parent"
@@ -27,11 +26,12 @@
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_toRightOf="@+id/sub_member_back"
-            android:fontFamily="@font/nexa_regular"
+            android:fontFamily="@font/nexa_bold"
             android:text="Add Members"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textFontWeight="700"
-            android:textSize="@dimen/_14sdp" />
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
@@ -42,16 +42,16 @@
         android:layout_above="@+id/btn_LL"
         android:layout_below="@+id/toolbar_RL"
         android:layout_marginTop="@dimen/_10sdp"
-        android:background="@color/white"
         android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@color/white"
         android:orientation="vertical"
         android:paddingHorizontal="@dimen/_10sdp">
 
 
         <ScrollView
-            android:scrollbars="none"
             android:layout_width="match_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="fill_parent"
+            android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -65,8 +65,8 @@
                     android:fontFamily="@font/nexa_regular"
                     android:text="Enter Member details"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
 
                 <RelativeLayout
                     android:layout_width="@dimen/_80sdp"
@@ -339,8 +339,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:gravity="center"
                     android:layout_marginBottom="@dimen/_10sdp"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <RadioGroup
@@ -390,22 +390,24 @@
     <RelativeLayout
         android:id="@+id/btn_LL"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/white"
+        android:layout_margin="@dimen/_8sdp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_add_member"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:background="@drawable/curve_bg_login"
-            android:fontFamily="@font/nexa_light"
+            android:layout_height="wrap_content"
+            android:background="@drawable/the_button"
+            android:fontFamily="@font/nexa_bold"
             android:gravity="center"
+            android:padding="@dimen/_8sdp"
             android:text="Add Members"
-            android:textColor="@color/white"
+            android:textColor="@color/colorPrimary"
             android:textFontWeight="600"
-            android:textSize="@dimen/_12sdp" />
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 </RelativeLayout>

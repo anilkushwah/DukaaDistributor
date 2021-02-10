@@ -1023,11 +1023,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_50sdp"
                     android:layout_alignParentBottom="true"
-                    android:background="@drawable/button_shap"
+                    android:background="@drawable/the_button"
                     android:fontFamily="@font/nexa_regular"
                     android:text="Add Product"
                     android:textAllCaps="false"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_margin="@dimen/_8sdp"
                     android:textSize="@dimen/_16sdp" />
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>

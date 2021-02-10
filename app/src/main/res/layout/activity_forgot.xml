@@ -100,7 +100,7 @@
             android:padding="@dimen/_35sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_color_logo"/>
+            android:src="@drawable/logo_mini"/>
 
     </LinearLayout>
 
@@ -109,7 +109,7 @@
         android:layout_height="0dp"
         android:layout_weight="1.2"
         android:weightSum="3"
-        android:background="@drawable/curve_bg_white_login"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <LinearLayout
@@ -201,13 +201,14 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             android:layout_weight="0.4"
+            android:layout_margin="@dimen/_8sdp"
             >
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/white"
-                android:background="@drawable/curve_bg_login"
+                android:background="@drawable/the_button"
                 android:layout_alignParentBottom="true"
                 android:text="Send OTP"
                 android:id="@+id/btn_forgot_send"
@@ -491,6 +492,7 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             android:layout_weight="0.4"
+            android:layout_margin="@dimen/_8sdp"
             >
 
             <Button
@@ -498,7 +500,7 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="-6dp"
-                android:background="@drawable/curve_bg_login"
+                android:background="@drawable/the_button"
                 android:fontFamily="@font/nexa_regular"
                 android:text="Submit"
                 android:textAllCaps="false"
