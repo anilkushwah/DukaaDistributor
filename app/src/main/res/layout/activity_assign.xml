@@ -117,7 +117,6 @@
         <LinearLayout
             android:layout_alignParentBottom="true"
             android:layout_marginTop="@dimen/_5sdp"
-            android:id="@+id/ll_bottom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"

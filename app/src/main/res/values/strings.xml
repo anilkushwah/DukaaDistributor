@@ -6,72 +6,22 @@
     <string name="fb_login_protocol_scheme">fb577045086539558</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">History</string>
     <string name="title_items">Items</string>
     <string name="title_dashboard_onr">Dashboard</string>
     <string name="title_earning">Earning</string>
     <string name="title_notifications">Cart</string>
     <string name="title_profile">Profile</string>
     <string name="action_notification">Notification</string>
-    <string name="title_activity_scrolling">ScrollingActivity</string>
-    <string name="action_settings">Settings</string>
     // ₹ $ KSh
     <string name="currency_sign">KSh</string>
     <string name="percent">%</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-    <string-array name="countryname">
-        <item>Kenya</item>
-    </string-array>
-
-    <string-array name="city">
-        <item>Select City</item>
-        <item>Nairobi</item>
-        <item>Mombasa</item>
-        <item>Mombasa</item>
-        <item>Kisumu</item>
-        <item>Wote</item>
-        <item>Bomet</item>
-    </string-array>
-
-    <string-array name="no_sub_category">
-        <item>No Sub Category</item>
-
-    </string-array>
-
-    <string-array name="unit_per_case">
-        <item>6 slices</item>
-        <item>12  slices</item>
-        <item>18  slices</item>
-        <item>24  slices</item>
-    </string-array>
-
-    <string-array name="packing">
-        <item>Carton</item>
-        <item>Tray</item>
-        <item>Jerican</item>
-        <item>Bucket</item>
-        <item>Bale</item>
-        <item>Bag</item>
-        <item>Pack</item>
-
-    </string-array>
-
-
-    <string-array name="pack_size">
-        <item>1  Unit</item>
-        <item>2 Unit</item>
-        <item>5 Unit</item>
-        <item>10 Unit</item>
-    </string-array>
     <string name="title_activity_maps">Map</string>
 
     <string name="default_notification_channel_id">10010010</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>

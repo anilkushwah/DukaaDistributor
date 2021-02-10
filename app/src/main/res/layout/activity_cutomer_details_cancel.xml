@@ -301,7 +301,6 @@
                                 android:layout_height="wrap_content">
 
                                 <ImageView
-                                    android:id="@+id/im_pastlist"
                                     android:layout_gravity="center"
                                     android:rotation="90"
                                     android:layout_width="@dimen/_15sdp"
@@ -409,7 +408,6 @@
                     >
 
                     <TextView
-                        android:id="@+id/order_accept"
                         style="@style/normalFont"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_35sdp"

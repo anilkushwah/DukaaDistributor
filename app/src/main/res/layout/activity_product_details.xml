@@ -12,8 +12,7 @@
     <RelativeLayout
         android:id="@+id/toolbaar_product_related"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_70sdp"
-        android:background="@drawable/lv_home_bck">
+        android:layout_height="wrap_content">
 
 
         <ImageView
@@ -23,7 +22,7 @@
             android:layout_gravity="left"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:src="@drawable/ic_back_left" />
+            app:srcCompat="@drawable/ic_back_left_black" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -33,8 +32,9 @@
             android:layout_toRightOf="@+id/prod_back"
             android:fontFamily="@font/nexa_bold"
             android:text="Products Details"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_18sdp" />
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -116,7 +116,6 @@
                     android:layout_height="wrap_content">
 
                     <LinearLayout
-                        android:id="@+id/llindicators_product"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
@@ -136,7 +135,6 @@
                     android:visibility="gone">
 
                     <TextView
-                        android:id="@+id/rating_star_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nexa_bold"
@@ -261,7 +259,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_8sdp"
-                    android:background="@color/colorBody" />
+                    android:background="@color/white" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -294,7 +292,6 @@
                     </RelativeLayout>
 
                     <LinearLayout
-                        android:id="@+id/container"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_15sdp"
@@ -322,7 +319,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_8sdp"
-                    android:background="@color/colorBody" />
+                    android:background="@color/white" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

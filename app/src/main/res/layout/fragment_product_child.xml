@@ -6,7 +6,6 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/llNotFoundId"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
@@ -14,7 +13,6 @@
         android:visibility="gone">
 
         <ImageView
-            android:id="@+id/ivNotFoundId"
             android:layout_width="@dimen/_200sdp"
             android:layout_height="@dimen/_200sdp"
             android:layout_centerInParent="true" />

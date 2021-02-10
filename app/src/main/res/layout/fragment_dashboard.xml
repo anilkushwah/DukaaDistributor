@@ -375,7 +375,6 @@
 
 
                     <LinearLayout
-                        android:id="@+id/week_chart_LL_total_sold"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_300sdp"
                         android:orientation="vertical">

@@ -16,7 +16,6 @@
 
 
         <ImageView
-            android:id="@+id/illustration"
             android:layout_width="match_parent"
             android:layout_height="0sp"
             android:scaleType="fitCenter"
@@ -46,7 +45,6 @@
                 android:textSize="@dimen/_12sdp" />
 
             <LinearLayout
-                android:id="@+id/ll_edt_mobile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_15sdp"
@@ -120,7 +118,6 @@
 
 
             <LinearLayout
-                android:id="@+id/ll_edt_pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_15sdp"

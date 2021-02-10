@@ -944,7 +944,6 @@
                         android:gravity="center">
 
                         <ImageView
-                            android:id="@+id/im_bussines_permit"
                             android:layout_width="@dimen/_20sdp"
                             android:layout_height="@dimen/_20sdp"
                             android:layout_gravity="center"
@@ -978,7 +977,6 @@
                         android:gravity="center">
 
                         <ImageView
-                            android:id="@+id/im_return_policy"
                             android:layout_width="@dimen/_20sdp"
                             android:layout_height="@dimen/_20sdp"
                             android:layout_gravity="center"

@@ -375,7 +375,6 @@
                                 android:layout_height="wrap_content">
 
                                 <ImageView
-                                    android:id="@+id/im_pastorder"
                                     android:layout_gravity="center"
                                     android:rotation="90"
                                     android:layout_width="@dimen/_15sdp"

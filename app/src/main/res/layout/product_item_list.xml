@@ -267,7 +267,6 @@
                                     </LinearLayout>
 
                                     <LinearLayout
-                                        android:id="@+id/lv_delete_product"
                                         android:layout_width="@dimen/_35sdp"
                                         android:layout_height="match_parent"
                                         android:gravity="center"

@@ -126,7 +126,6 @@
                         android:layout_weight="0.5"
                         android:layout_height="wrap_content"
                         android:text="Filter"
-                        android:id="@+id/tv_wishlist_Edit"
                         android:gravity="center|right"
                         android:textSize="@dimen/_13sdp"
                         android:fontFamily="@font/nexa_bold"/>

@@ -88,7 +88,6 @@
 
             <TextView
                 android:padding="@dimen/_5sdp"
-                android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"

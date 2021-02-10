@@ -19,7 +19,6 @@
         android:layout_width="@dimen/_15sdp"
         android:layout_height="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_15sdp"
-        android:id="@+id/notification_badge"
         android:background="@drawable/bell_back"
         android:textSize="@dimen/_10sdp"
         android:textColor="#FFFFFF"

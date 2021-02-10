@@ -22,7 +22,6 @@
             android:src="@drawable/ic_back_left" />
 
         <TextView
-            android:id="@+id/toolbar_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
@@ -723,7 +722,6 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/create_mpesa_user_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"
@@ -772,7 +770,6 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/create_till_number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"

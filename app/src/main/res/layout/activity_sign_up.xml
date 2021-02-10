@@ -292,7 +292,6 @@
                     android:layout_weight="1">
 
                     <com.facebook.login.widget.LoginButton
-                        android:id="@+id/login_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5sdp"
@@ -302,7 +301,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp"
                         android:text="facebook"
-                        android:id="@+id/btn_facebook_registration_Id"
                         android:background="@drawable/et_facebook_bck"
                         android:textColor="@android:color/white"
                         android:gravity="left|center"
@@ -320,7 +318,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:id="@+id/lv_google_signUp"
                     android:layout_marginLeft="@dimen/_5sdp"
                     android:padding="@dimen/_10sdp"
                     android:background="@drawable/et_google_bck"

@@ -51,7 +51,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/_5sdp"
-            android:id="@+id/lv_ProductDetailsGo"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -61,7 +60,6 @@
                 android:background="@drawable/home_prdct_blue_bck">
 
                 <ImageView
-                    android:id="@+id/iv_ProductImage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_10sdp"
@@ -82,7 +80,6 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/tv_MpesaDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nexa_regular"
@@ -129,7 +126,6 @@
                             />
 
                         <TextView
-                            android:id="@+id/tv_ProductRealtedActualPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/_2sdp"

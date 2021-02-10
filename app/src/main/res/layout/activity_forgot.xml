@@ -105,7 +105,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/ll_loginwith_phone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.2"
@@ -224,7 +223,6 @@
 
     <LinearLayout
         android:visibility="gone"
-        android:id="@+id/ll_loginwith_email"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.2"
@@ -256,7 +254,6 @@
 
 
                 <LinearLayout
-                    android:id="@+id/ll_email_req"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/et_edittext_bck"
@@ -275,7 +272,6 @@
                         android:gravity="center|left"
                         android:inputType="textEmailAddress"
                         android:textSize="@dimen/_15sdp"
-                        android:id="@+id/et_login_emialid"
                         android:layout_marginLeft="@dimen/_5sdp"
                         android:paddingTop="@dimen/_5sdp"
                         android:fontFamily="@font/nexa_light"
@@ -289,7 +285,6 @@
                 android:visibility="gone"
                 android:textSize="@dimen/_12sdp"
                 android:textColor="@color/colorRed"
-                android:id="@+id/tv_email_req"
                 android:layout_marginTop="@dimen/_3sdp"
                 android:layout_marginLeft="@dimen/_23sdp"
                 android:layout_width="wrap_content"
@@ -318,7 +313,6 @@
                 android:layout_height="wrap_content"
                 >
                 <LinearLayout
-                    android:id="@+id/ll_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/et_edittext_bck"
@@ -337,7 +331,6 @@
                         android:inputType="textPassword"
                         android:maxLines="1"
                         android:textSize="@dimen/_15sdp"
-                        android:id="@+id/et_login_email_pass"
                         android:layout_marginLeft="@dimen/_5sdp"
                         android:paddingTop="@dimen/_5sdp"
                         android:fontFamily="@font/nexa_light"
@@ -363,7 +356,6 @@
                 android:text="Please Enter  Password"/>
 
             <TextView
-                android:id="@+id/tv_use_mobile_number"
                 android:text="Use Mobile Number"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_gravity="right"
@@ -407,7 +399,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.7"
                     android:text="Sign up"
-                    android:id="@+id/tv_loginemail_signup"
                     android:fontFamily="@font/nexa_light"
                     android:padding="@dimen/_5sdp"
                     android:textSize="@dimen/_14sdp"
@@ -503,7 +494,6 @@
             >
 
             <Button
-                android:id="@+id/btn_login_submit"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"

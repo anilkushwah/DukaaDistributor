@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/colorBody">
+    android:background="@color/white">
 
   
 
@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_110sdp"
-        android:background="@drawable/lv_home_bck">
+        android:background="@color/colorPrimary">
         
         <LinearLayout
             android:paddingTop="@dimen/_8sdp"
@@ -27,18 +27,18 @@
                 android:layout_gravity="center"
                 android:layout_width="@dimen/_22sdp"
                 android:layout_height="@dimen/_22sdp"
-                android:src="@drawable/ic_back_left"/>
+                app:srcCompat="@drawable/ic_back_left"/>
 
             <TextView
-                android:id="@+id/toolbar_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:text="Personal Details"
-                android:fontFamily="@font/nexa_regular"
+                android:fontFamily="@font/nexa_bold"
+                android:textStyle="bold"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_16sdp"
+                android:textSize="@dimen/_14sdp"
                 />
 
 
@@ -52,7 +52,6 @@
             android:weightSum="2">
 
             <com.dollop.distributor.Activity.RoundedCornerImageLayout
-                android:id="@+id/parent_layout"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_margin="@dimen/_16sdp"

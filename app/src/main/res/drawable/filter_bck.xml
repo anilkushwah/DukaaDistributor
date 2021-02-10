@@ -8,6 +8,10 @@
     <corners
         android:radius="@dimen/_8sdp"/>
 
+    <stroke
+        android:color="@color/colorPrimary"
+        android:width="@dimen/_1sdp"/>
+
     <size
         android:height="@dimen/_25sdp"
         android:width="@dimen/_25sdp"/>
