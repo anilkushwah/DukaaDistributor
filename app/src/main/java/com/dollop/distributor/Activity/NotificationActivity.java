@@ -1,25 +1,22 @@
 package com.dollop.distributor.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.NetworkUtil;
 import com.dollop.distributor.UtilityTools.SavedData;
 import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.adapter.NotificationAdapter;
-import com.dollop.distributor.adapter.TotalEarningAdapter;
 import com.dollop.distributor.database.UserDataHelper;
-import com.dollop.distributor.model.NewOderlist;
 import com.dollop.distributor.model.NotificationData;
 import com.dollop.distributor.model.NotificationModelList;
-import com.dollop.distributor.model.OrderModel;
 import com.dollop.distributor.retrofit.ApiClient;
 import com.dollop.distributor.retrofit.ApiInterface;
 

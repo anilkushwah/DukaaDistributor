@@ -1,11 +1,11 @@
 package com.dollop.distributor.Activity;
 
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.view.View;
 
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.NetworkUtil;

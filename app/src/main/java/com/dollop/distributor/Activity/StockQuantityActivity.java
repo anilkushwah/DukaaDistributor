@@ -1,10 +1,5 @@
 package com.dollop.distributor.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.Dialog;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,8 +7,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -26,7 +24,6 @@ import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.dollop.distributor.Fragment.ProductChildFragment;
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.Const;
 import com.dollop.distributor.UtilityTools.NetworkUtil;
@@ -36,7 +33,6 @@ import com.dollop.distributor.adapter.StockAdapterAdapter;
 import com.dollop.distributor.database.UserDataHelper;
 import com.dollop.distributor.model.AddProduct_model;
 import com.dollop.distributor.model.CategoryModel;
-import com.dollop.distributor.model.ProductModel;
 import com.dollop.distributor.model.StockQuantity_model;
 import com.dollop.distributor.model.SubCategoryModel;
 import com.dollop.distributor.model.SubCategoty_model;

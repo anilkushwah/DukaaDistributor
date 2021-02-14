@@ -15,7 +15,6 @@ import com.dollop.distributor.UtilityTools.SavedData;
 import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.adapter.NewCreditReqAdapter;
 import com.dollop.distributor.database.UserDataHelper;
-
 import com.dollop.distributor.model.CreditRequestResponse;
 import com.dollop.distributor.model.NewCreditReq_Model;
 import com.dollop.distributor.retrofit.ApiClient;
@@ -23,7 +22,6 @@ import com.dollop.distributor.retrofit.ApiInterface;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
 
 import retrofit2.Call;
 import retrofit2.Callback;

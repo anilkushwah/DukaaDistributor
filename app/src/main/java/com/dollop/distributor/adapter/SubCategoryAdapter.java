@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.dollop.distributor.Activity.CreateOfferActivity;
 import com.dollop.distributor.R;
-import com.dollop.distributor.model.CategoryModel;
 import com.dollop.distributor.model.SubCategoryModel;
 
 import java.util.ArrayList;

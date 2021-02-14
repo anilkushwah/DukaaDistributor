@@ -1,8 +1,5 @@
 package com.dollop.distributor.Activity;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -20,6 +17,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NetworkResponse;
@@ -32,7 +31,6 @@ import com.dollop.distributor.UtilityTools.Const;
 import com.dollop.distributor.UtilityTools.MarshMallowPermission;
 import com.dollop.distributor.UtilityTools.UserAccount;
 import com.dollop.distributor.UtilityTools.Utils;
-
 import com.dollop.distributor.UtilityTools.multipart.VolleyMultipartRequest;
 import com.dollop.distributor.UtilityTools.multipart.VolleySingleton;
 import com.dollop.distributor.database.UserDataHelper;

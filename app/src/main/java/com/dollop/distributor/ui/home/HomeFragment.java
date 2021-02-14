@@ -19,17 +19,14 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dollop.distributor.Activity.AllCreditRequestActivity;
 import com.dollop.distributor.Activity.HomeActivity;
 import com.dollop.distributor.Activity.OrderDetailsActivity;
-
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.RecyclerItemClickListener;
 import com.dollop.distributor.UtilityTools.SavedData;
-
 import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.adapter.NewOrderAdapter;
 import com.dollop.distributor.database.UserDataHelper;
@@ -360,7 +357,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
   }
 
   public void Unselect_DispatchMethod() {
-    tvDispatchId.setBackground(null);
+    tvDispatchId.setBackgroundResource(R.drawable.unselected_item);
     tvDispatchId.setTextColor(getResources().getColor(R.color.black));
 //    dispatch_LL.setBackgroundResource(R.drawable.ic_tab_circle);
 //    tvDispatchCountId.setTextColor(getResources().getColor(R.color.white));
@@ -378,7 +375,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
   }
 
   public void Unselect_completed() {
-    tv_completed.setBackground(null);
+    tv_completed.setBackgroundResource(R.drawable.unselected_item);
 //    ll_tab_completed.setBackgroundResource(R.drawable.ordertabselected_back);
     tv_completed.setTextColor(getResources().getColor(R.color.black));
 //    CompleteCount_LL.setBackgroundResource(R.drawable.ic_tab_circle);

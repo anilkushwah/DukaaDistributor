@@ -1,7 +1,5 @@
 package com.dollop.distributor.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -24,7 +23,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.Const;
-import com.dollop.distributor.UtilityTools.SavedData;
 import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.database.UserDataHelper;
 import com.dollop.distributor.model.ManageMemberModel;

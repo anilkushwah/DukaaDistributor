@@ -3,8 +3,6 @@ package com.dollop.distributor.UtilityTools;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.dollop.distributor.model.UserDTO;
-
 
 public class SessionManager {
 

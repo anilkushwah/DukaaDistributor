@@ -1,25 +1,16 @@
 package com.dollop.distributor.adapter;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.view.menu.MenuBuilder;
-import androidx.appcompat.view.menu.MenuPopupHelper;
-import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.Utility;
-import com.dollop.distributor.model.ManageMemberModel;
-import com.dollop.distributor.model.PastOrder_Model;
 import com.dollop.distributor.model.TotalEarningmodel;
 
 import java.util.List;

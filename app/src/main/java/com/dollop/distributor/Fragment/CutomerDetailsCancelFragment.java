@@ -9,13 +9,12 @@ import android.widget.LinearLayout;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.NetworkUtil;
 import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.adapter.PastOrderListAdapter;
-import com.dollop.distributor.adapter.TotalEarningAdapter;
 import com.dollop.distributor.model.PastOrder_Model;
-import com.dollop.distributor.model.TotalEarningmodel;
 
 import java.util.ArrayList;
 

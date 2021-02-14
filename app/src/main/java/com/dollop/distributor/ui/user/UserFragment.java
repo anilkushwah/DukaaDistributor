@@ -13,8 +13,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -34,6 +32,8 @@ import com.android.volley.toolbox.Volley;
 import com.dollop.distributor.Activity.BankDetailsActivity;
 import com.dollop.distributor.Activity.ChangePasswordActivity;
 import com.dollop.distributor.Activity.CreditSettingActivity;
+import com.dollop.distributor.Activity.EditProfileFragment;
+import com.dollop.distributor.Activity.LoginActivity;
 import com.dollop.distributor.Activity.MPESActivity;
 import com.dollop.distributor.Activity.ManageDocumentActivity;
 import com.dollop.distributor.Activity.ManageMemberActivity;
@@ -42,16 +42,13 @@ import com.dollop.distributor.Activity.NotificationActivity;
 import com.dollop.distributor.Activity.OfferActivity;
 import com.dollop.distributor.Activity.OrderHistory;
 import com.dollop.distributor.Activity.PersonalDeatilsActivity;
-import com.dollop.distributor.Activity.EditProfileFragment;
 import com.dollop.distributor.Activity.SetTimingActivity;
-import com.dollop.distributor.Activity.LoginActivity;
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.Const;
 import com.dollop.distributor.UtilityTools.SavedData;
 import com.dollop.distributor.UtilityTools.SessionManager;
 import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.database.UserDataHelper;
-import com.dollop.distributor.database.UserModel;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;

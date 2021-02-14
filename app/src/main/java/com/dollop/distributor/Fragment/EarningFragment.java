@@ -20,13 +20,14 @@ import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.annotation.RequiresApi;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.dollop.distributor.R;
-import com.dollop.distributor.UtilityTools.MarshMallowPermission;
 import com.dollop.distributor.UtilityTools.NetworkUtil;
 import com.dollop.distributor.UtilityTools.SavedData;
 import com.dollop.distributor.UtilityTools.Utils;
@@ -36,6 +37,7 @@ import com.dollop.distributor.model.Datum;
 import com.dollop.distributor.model.OrderModel;
 import com.dollop.distributor.retrofit.ApiClient;
 import com.dollop.distributor.retrofit.ApiInterface;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -48,6 +50,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 

@@ -17,7 +17,6 @@ import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-
 import com.dollop.distributor.Activity.HomeActivity;
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.SavedData;
@@ -31,7 +30,6 @@ import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="0sp"
             android:scaleType="fitCenter"
-            android:src="@drawable/illustration_6"
+            android:src="@drawable/dukaa_vendor_highres"
             app:layout_constraintBottom_toTopOf="@id/ll_input"
             app:layout_constraintTop_toTopOf="parent" />
 

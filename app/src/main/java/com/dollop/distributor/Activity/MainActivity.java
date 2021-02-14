@@ -1,8 +1,5 @@
 package com.dollop.distributor.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,10 +9,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.NetworkUtil;
 import com.dollop.distributor.UtilityTools.Utils;
-
 
 import java.util.ArrayList;
 import java.util.List;

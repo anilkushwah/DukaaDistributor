@@ -1,7 +1,5 @@
 package com.dollop.distributor.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -13,6 +11,7 @@ import android.provider.Settings;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.dollop.distributor.DirectionHelper.GoogleApisHandle;
 import com.dollop.distributor.R;

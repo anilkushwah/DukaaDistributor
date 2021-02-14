@@ -1,25 +1,17 @@
 package com.dollop.distributor.Activity;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
-
-
 import android.webkit.WebView;
 import android.widget.ImageView;
-import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -35,25 +27,17 @@ import com.android.volley.toolbox.Volley;
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.Const;
 import com.dollop.distributor.UtilityTools.NetworkUtil;
-import com.dollop.distributor.UtilityTools.SavedData;
 import com.dollop.distributor.UtilityTools.TouchViewPagerIMageView;
 import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.database.UserDataHelper;
 import com.dollop.distributor.retrofit.ApiClient;
-import com.github.barteksc.pdfviewer.PDFView;
-import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
-import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
-import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
-import com.shockwave.pdfium.PdfDocument;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.File;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @RequiresApi(api = Build.VERSION_CODES.M)

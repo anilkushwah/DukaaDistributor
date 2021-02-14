@@ -40,7 +40,6 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.appcompat.view.menu.MenuPopupHelper;
@@ -61,9 +60,6 @@ import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.dollop.distributor.Activity.AllCreditRequestActivity;
-import com.dollop.distributor.Activity.CreateOfferActivity;
-import com.dollop.distributor.Activity.OfferActivity;
 import com.dollop.distributor.Activity.ProductDetailsActivity;
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.Const;
@@ -72,7 +68,6 @@ import com.dollop.distributor.UtilityTools.SessionManager;
 import com.dollop.distributor.UtilityTools.UserAccount;
 import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.UtilityTools.multipart.VolleyMultipartRequest;
-import com.dollop.distributor.adapter.CategoryAdapter;
 import com.dollop.distributor.adapter.OfferAdapter;
 import com.dollop.distributor.database.UserDataHelper;
 import com.dollop.distributor.model.AddProduct_model;
@@ -91,7 +86,6 @@ import com.squareup.picasso.Picasso;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

@@ -5,11 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dollop.distributor.R;
 import com.dollop.distributor.model.SearchHistory_Model;
+
 import java.util.ArrayList;
 
 public class SerachHistoryAdapter extends RecyclerView.Adapter<SerachHistoryAdapter.MyViewHolder> {

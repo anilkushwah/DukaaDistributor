@@ -1,10 +1,5 @@
 package com.dollop.distributor.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -12,7 +7,6 @@ import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -26,14 +20,15 @@ import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.webkit.MimeTypeMap;
-import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -49,7 +44,6 @@ import com.dollop.distributor.UtilityTools.TouchViewPagerIMageView;
 import com.dollop.distributor.UtilityTools.UserAccount;
 import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.UtilityTools.multipart.VolleyMultipartRequest;
-import com.dollop.distributor.adapter.OfferAdapter;
 import com.dollop.distributor.adapter.StateAdapter;
 import com.dollop.distributor.database.CityAdapter;
 import com.dollop.distributor.database.UserDataHelper;
@@ -59,7 +53,6 @@ import com.dollop.distributor.model.StateData;
 import com.dollop.distributor.model.StateRespone;
 import com.dollop.distributor.retrofit.ApiClient;
 import com.dollop.distributor.retrofit.ApiInterface;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;

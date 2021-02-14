@@ -8,18 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dollop.distributor.Activity.CutomerDetailsAcceptActivity;
-import com.dollop.distributor.Activity.CutomerDetailsActivity;
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.model.AcceptCreditReq_Model;
-import com.dollop.distributor.model.NewCreditReq_Model;
 
 import java.util.List;
 

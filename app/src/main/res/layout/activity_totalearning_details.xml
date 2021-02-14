@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -10,7 +9,7 @@
         android:id="@+id/rl_tool"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@white"
+        android:background="@color/white"
         android:paddingBottom="@dimen/_10sdp">
 
         <LinearLayout
@@ -49,7 +48,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/tvTotalAmountId"
+                    android:id="@+id/tv_total_amount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nexa_bold"
@@ -84,7 +83,7 @@
                         android:textSize="@dimen/_12sdp" />
 
                     <TextView
-                        android:id="@+id/orderid"
+                        android:id="@+id/tv_order_id"
                         style="@style/normalFont"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -93,19 +92,19 @@
                         android:textColor="@color/black"
                         android:textSize="@dimen/_12sdp" />
 
-                    <!--                    <TextView-->
-                    <!--                        android:id="@+id/tv_items_and_amount"-->
-                    <!--                        style="@style/normalFont"-->
-                    <!--                        android:layout_width="wrap_content"-->
-                    <!--                        android:layout_height="wrap_content"-->
-                    <!--                        android:text="5"-->
-                    <!--                        android:textColor="@color/black"-->
-                    <!--                        android:textSize="@dimen/_12sdp" />-->
+                    <TextView
+                        android:id="@+id/tv_items_and_amount"
+                        style="@style/normalFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
 
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/past_order_Tv"
+                    android:id="@+id/tv_pastorder"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -382,6 +381,7 @@
                 android:background="@color/white" />
 
             ¬
+
             <TextView
                 style="@style/normalFont"
                 android:layout_width="wrap_content"

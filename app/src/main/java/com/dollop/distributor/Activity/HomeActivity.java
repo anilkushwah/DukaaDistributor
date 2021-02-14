@@ -7,13 +7,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.dollop.distributor.R;
-import com.dollop.distributor.UtilityTools.NetworkUtil;
-import com.dollop.distributor.UtilityTools.SavedData;
-import com.dollop.distributor.UtilityTools.SessionManager;
-import com.dollop.distributor.UtilityTools.Utils;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -21,6 +14,13 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+
+import com.dollop.distributor.R;
+import com.dollop.distributor.UtilityTools.NetworkUtil;
+import com.dollop.distributor.UtilityTools.SavedData;
+import com.dollop.distributor.UtilityTools.SessionManager;
+import com.dollop.distributor.UtilityTools.Utils;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     Toolbar toolbar;

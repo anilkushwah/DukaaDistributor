@@ -1,10 +1,5 @@
 package com.dollop.distributor.Activity;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -29,6 +24,11 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NetworkResponse;
@@ -50,11 +50,9 @@ import com.dollop.distributor.UtilityTools.multipart.VolleyMultipartRequest;
 import com.dollop.distributor.UtilityTools.multipart.VolleySingleton;
 import com.dollop.distributor.adapter.CategoryAdapter;
 import com.dollop.distributor.adapter.SubCategoryAdapter;
-import com.dollop.distributor.adapter.TotalEarningAdapter;
 import com.dollop.distributor.database.UserDataHelper;
 import com.dollop.distributor.model.AddProduct_model;
 import com.dollop.distributor.model.CategoryModel;
-import com.dollop.distributor.model.ProductModel;
 import com.dollop.distributor.model.SubCategoryModel;
 import com.dollop.distributor.model.SubCategoty_model;
 

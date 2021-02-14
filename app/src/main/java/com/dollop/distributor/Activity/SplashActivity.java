@@ -1,11 +1,11 @@
 package com.dollop.distributor.Activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.SessionManager;

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
@@ -38,18 +39,18 @@
                 android:gravity="center">
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/driver_image"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_55sdp"
                     android:layout_gravity="center"
                     android:padding="@dimen/_3sdp"
-                    android:id="@+id/driver_image"
-                    android:src="@drawable/ic_user_blue" />
+                    app:srcCompat="@drawable/ic_user_blue" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/_8sdp"
                 android:layout_weight="1.2"
                 android:orientation="horizontal">
@@ -57,31 +58,32 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/driver_name_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nexa_regular"
                         android:text=""
-                        android:id="@+id/driver_name_tv"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_12sdp" />
 
                     <TextView
+                        android:id="@+id/driver_mobile_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nexa_regular"
                         android:text=""
-                        android:id="@+id/driver_mobile_tv"
                         android:textSize="@dimen/_10sdp" />
 
                     <TextView
+                        android:id="@+id/vehicle_number_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nexa_regular"
                         android:text=""
-                        android:id="@+id/vehicle_number_tv"
                         android:textSize="@dimen/_10sdp" />
 
                 </LinearLayout>
@@ -123,9 +125,9 @@
 
 
             <LinearLayout
-                android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_weight="0.8"
                 android:orientation="vertical">
 
@@ -152,15 +154,14 @@
 
 
                     <TextView
+                        android:id="@+id/retailer_number_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/nexa_regular"
                         android:text=""
-                        android:id="@+id/retailer_number_tv"
                         android:textSize="@dimen/_10sdp" />
 
                 </LinearLayout>
-
 
 
             </LinearLayout>

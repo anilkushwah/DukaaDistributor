@@ -22,18 +22,15 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.Const;
-import com.dollop.distributor.UtilityTools.NetworkUtil;
 import com.dollop.distributor.UtilityTools.SavedData;
 import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.adapter.PastOrderListAdapter;
 import com.dollop.distributor.model.NewCreditReq_Model;
-import com.dollop.distributor.model.PastOrder_Model;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 

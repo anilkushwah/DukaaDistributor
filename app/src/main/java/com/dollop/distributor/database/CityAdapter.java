@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,13 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.dollop.distributor.Activity.CreateAccountActivity;
 import com.dollop.distributor.Activity.EditProfileFragment;
-import com.dollop.distributor.Fragment.ProductChildFragment;
 import com.dollop.distributor.R;
-import com.dollop.distributor.UtilityTools.Const;
-import com.dollop.distributor.adapter.OfferAdapter;
 import com.dollop.distributor.model.CityResponse;
-import com.dollop.distributor.model.OfferResponse;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 

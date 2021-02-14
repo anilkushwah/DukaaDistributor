@@ -12,7 +12,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.dollop.distributor.Activity.CutomerDetailsActivity;
 import com.dollop.distributor.Activity.CutomerDetailsCancelActivity;
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.Utils;

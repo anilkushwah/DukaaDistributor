@@ -1,18 +1,16 @@
 package com.dollop.distributor.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.app.Dialog;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.dollop.distributor.Fragment.AcceptCreditRequestFragment;
 import com.dollop.distributor.Fragment.CancelCreditRequestFragment;
@@ -21,7 +19,6 @@ import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.NetworkUtil;
 import com.dollop.distributor.UtilityTools.SavedData;
 import com.dollop.distributor.UtilityTools.Utils;
-import com.dollop.distributor.adapter.NewCreditReqAdapter;
 import com.dollop.distributor.database.UserDataHelper;
 import com.dollop.distributor.model.CreditRequestResponse;
 import com.dollop.distributor.model.NewCreditReq_Model;
@@ -116,8 +113,8 @@ public class AllCreditRequestActivity extends AppCompatActivity implements View.
 
     public void tab_newMethod() {
 
-        ll_reqtab_new.setBackgroundResource(R.drawable.tab_background_selected);
-        tv_reqnew.setTextColor(getResources().getColor(R.color.colorBlue));
+        ll_reqtab_new.setBackgroundResource(R.drawable.selected_item_white_back);
+        tv_reqnew.setTextColor(getResources().getColor(R.color.colorPrimary));
         new_order_LL.setBackgroundResource(R.drawable.ic_tab_blue_circle);
         new_count.setTextColor(getResources().getColor(R.color.white));
         get_credit_request("Pending");
@@ -127,14 +124,14 @@ public class AllCreditRequestActivity extends AppCompatActivity implements View.
         ll_reqtab_new.setBackgroundResource(R.drawable.ordertabselected_back);
         tv_reqnew.setTextColor(getResources().getColor(R.color.white));
         new_order_LL.setBackgroundResource(R.drawable.ic_tab_circle);
-        new_count.setTextColor(getResources().getColor(R.color.colorBlue));
+        new_count.setTextColor(getResources().getColor(R.color.colorPrimary));
 
 
     }
 
     public void reqtab_accepted() {
-        ll_reqtab_accepted.setBackgroundResource(R.drawable.tab_background_selected);
-        tv_accepted.setTextColor(getResources().getColor(R.color.colorBlue));
+        ll_reqtab_accepted.setBackgroundResource(R.drawable.selected_item_white_back);
+        tv_accepted.setTextColor(getResources().getColor(R.color.colorPrimary));
         get_credit_request1("Approved");
     }
 
@@ -144,8 +141,8 @@ public class AllCreditRequestActivity extends AppCompatActivity implements View.
     }
 
     public void CancleMethod() {
-        ll_tab_cancelled.setBackgroundResource(R.drawable.tab_background_selected);
-        tv_cancelled.setTextColor(getResources().getColor(R.color.colorBlue));
+        ll_tab_cancelled.setBackgroundResource(R.drawable.selected_item_white_back);
+        tv_cancelled.setTextColor(getResources().getColor(R.color.colorPrimary));
 
         get_credit_request2("Canceled");
     }

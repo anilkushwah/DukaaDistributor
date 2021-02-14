@@ -1,8 +1,5 @@
 package com.dollop.distributor.model;
 
-import java.awt.font.NumericShaper;
-import java.util.ArrayList;
-
 public class ProductDetailsModel {
     public String product_id;
     public String distributor_id;

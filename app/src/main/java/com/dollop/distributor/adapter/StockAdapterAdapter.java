@@ -2,36 +2,27 @@ package com.dollop.distributor.adapter;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.dollop.distributor.Activity.LoginActivity;
-import com.dollop.distributor.Activity.MyRatingActivity;
 import com.dollop.distributor.Activity.StockQuantityActivity;
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.Const;
 import com.dollop.distributor.UtilityTools.Utils;
-import com.dollop.distributor.database.UserDataHelper;
-import com.dollop.distributor.model.RatingDTO;
 import com.dollop.distributor.model.StockQuantity_model;
-import com.dollop.distributor.model.TotalEarningmodel;
 import com.dollop.distributor.model.UpdateStock;
 import com.dollop.distributor.retrofit.ApiClient;
 import com.dollop.distributor.retrofit.ApiInterface;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 

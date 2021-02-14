@@ -15,7 +15,6 @@ import com.dollop.distributor.UtilityTools.Const;
 import com.dollop.distributor.model.ShoworderModel;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ShowOrderAdapter extends RecyclerView.Adapter<ShowOrderAdapter.MyHolder> {

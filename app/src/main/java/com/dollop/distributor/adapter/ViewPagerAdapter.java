@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-
 import com.dollop.distributor.R;
 import com.squareup.picasso.Picasso;
 

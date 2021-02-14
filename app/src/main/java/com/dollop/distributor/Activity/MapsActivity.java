@@ -1,8 +1,5 @@
 package com.dollop.distributor.Activity;
 
-import androidx.fragment.app.FragmentActivity;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
@@ -14,11 +11,12 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.fragment.app.FragmentActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
@@ -35,7 +33,6 @@ import com.dollop.distributor.DirectionHelper.FetchURL;
 import com.dollop.distributor.DirectionHelper.TaskLoadedCallback;
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.Const;
-import com.dollop.distributor.UtilityTools.SavedData;
 import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.database.UserDataHelper;
 import com.dollop.distributor.firebase.Config;
@@ -52,14 +49,12 @@ import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
-import com.google.gson.JsonObject;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -133,13 +128,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             vehicle_number_tv.setText(datum.vehicleType);
             if (datum.vehicleType.equals("Van")) {
-                vehicle_type_image.setBackgroundResource(R.drawable.ic_pickup_truck_home);
+                vehicle_type_image.setBackgroundResource(R.drawable.tracking_screen_icon);
 
             } else if (datum.vehicleType.equals("Bike")) {
-                vehicle_type_image.setBackgroundResource(R.drawable.bike);
+                vehicle_type_image.setBackgroundResource(R.drawable.tracking_screen_icon);
 
             } else if (datum.vehicleType.equals("Truck")) {
-                vehicle_type_image.setBackgroundResource(R.drawable.truck);
+                vehicle_type_image.setBackgroundResource(R.drawable.tracking_screen_icon);
             }
         }
 

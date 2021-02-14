@@ -12,11 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import com.dollop.distributor.R;
-import com.dollop.distributor.UtilityTools.NetworkUtil;
 import com.dollop.distributor.UtilityTools.SessionManager;
-import com.dollop.distributor.UtilityTools.Utility;
 import com.dollop.distributor.UtilityTools.Utils;
 import com.dollop.distributor.adapter.MyReviewAdapter;
 import com.dollop.distributor.database.UserDataHelper;

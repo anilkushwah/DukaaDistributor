@@ -11,13 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dollop.distributor.Activity.PastorderDetailsActivity;
-import com.dollop.distributor.Activity.TotalEarningDetailsActivity;
 import com.dollop.distributor.R;
 import com.dollop.distributor.UtilityTools.Utils;
-import com.dollop.distributor.model.TotalEarningmodel;
 import com.dollop.distributor.model.pastOrderModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PastOrderAdapter extends RecyclerView.Adapter<PastOrderAdapter.MyViewHolder> {

@@ -30,7 +30,7 @@
         android:pointerIcon="hand"
         app:itemIconSize="@dimen/_22sdp"
         app:itemRippleColor="@color/colorGreen"
-        app:labelVisibilityMode="labeled"
+        app:labelVisibilityMode="auto"
         app:menu="@menu/bottom_nav_menu" />
 </RelativeLayout>
 

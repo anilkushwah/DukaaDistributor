@@ -28,6 +28,29 @@ import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.dollop.distributor.Activity.StockQuantityActivity;
+import com.dollop.distributor.R;
+import com.dollop.distributor.UtilityTools.Const;
+import com.dollop.distributor.UtilityTools.SavedData;
+import com.dollop.distributor.UtilityTools.Utils;
+import com.dollop.distributor.database.UserDataHelper;
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
 /*import com.anychart.AnyChart;
 import com.anychart.AnyChartView;
 import com.anychart.chart.common.dataentry.DataEntry;
@@ -38,31 +61,6 @@ import com.anychart.enums.Anchor;
 import com.anychart.enums.HoverMode;
 import com.anychart.enums.Position;
 import com.anychart.enums.TooltipPositionMode;*/
-import com.dollop.distributor.Activity.StockQuantityActivity;
-import com.dollop.distributor.R;
-import com.dollop.distributor.UtilityTools.Const;
-import com.dollop.distributor.UtilityTools.SavedData;
-import com.dollop.distributor.UtilityTools.Utility;
-import com.dollop.distributor.UtilityTools.Utils;
-import com.dollop.distributor.database.UserDataHelper;
-import com.github.mikephil.charting.charts.BarChart;
-import com.github.mikephil.charting.components.Legend;
-import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.data.BarData;
-import com.github.mikephil.charting.data.BarDataSet;
-import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.utils.ColorTemplate;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 
 public class DashboardFragment extends Fragment {

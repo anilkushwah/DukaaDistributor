@@ -1,18 +1,16 @@
 package com.dollop.distributor.Activity;
 
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.service.autofill.OnClickAction;
-import android.view.View;
-import android.widget.ImageView;
-
 import com.dollop.distributor.R;
 import com.dollop.distributor.adapter.PastOrderAdapter;
-import com.dollop.distributor.adapter.TotalEarningAdapter;
 import com.dollop.distributor.model.pastOrderModel;
 
 import java.util.ArrayList;
