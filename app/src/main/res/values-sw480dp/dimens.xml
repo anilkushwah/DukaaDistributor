@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- xhdpi 720x1280 -->
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    
+     <!--Layout Top header size-->
+ <dimen name="activity_horizontal_margin">16dp</dimen>
+ <dimen name="activity_vertical_margin">16dp</dimen>
+ <dimen name="fab_margin">16dp</dimen>
+ <dimen name="nav_header_vertical_spacing">8dp</dimen>
+
+ <dimen name="design_bottom_navigation_height" tools:override="true">@dimen/_40sdp</dimen>
+ <dimen name="nav_header_height">150dp</dimen>
+
+</resources>
